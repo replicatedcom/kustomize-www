@@ -4,7 +4,6 @@ install:
 	yarn
 
 build:
-	yarn gulp
 	hugo -v
 
 build_staging:
