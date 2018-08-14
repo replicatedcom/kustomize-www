@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on Replicated Help Center</title>
+    <link>/docs/ship/getting-started/</link>
+    <description>Recent content in Getting Started on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/ship/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ship Overview</title>
+      <link>/docs/ship/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship/getting-started/overview/</guid>
+      <description>Replicated Ship  Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works.</description>
+    </item>
+    
+    <item>
+      <title>YAML Overview</title>
+      <link>/docs/ship/getting-started/yaml-overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship/getting-started/yaml-overview/</guid>
+      <description>Replicated Ship YAML Overvidew  There are many artifacts, assets and config that are required to install and configure a modern application. Replicated Ship requires a single YAML file that defines all of the objects that are needed to install an application.
+The Ship YAML has three distinct top-level sections:
+Assets The assets section defines all of the public and private assets that are required to be available to start an application.</description>
+    </item>
+    
+  </channel>
+</rss>

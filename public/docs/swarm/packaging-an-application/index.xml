@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Packaging A Swarm Application on Replicated Help Center</title>
+    <link>/docs/swarm/packaging-an-application/</link>
+    <description>Recent content in Packaging A Swarm Application on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/swarm/packaging-an-application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Packaging A Swarm Application</title>
+      <link>/docs/swarm/packaging-an-application/overview/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/overview/</guid>
+      <description>Using Replicated with the built-in Docker Swarm support allows you to use your existing docker-compose.yml and Swarm Services to deploy your application using the Replicated platform.
+Shipping a Swarm application with Replicated involves creating a single YAML file that contains your Docker Swarm services and additional Replicated configuration data. This is packaged as a multi-document YAML file, with a special comment at the top of each included documented to describe it&amp;rsquo;s structure.</description>
+    </item>
+    
+    <item>
+      <title>Managing Volumes</title>
+      <link>/docs/swarm/packaging-an-application/volumes/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/volumes/</guid>
+      <description>Managing Volumes  Docker Swarm supports both binding a host path as part of a definition for a single service as well as anonymous and named volumes in the top-level volumes key. When scheduling your services, keep in mind that the tasks (containers) backing a service can be deployed on any node in a swarm, and this may be a different node each time the service is updated. It is possible to specify constraints so that the service&amp;rsquo;s tasks are deployed on a node that has the volume present.</description>
+    </item>
+    
+    <item>
+      <title>Config Files</title>
+      <link>/docs/swarm/packaging-an-application/config-files/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/config-files/</guid>
+      <description>Config Files  Some applications and containers expect to have files mounted into the container with config data or other dynamically-generated contents. These can&amp;rsquo;t be built into the container image because the contents are generated from the environment.
+Docker Swarm provides a config item to handle this, and Replicated has support for building the config data through the Replicated Template Functions. To use a Swarm Config in Replicated, the config should be inline and referenced in the Swarm service.</description>
+    </item>
+    
+    <item>
+      <title>Docker Secrets</title>
+      <link>/docs/swarm/packaging-an-application/secrets/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/secrets/</guid>
+      <description>Docker Secrets  Docker introduced support for secret management in Docker 1.13. When running an application on Replicated and Docker Swarm, the minimum supported Docker version is 1.13.1, so this functionality will always be available to your application.
+ Secret Reference  To use a Swarm secret in Replicated, the secret should be defined as external in the service definition, and referenced in the specific services that need to access the secret.</description>
+    </item>
+    
+    <item>
+      <title>Ephemeral Containers</title>
+      <link>/docs/swarm/packaging-an-application/ephemeral-containers/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/ephemeral-containers/</guid>
+      <description>Replicated monitors the status of the Docker Swarm services deployed in an application, and if any stop, the Admin Console will report the application as stopped. Sometimes, it&amp;rsquo;s desirable to have a container stop after it runs. One common scenario where this is required is running database migrations at startup. In Replicated, an ephemeral container is one that Replicated will start, but not monitor the lifecycle of.
+When shipping a Docker Swarm application, to set a service as ephemeral in Replicated, you can label the stack service with com.</description>
+    </item>
+    
+    <item>
+      <title>Template Functions</title>
+      <link>/docs/swarm/packaging-an-application/template-functions/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/template-functions/</guid>
+      <description>Template functions are marked by the double curly bracket + &amp;ldquo;repl&amp;rdquo; escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be {{repl, not {{ repl.
+Go Templates Replicated uses Go&amp;rsquo;s template package to execute the following functions. In addition to the functions listed here, all functions from the Go text/template package are available. Please note that Go template functions must still be escaped with &amp;ldquo;repl&amp;rdquo; escape sequence as demonstrated below.</description>
+    </item>
+    
+    <item>
+      <title>Support Bundle</title>
+      <link>/docs/swarm/packaging-an-application/support-bundle/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/support-bundle/</guid>
+      <description>A support bundle is an archive that is available for the customer to download via the Support tab of the Admin Console or the Replicated CLI.
+Contents of the support page can be customized by including markdown in the top-level of the YAML.
+replicated_api_version: &amp;quot;2.20.2&amp;quot; name: ELK console_support_markdown: | # Email Us for help: #### support@getelk.com Or don&#39;t, your loss.  The support bundle has a default timeout of 120 seconds, after which only files and commands that have completed will be included in the downloaded bundle.</description>
+    </item>
+    
+    <item>
+      <title>Custom Preflight Checks</title>
+      <link>/docs/swarm/packaging-an-application/custom-preflight-checks/</link>
+      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/custom-preflight-checks/</guid>
+      <description>A preflight check is a test that is run before installing and running an application. The test will analyze the system to determine if the environment meets the minimum requirements.
+The preflight check may be manually run for an existing installation by visiting:
+ https://[your server address]:8800/run-checks  By default, Replicated automatically adds preflight checks for:
+   Category Check     OS Linux   Linux Kernel 3.</description>
+    </item>
+    
+    <item>
+      <title>Programmable Preflight Checks</title>
+      <link>/docs/swarm/packaging-an-application/programmable-preflight-checks/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/programmable-preflight-checks/</guid>
+      <description>The host requirements section of the yaml gives Replicated the ability to analyze system requirements and warn or prevent the user from proceeding with an installation or upgrade. In addition to host requirements, Replicated has the ability to define fully customizable preflight requirements as of version v2.5.0 . These custom requirements provide flexibility to the point that an arbitrary command can be executed by a vendor provided image. See the commands section below for a full list of commands that may be run including examples.</description>
+    </item>
+    
+    <item>
+      <title>Custom Metrics</title>
+      <link>/docs/swarm/packaging-an-application/custom-metrics/</link>
+      <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/custom-metrics/</guid>
+      <description>All Replicated installations come with a StatsD/Graphite/Carbon container that can be used by your application containers to report data. Optional custom monitors can be configured to display additional charts in the Replicated dashboard. Additionally, your own applications can query Graphite directly.
+ Configuring your services to use StatsD  services: api: image: quay.io/mycompany/myapp:1.0 deploy: replicas: 2 restart_policy: delay: 1s condition: on-failure ports: - &amp;quot;5000:3000&amp;quot; environment: - STATSD_HOST={{repl (index (Split (StatsdAddress) &amp;quot;:&amp;quot;) 0)}} - STATSD_PORT={{repl (index (Split (StatsdAddress) &amp;quot;:&amp;quot;) 1)}}   Defining metrics  Add custom_metrics as a root element to the application YAML.</description>
+    </item>
+    
+    <item>
+      <title>Admin Commands</title>
+      <link>/docs/swarm/packaging-an-application/admin-commands/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/admin-commands/</guid>
+      <description>The admin_commands section allows you to define ad-hoc commands that can be executed inside a running container from the shell.
+Note: If you are calling admin commands from a script use the --no-tty flag.
+ Executing  $ &amp;lt;shell_alias&amp;gt; &amp;lt;command_alias&amp;gt; &amp;lt;params&amp;gt;  or
+$ replicated admin &amp;lt;command_alias&amp;gt; &amp;lt;params&amp;gt;  or
+$ docker exec -it &amp;quot;$(docker inspect --format &amp;quot;{{.Status.ContainerStatus.ContainerID}}&amp;quot; &amp;quot;$(docker service ps &amp;quot;$(docker service inspect --format &amp;quot;{{.ID}}&amp;quot; replicated_replicated | awk &amp;quot;NR==1&amp;quot;)&amp;quot; -q)&amp;quot;)&amp;quot; replicated admin &amp;lt;command_alias&amp;gt; &amp;lt;params&amp;gt;   Examples  nginx-reload This example admin command will create a shell alias to allow mycli nginx-reload to execute the command service nginx reload inside the running nginx container.</description>
+    </item>
+    
+    <item>
+      <title>Application Properties</title>
+      <link>/docs/swarm/packaging-an-application/application-properties/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/packaging-an-application/application-properties/</guid>
+      <description>The properties section of the YAML allows you to configure properties of the admin console.
+Below is an example of the properties section of an application config YAML.
+properties: app_url: http://{{repl ConfigOption &amp;quot;hostname&amp;quot; }} logo_url: http://replicated.com/logo.png console_title: My Enterprise Application shell_alias: mycli  Available Properties app_url The URL of your application. A link to this URL will de displayed to the user on the dashboard of the admin console. This field supports template functions and often uses one to determine the hostname or IP address to link to.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+---
+baseURL: "/"
+languageCode: "en-us"
+title: "Replicated Help Center"
+theme: "replicated-docs-theme"
+metadataformat: "yaml"
+canonifyurls: true
+description: "Documentation and knowledgebase for Replicated."
+googleAnalytics: "UA-61084834-1"
+
+Params:
+  author: "Replicated"
+  copyright: "Replicated, Inc"
+  search_env: "staging"
+
+  favicon: ""
+  pagetitle: "Replicated"
+  permalink: "#"
+
+  docker_version_default: "17.06.2-ce"
+  docker_version_minimum: "1.7.1"
+  replicated_api_version_current: "2.20.2"
+  replicated_latest_version: "2.20.2"
+  replicated_latest_release_date: "April 26, 2018"
+
+  swarm_docker_version_minimum: "1.13.1"
+  swarm_docker_version_default: "17.06.2-ce"
+
+  kubernetes_docker_version_minimum: "1.12.3"
+  kubernetes_docker_version_default: "1.12.3"
+  kubernetes_version: "1.9.3"
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+  kb-section: "kb-sections"
+
+algolia:
+  index: "ship_staging"
+  appID: "5PHVQPX4AR"
+
+menu:
+  main:
+    - Name: "Documentation"
+      Weight: 2
+      URL: "/docs/ship-yaml/getting-started/overview"
+    - Name: "Guides"
+      Weight: 2
+      URL: "/guides"
+---

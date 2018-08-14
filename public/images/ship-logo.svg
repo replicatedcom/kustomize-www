@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="47px" viewBox="0 0 119 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.5%" y="-7.1%" width="101.0%" height="120.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ship-Guide-#1" transform="translate(-237.000000, -15.000000)">
+            <g id="Group-5">
+                <g id="Nav" filter="url(#filter-1)">
+                    <g id="Nav-items" transform="translate(241.000000, 17.000000)">
+                        <g id="Group">
+                            <g id="Logo" transform="translate(54.000000, 4.000000)">
+                                <g id="Group-3" transform="translate(0.000000, 0.500000)">
+                                    <text id="Ship" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="14" font-weight="bold" fill="#337AB7">
+                                        <tspan x="1" y="27">Ship</tspan>
+                                    </text>
+                                    <text id="Replicated" font-family="HelveticaNeue, Helvetica Neue" font-size="12" font-weight="normal" fill="#4A4A4A">
+                                        <tspan x="0" y="11">Replicated</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                            <g id="Group-2">
+                                <circle id="Oval-7" fill="#63C07D" cx="19.5" cy="19.5" r="19.5"></circle>
+                                <g id="Group-4" transform="translate(8.000000, 12.000000)" fill="#FFFFFF">
+                                    <path d="M2.81009753,8.37774129 L6.71626806,12.2839118 C7.17556237,12.7432061 7.17473985,13.4785181 6.72070591,13.932552 C6.26350654,14.3897514 5.52855063,14.384599 5.07206574,13.9281141 L0.40277725,9.25882565 C0.159049126,9.01509753 0.0448888626,8.69364347 0.0592645679,8.37774129 C0.0448888626,8.06183911 0.159049126,7.74038505 0.40277725,7.49665693 L5.07206574,2.82736843 C5.52855063,2.37088354 6.26350654,2.36573121 6.72070591,2.82293058 C7.17473985,3.27696452 7.17556237,4.01227645 6.71626806,4.47157075 L2.81009753,8.37774129 Z" id="Combined-Shape"></path>
+                                    <path d="M18.7521694,8.39456238 L22.6585204,12.3009134 C23.1178147,12.7602077 23.117073,13.4954388 22.6631387,13.9493731 C22.2060397,14.4064721 21.4711639,14.4012397 21.014679,13.9447548 L16.3453905,9.2754663 C16.1016936,9.03176941 15.9875086,8.71038925 16.0018133,8.39456238 C15.9875086,8.07873551 16.1016936,7.75735535 16.3453905,7.51365847 L21.014679,2.84436997 C21.4711639,2.38788508 22.2060397,2.38265265 22.6631387,2.83975167 C23.117073,3.29368595 23.1178147,4.02891709 22.6585204,4.4882114 L18.7521694,8.39456238 Z" id="Combined-Shape" transform="translate(19.501955, 8.394562) scale(-1, 1) translate(-19.501955, -8.394562) "></path>
+                                    <rect id="Rectangle-21" transform="translate(11.167011, 8.307447) rotate(15.000000) translate(-11.167011, -8.307447) " x="10.0057664" y="0.856466783" width="2.32248882" height="14.9019608" rx="1.16124441"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

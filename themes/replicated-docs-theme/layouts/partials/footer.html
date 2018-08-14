@@ -1,0 +1,137 @@
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					{{ partial "footer-items.html" . }}
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	{{ with .Site.GoogleAnalytics }}
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
+        ga('create', '{{ . }}', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    {{ end }}
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  {{ $env := .Site.Params.search_env }}
+  {{ with .CurrentSection }}
+
+    {{ if eq $env "staging" }}
+      <script src='{{ .Site.BaseURL }}js/staging/{{ index .Site.Data "manifest-js-staging" "autocomplete-search.js" }}'></script>
+    {{ else }}
+      <script src='{{ .Site.BaseURL }}js/prod/{{ index .Site.Data "manifest-js-prod" "autocomplete-search.js" }}'></script>
+    {{ end }}
+
+  {{ end }}
+
+	<script src="{{ .Site.BaseURL }}js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="{{ .Site.BaseURL }}js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+
+    $('#navItem--guides').on("mouseenter", function () {
+      $('.guides-sub-nav').show();
+    });
+    $('#navItem--documentation').on("mouseenter", function () {
+      $('.guides-sub-nav').hide();
+    });
+    
+    $('.home-nav').on("mouseleave", function () {
+      $('.guides-sub-nav').hide();
+    });
+    $('.other-nav').on("mouseleave", function (e) {
+      $('.guides-sub-nav').hide();
+    });
+  </script>
+  <script>
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 400);
+          }
+        }
+      });
+  </script>
+</body>
+</html>

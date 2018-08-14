@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>APIs on Replicated Help Center</title>
+    <link>/docs/audit-log/apis/</link>
+    <description>Recent content in APIs on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/audit-log/apis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>APIs</title>
+      <link>/docs/audit-log/apis/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/apis/overview/</guid>
+      <description>Replicated Audit Log provides several APIs:
+Publisher API the Publisher API is the primary API that an application vendor will use to send events into the Audit Log. This is the API that the Replicated Audit Log SDKs consume. When getting started, this is the first place to start. Use the Publisher API to start sending events into the Audit Log.
+Enterprise API The Enterprise API is the API that the end customer (the enterprise IT administrator) will consume to pull their organization events and ingest it into their own internal systems.</description>
+    </item>
+    
+    <item>
+      <title>Publisher API</title>
+      <link>/docs/audit-log/apis/publisher-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/apis/publisher-api/</guid>
+      <description>Swagger JSON | API Console The Publisher API is the API that most applications will embed into a production system. This API contains the methods necessary to send new events into Retraced, create viewer tokens and to programatically search events when the embedded viewer is not being used.
+When possible, it&amp;rsquo;s recommended to use one of the supported SDKs as these provide an easier way to get started.
+To consume the Publisher API directly, we publish a Swagger spec that is both documented and available in a raw json object.</description>
+    </item>
+    
+    <item>
+      <title>Enterprise API</title>
+      <link>/docs/audit-log/apis/enterprise-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/apis/enterprise-api/</guid>
+      <description>Swagger JSON | API Console Overview The Enterprise API is the API that the end customer (the enterprise IT administrator) will consume to pull their organization events and ingest it into their own internal systems.
+Authentication The Enterprise API endpoints expect the token to be provided in a header of the form
+Authorization: token=YOUR_ENTERPRISE_TOKEN  Getting an Enterprise API Token There are currently two ways to manage Enterprise API tokens.</description>
+    </item>
+    
+    <item>
+      <title>Admin API</title>
+      <link>/docs/audit-log/apis/admin-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/apis/admin-api/</guid>
+      <description> Swagger JSON | API Console Authentication The Admin API expects a base64-ecoded hmac-signed JSON Web Token in an Authorization header:
+Authorization: WU9VUl9TSUdORURfSldUX1RPS0VOX18K...  </description>
+    </item>
+    
+    <item>
+      <title>GraphQL Endpoint</title>
+      <link>/docs/audit-log/apis/graphql/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/apis/graphql/</guid>
+      <description>The recommended way to search events using an API is to POST your query and variables to the appropriate Audit Log GraphQL endpoint.
+   API Endpoint     Publisher https://api.retraced.io/publisher/v1/project/{projectId}/graphql   Admin https://api.retraced.io/admin/v1/project/{projectId}/environment/{environmentId}/graphql   Enterprise https://api.retraced.io/enterprise/v1/graphql   Viewer https://api.retraced.io/viewer/v1/graphql    Search The query root provides a search method. A fully-formed query for a subset of event fields would look like this:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exposing Events on Replicated Help Center</title>
+    <link>/categories/exposing-events/</link>
+    <description>Recent content in Exposing Events on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/exposing-events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exposing Events</title>
+      <link>/docs/audit-log/exposing-events/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/exposing-events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enterprise API</title>
+      <link>/docs/audit-log/exposing-events/enterprise-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/exposing-events/enterprise-api/</guid>
+      <description>The Retraced Enterprise API enables users to consume audit log data programmatically and integrate it with an external monitoring or security system.
+Creating and Managing Enterprise Tokens Enterprise Tokens can be created and managed via the Embedded Viewer
+Note: If you&amp;rsquo;re a vendor integrating Retraced as your audit log, you can also manage and distribute Enterprise Tokens using the Publisher API.
+Graphql The quickest way to start getting events is using the GraphQL API.</description>
+    </item>
+    
+    <item>
+      <title>Using The Retraced Viewer</title>
+      <link>/docs/audit-log/exposing-events/viewer/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/exposing-events/viewer/</guid>
+      <description>The Retraced embedded viewer is the easiest way consume and understand your audit log data. This guide will walk you through the viewer&amp;rsquo;s features.
+Note &amp;ndash; if you&amp;rsquo;re a Software Vendor and you&amp;rsquo;re looking to embed the viewer into your site, see the Embedded Viewer Guide
+Overview The viewer exposes four core features:
+ Search Filters Export API Token Management.  Search The search box allows for free-text search of all audit events, but also supports some structured search operators.</description>
+    </item>
+    
+  </channel>
+</rss>

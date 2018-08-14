@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicated Native Scheduler on Replicated Help Center</title>
+    <link>/docs/native/getting-started/</link>
+    <description>Recent content in Replicated Native Scheduler on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/native/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Replicated Native Scheduler</title>
+      <link>/docs/native/getting-started/overview/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/overview/</guid>
+      <description>About the Replicated Native Scheduler  The Replicated Native Scheduler is a mature, proprietary runtime that&amp;rsquo;s being used to manage single and multi-node clusters in many Replicated installations today.
+ Strengths of the Replicated Native Scheduler  There are several factors to consider when deciding which scheduler to ship your enterprise installable application with, including:
+ Compatibility with hosted scheduler specs, if any Knowledge and experience running and supporting the scheduler Support for your end-customers environment Features of the scheduler  The Replicated Native Scheduler focuses on the broadest possible support for end-customer environments by including support for Docker 1.</description>
+    </item>
+    
+    <item>
+      <title>Concepts and Terminology</title>
+      <link>/docs/native/getting-started/concepts-and-terms/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/concepts-and-terms/</guid>
+      <description>Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
+Application An application is the software package you are installing onto your customer&amp;rsquo;s servers. It isn&amp;rsquo;t a single binary, rather it&amp;rsquo;s all of the individual components and containers that are required to get a functional version of your product.
+Release A Release is an installable version of the application, complete with all metadata such as release notes and instructions.</description>
+    </item>
+    
+    <item>
+      <title>Create &amp; Manage Releases</title>
+      <link>/docs/native/getting-started/manage-releases/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/manage-releases/</guid>
+      <description>Create Releases  The Replicated vendor portal provides you with a location to create and release versions of your application to various release channels. The vendor portal hosts a built-in YAML editor and linter to help you write and validate YAML for the Replicated Native Scheduler.
+ Promoting Releases  Once a release is ready to be installed, the release can be promoted to one or more release channels.</description>
+    </item>
+    
+    <item>
+      <title>Developer Environment</title>
+      <link>/docs/native/getting-started/developer-environment/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/developer-environment/</guid>
+      <description>Once your application is working in Docker, you&amp;rsquo;ll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+ Install Replicated Studio  With our simple installation script (on a Linux server in your IaaS provider of choice, or in a local dev environment in Vagrant/VirtualBox):</description>
+    </item>
+    
+    <item>
+      <title>Docker Registries</title>
+      <link>/docs/native/getting-started/docker-registries/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/docker-registries/</guid>
+      <description>When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.
+ Replicated Registry  Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. The Replicated Native Scheduler has built in support for the private registry, and will automatically authenticate with read-only access from a customer license file.</description>
+    </item>
+    
+    <item>
+      <title>Create Customers &amp; Licenses</title>
+      <link>/docs/native/getting-started/create-licenses/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/create-licenses/</guid>
+      <description>Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer &amp;amp; application during the installation and update processes. A customer license is created in the Customers section of the vendor portal. You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
+If you are looking to create or manage custom license fields you can do so in the License Fields section of the vendor portal or via the Vendor License API.</description>
+    </item>
+    
+    <item>
+      <title>Next Steps</title>
+      <link>/docs/native/getting-started/next-steps/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/native/getting-started/next-steps/</guid>
+      <description>Now that we&amp;rsquo;ve gone over the basic concepts of shipping an application with the Replicated Native Scheduler, continue to the Packaging An Application For the Replicated Native Scheduler documentation.</description>
+    </item>
+    
+  </channel>
+</rss>

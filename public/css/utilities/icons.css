@@ -1,0 +1,196 @@
+.icon.u-guidesIcon {
+  background-position: -2px -4px;
+  width: 46px;
+  height: 43px;
+}
+.icon.u-documentationIcon {
+  background-position: -2px -49px;
+  width: 35px;
+  height: 42px;
+}
+.icon.u-apiReferenceIcon {
+  background-position: -2px -93px;
+  width: 42px;
+  height: 49px;
+}
+.icon.u-chevronIcon {
+  background-position: -58px -4px;
+  width: 7px;
+  height: 12px;
+}
+.icon.u-contactIcon {
+  background-position: -2px -144px;
+  width: 46px;
+  height: 48px;
+}
+.icon.u-navIcon {
+  background-position: -70px 0;
+  width: 23px;
+  height: 14px;
+}
+.icon.u-closeIconWhite {
+  background-position: -95px 0;
+  width: 14px;
+  height: 14px;
+}
+.icon.u-searchIcon {
+  background-position: -70px -172px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-replicatedKubernetes {
+  background-position: -224px -3px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedDockerSwarm {
+  background-position: -224px -128px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedCircle {
+  background-position: -224px -252px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedShip {
+  background-position: -348px -252px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedTroubleshoot {
+  background-position: -348px -378px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedAuditLog {
+  background-position: -224px -502px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedHelm {
+  background-position: -348px -502px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedAnsible {
+  background-position: -476px -3px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-replicatedCircleCI {
+  background-position: -476px -127px;
+  width: 117px;
+  height: 119px;
+}
+.icon.u-troubleshoot {
+  background-position: -347px -130px;
+  width: 118px;
+  height: 120px;
+}
+.icon.u-vendorPortal {
+  background-position: -224px -375px;
+  width: 118px;
+  height: 120px;
+}
+.icon.u-beginnerWings {
+  background-position: -2px -256px;
+  width: 200px;
+  height: 61px;
+}
+.icon.u-intermediateWings {
+  background-position: -2px -319px;
+  width: 211px;
+  height: 61px;
+}
+.icon.u-advancedWings {
+  background-position: -2px -382px;
+  width: 211px;
+  height: 78px;
+}
+.icon.u-guidesHeaderIcon {
+  background-position: -72px -20px;
+  width: 60px;
+  height: 56px;
+}
+.icon.u-supportHeaderIcon {
+  background-position: 0 -462px;
+  width: 48px;
+  height: 57px;
+}
+.icon.u-docsHeaderIcon {
+  background-position: -72px -100px;
+  width: 47px;
+  height: 56px;
+}
+.icon.u-apiHeaderIcon {
+  background-position: -150px -159px;
+  width: 60px;
+  height: 60px;
+}
+.icon.u-greenCheckCircle {
+  background-position: -72px -198px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-grayFailCircle {
+  background-position: -72px -220px;
+  width: 20px;
+  height: 20px;
+}
+.icon.u-yellowCustomCircle {
+  background-position: -99px -220px;
+  width: 20px;
+  height: 20px;
+}
+
+.replicatedLogo,
+.replicatedLogo-main {
+  background-image: url("../../images/rep_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 140px;
+  height: 33px;
+  display: block;
+}
+.kubernetesLogo {
+  background-image: url("../../images/kubernetes_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70px;
+  height: 67px;
+  display: block;
+}
+.dockerSwarmLogo {
+  background-image: url("../../images/ds_logo@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75px;
+  height: 60px;
+  display: block;
+}
+
+.kubernetesLogo-combo {
+  background-image: url("../../images/kub-repl@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 184px;
+  height: 52px;
+  display: block;
+}
+.kubernetesLogo-combo.small {
+  width: 160px;
+}
+.dockerSwarmLogo-combo {
+  background-image: url("../../images/ds-repl@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 184px;
+  height: 43px;
+  display: block;
+}
+.dockerSwarmLogo-combo.small {
+  width: 160px;
+}

@@ -1,0 +1,24 @@
+{{ $param := .Get 0 }}
+{{ $tag := .Get 1 }}
+
+{{ if eq $tag "h1" }}
+    <h1 class="linked-headline" id="{{ $param | urlize }}">
+        <a href="{{ $.Page.RelPermalink }}#{{$param | urlize }}" class="anchor" id="#{{ $param | urlize  }}"></a>
+        {{ $param }}
+    </h1>
+{{ else if eq $tag "h2" }}
+    <h2 class="linked-headline" id="{{ $param | urlize }}">
+        <a href="{{ $.Page.RelPermalink }}#{{$param | urlize }}" class="anchor" id="#{{ $param | urlize  }}"></a>
+        {{ $param }}
+    </h2>
+{{ else if eq $tag "h3" }}
+    <h3 class="linked-headline" id="{{ $param | urlize }}">
+        <a href="{{ $.Page.RelPermalink }}#{{$param | urlize }}" class="anchor" id="#{{ $param | urlize  }}"></a>
+        {{ $param }}
+    </h3>
+{{ else }}
+    <h2 class="linked-headline" id="{{ $param | urlize }}">
+        <a href="{{ $.Page.RelPermalink }}#{{$param | urlize }}" class="anchor" id="#{{ $param | urlize  }}"></a>
+        {{ $param }}
+    </h2>
+{{ end }}

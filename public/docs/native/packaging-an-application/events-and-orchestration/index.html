@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Events and Orchestration</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Events and Orchestration</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">The events section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers.</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-replicatedCircle u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Native Scheduler</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
+                
+                    
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/getting-started/overview/" class=" u-color--tuna ">Replicated Native Scheduler</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/packaging-an-application/overview/" class=" u-color--tuna ">Packaging An Application</a>
+                        </h3>
+                        
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/components-and-containers/" class=" u-color--curiousBlue ">
+                                            Components And Containers
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/volumes/" class=" u-color--curiousBlue ">
+                                            Container Volumes
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/environment_variables/" class=" u-color--curiousBlue ">
+                                            Environment Variables
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/config-files/" class=" u-color--curiousBlue ">
+                                            Config Files
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/ports-and-networking/" class=" u-color--curiousBlue ">
+                                            Ports / Networking
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/docker-options/" class=" u-color--curiousBlue ">
+                                            Docker Options
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/restart-policies/" class=" u-color--curiousBlue ">
+                                            Restart Policies
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/starting-and-stopping/" class=" u-color--curiousBlue ">
+                                            Starting and Stopping
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/events-and-orchestration/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                                            Events and Orchestration
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/clustering/" class=" u-color--curiousBlue ">
+                                            Clustering
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/template-functions/" class=" u-color--curiousBlue ">
+                                            Template Functions
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/support-bundle/" class=" u-color--curiousBlue ">
+                                            Support Bundle
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/custom-preflight-checks/" class=" u-color--curiousBlue ">
+                                            Custom Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/programmable-preflight-checks/" class=" u-color--curiousBlue ">
+                                            Programmable Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/custom-metrics/" class=" u-color--curiousBlue ">
+                                            Custom Metrics
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/admin-commands/" class=" u-color--curiousBlue ">
+                                            Admin Commands
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/application-properties/" class=" u-color--curiousBlue ">
+                                            Application Properties
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/promote-releases/" class=" u-color--curiousBlue ">
+                                            Promote Releases
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/customer-installations/overview/" class=" u-color--tuna ">Managing Customer Installations</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/examples/overview/" class=" u-color--tuna ">Native Scheduler Examples</a>
+                        </h3>
+                        
+                    
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<p>Events are provided to help with the startup, orchestration and service discovery between your containers. There are
+several reasons to use events in your application yaml:</p>
+
+<ul>
+<li>When one container must be started and in a running state before another container starts</li>
+<li>When one container depends on the ip address or exposed ports of another container</li>
+</ul>
+
+<p>Replicated provides this functionality in a pub/sub style model. Containers can publish events and list the subscriptions.
+When the event is fired, the subscribed event starts.</p>
+
+
+<h2 class="linked-headline" id="published-events">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#published-events" class="anchor" id="#published-events"></a>
+    Published Events
+</h2>
+
+
+<p>Containers can publish a message when specific events occur. These events can be subscribed to by other containers in your
+application and are designed to be used to help manage the state of your application. Some of these events are published
+when a container changes state. These events are published as soon as the Replicated operator reports that
+the container state has changed.</p>
+
+<p>When setting up event orchestration use unique event names. When starting a container with constraints from multiple parents, the first event to fire causes the container to start.</p>
+
+
+<h2 class="linked-headline" id="container-started-event">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#container-started-event" class="anchor" id="#container-started-event"></a>
+    Container Started Event
+</h2>
+
+
+<p>A <code>container-start</code> event is published as soon as the Docker Engine reports that your container is started. The container
+may still be initializing and loading, but control of the process has been transferred to the <code>ENTRYPOINT</code> or <code>CMD</code>
+specified in the container. When this event is received, all of the template functions are available for this container.</p>
+
+<h4 id="example-of-a-container-start-event">Example of a <code>container-start</code> event</h4>
+
+<pre><code class="language-yaml">containers:
+  - source: public
+    image_name: redis
+    version: 3.0.5
+    publish_events:
+    - name: Redis started
+      trigger: container-start
+      subscriptions:
+      - component: App
+        container: app
+        action: start
+</code></pre>
+
+
+<h2 class="linked-headline" id="container-stopped-event">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#container-stopped-event" class="anchor" id="#container-stopped-event"></a>
+    Container Stopped Event
+</h2>
+
+
+<p>When a <code>container-stop</code> event is published, your container has been terminated. It may restart, but the current state is stopped. A
+<code>container-start</code> event will be published if the container is ever restarted.</p>
+
+
+<h2 class="linked-headline" id="container-port-listen-event">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#container-port-listen-event" class="anchor" id="#container-port-listen-event"></a>
+    Container Port Listen Event
+</h2>
+
+
+<p>When a <code>port-listen</code> event is published, your container has started accepting connections on an exposed public port. This can be useful
+in cases where you need to know when a specific service inside your container is actually up and running. The port you&rsquo;re interested in
+is specified in the data field, e.g. <code>data: &quot;3306&quot;</code></p>
+
+<h3 id="example-of-a-port-listen-event">Example of a <code>port-listen</code> event</h3>
+
+<pre><code class="language-yaml">containers:
+  - source: public
+    image_name: mysql
+    version: 5.7
+    publish_events:
+    - name: Mysql ready
+      trigger: port-listen
+      data: &quot;3306&quot;
+      subscriptions:
+      - component: App
+        container: app
+        action: start
+</code></pre>
+
+
+<h2 class="linked-headline" id="container-exec-event">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#container-exec-event" class="anchor" id="#container-exec-event"></a>
+    Container Exec Event
+</h2>
+
+
+<p>The <code>exec</code> event type is provided to execute arbitrary scripts in a container. This command is attempted immediately after the
+container starts, and again at an interval of 2 seconds until it returns 0 or 10 minutes has elapsed. If the command succeeds
+with a result code of 0, the event triggers. If not, the command will retry for up to 10 minutes and result in a failure if
+the exit code is never 0. The command to be executed is given in the <code>args</code> field as the arguments are represented as an array
+of strings.</p>
+
+<pre><code class="language-yaml">containers:
+  - source: public
+    image_name: mysql
+    version: 5.7
+    publish_events:
+    - name: Minecraft Server Started
+      trigger: exec
+      args: [&quot;grep&quot;, &quot;Done&quot;, &quot;/data/logs/latest.log&quot;]
+      subscriptions:
+      - component: Redis
+        container: redis
+        action: start
+</code></pre>
+
+
+<h2 class="linked-headline" id="subscribed-events">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#subscribed-events" class="anchor" id="#subscribed-events"></a>
+    Subscribed Events
+</h2>
+
+
+<p>Any container can subscribe to events from any other container in your application. A subscribed event must also define an action to
+take upon triggering of the event. The only action which is currently available is the start action, which causes the subscribing
+container to start.</p>
+
+
+<h2 class="linked-headline" id="timeouts">
+    <a href="/docs/native/packaging-an-application/events-and-orchestration/#timeouts" class="anchor" id="#timeouts"></a>
+    Timeouts
+</h2>
+
+
+<p><span class="version">v2.3.0</span>
+ The <code>timeout</code> parameter must be an integer and indicates the number of seconds an event has to execute before a timeout is initiated.
+If the event does not execute before the timeout is reached, then an error will show in the UI and the event sequence will terminate.
+By default the <code>timeout</code> option will be set to 10 minutes.  Setting the <code>timeout</code> parameter to -1 will disable the timeout feature.</p>
+
+<pre><code class="language-yaml">containers:
+  -source: public
+    image_name: example
+    publish_events:
+    - name: Some Event Started
+      trigger: container-stop
+      timeout: 30
+      subscriptions:
+      - component: DB
+        container: mysql
+        action: start
+</code></pre>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+												<a href="/docs/native/packaging-an-application/starting-and-stopping/">
+													<span class="icon u-chevronIcon"></span>
+													Starting and Stopping
+												</a>
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+												<a href="/docs/native/packaging-an-application/clustering/">
+													Clustering
+													<span class="icon u-chevronIcon"></span>
+												</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search-native.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

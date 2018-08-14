@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Support Bundle Yaml Lifecycle on Replicated Help Center</title>
+    <link>/categories/support-bundle-yaml-lifecycle/</link>
+    <description>Recent content in Support Bundle Yaml Lifecycle on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Wed, 17 Jan 2018 23:51:55 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/support-bundle-yaml-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Support Bundle Lifecycle</title>
+      <link>/api/support-bundle-yaml-lifecycle/root/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-lifecycle/root/</guid>
+      <description>The Support Bundle spec allows for customizing the lifecycle of your bundle, including how and when it gets generated any uploaded, and the messaging provided to the end customer.
+If you do not specify a lifecycle in your YAML spec, the following default lifecyle will be used:
+lifecycle: - message: contents: &amp;quot;Starting support bundle collection...&amp;quot; - generate: use_defaults: true - upload: prompt: message: &amp;quot;Done! Do you want to upload the support bundle for analysis?</description>
+    </item>
+    
+  </channel>
+</rss>

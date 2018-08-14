@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assets on Replicated Help Center</title>
+    <link>/docs/ship/assets/</link>
+    <description>Recent content in Assets on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Wed, 02 May 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/ship/assets/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Asset Types</title>
+      <link>/docs/ship/assets/asset-types/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship/assets/asset-types/</guid>
+      <description>Replicated Ship Asset Types  Assets are the core object that enables you to describe applications managed by Ship. They allow you to define scripts, manifests, and application artifacts needed to deploy your application to your end customer&amp;rsquo;s internal infrastructure. The goal of Ship assets is to give your customers controlled, transparent access to the same resources you use to deploy your SaaS application to your own private cloud.</description>
+    </item>
+    
+    <item>
+      <title>inline</title>
+      <link>/docs/ship/assets/inline/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship/assets/inline/</guid>
+      <description>Inline Asset Type  Inline asset types are useful to deliver text files such as Kubernetes manifests, application config files and shell scripts. The YAML reference documentation is published that defines all available keys.
+ Kubernetes Manifests  An example of delivering a simple Kubernetes manifest as an inline asset in Ship is:
+assets: v1: - inline: dest: ./installer/k8s/redis.yml contents: | apiVersion: v1 kind: Pod metadata: labels: name: redis redis-sentinel: &amp;quot;true&amp;quot; role: master name: redis-master spec: containers: - name: master image: redis:4.</description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/docs/ship/assets/docker/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship/assets/docker/</guid>
+      <description>Docker Asset Type  Docker asset types are useful to deliver both private and public Docker images to an installation. It&amp;rsquo;s recommended to build for airgapped environments, where images cannot be pulled directly from the upstream registry. Using the docker asset type, it&amp;rsquo;s possible to pull and load images on the workstation running the installation. Once pulled, adding a simple script to push these to a local registry will ensure that the cluster can bootstrap and run offline.</description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>/docs/ship/assets/web/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship/assets/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>/docs/ship/assets/github/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship/assets/github/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship Init on Replicated Help Center</title>
+    <link>/categories/ship-init/</link>
+    <description>Recent content in Ship Init on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/ship-init/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>/docs/ship-init/getting-started/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship-init/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ship Init Overview</title>
+      <link>/docs/ship-yaml/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship-yaml/getting-started/overview/</guid>
+      <description>Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works.</description>
+    </item>
+    
+    <item>
+      <title>Ship Overview</title>
+      <link>/docs/ship-init/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship-init/getting-started/overview/</guid>
+      <description>Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Overview</title>
+      <link>/docs/ship-yaml/troubleshooting/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship-yaml/troubleshooting/overview/</guid>
+      <description>Replicated Ship is a modern, composable way to define and package any application so that it can be configured, installed, updated and operated by someone with limited knowledge of how the software works.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship Lifecycle on Replicated Help Center</title>
+    <link>/categories/ship-lifecycle/</link>
+    <description>Recent content in Ship Lifecycle on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Wed, 02 May 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/ship-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lifecycle</title>
+      <link>/docs/ship-yaml/lifecycle/</link>
+      <pubDate>Wed, 02 May 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ship-yaml/lifecycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lifecycle Overview</title>
+      <link>/docs/ship-yaml/lifecycle/overview/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/ship-yaml/lifecycle/overview/</guid>
+      <description>The lifecycle key is where you can define and customize the end-user experience for customers installing your application. A lifecycle has two step types:
+ &amp;quot;message&amp;quot; - print a message to the console. This can be used multiple times. &amp;quot;render&amp;quot; - collect configuration and generate assets. This commonly is used once in an application.  In ship, a short assets section to pull and run a private docker container might look like</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private Registry on Replicated Help Center</title>
+    <link>/categories/private-registry/</link>
+    <description>Recent content in Private Registry on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/private-registry/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Security</title>
+      <link>/docs/registry/security/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/registry/security/</guid>
+      <description>Replicated Private Registry Security  This document lists the security measures and processes in place to ensure that images pushed to the Replicated Private Registry remain private.
+ Single Tenant Isolation  The registry is deployed and managed as a multi-tenant application, but each tenant is completely isolated from data created and pulled by other tenants. Docker images have shared base layers, but the Replicated Private Registry doesn&amp;rsquo;t share these between tenants.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Config Screen YAML</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Config Screen YAML</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">The config section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance.</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u- u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Config Screen</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            
+            
+            
+            <div class="u-marginBottom--most">
+              <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
+              
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/config-yaml/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                              Config Screen YAML
+                          </a>
+                      </p>
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/commands/" class=" u-color--curiousBlue ">
+                              Commands
+                          </a>
+                      </p>
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/test-procs/" class=" u-color--curiousBlue ">
+                              Test Procedures
+                          </a>
+                      </p>
+                  
+                  
+              
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<p>The admin console settings screen configuration is specified as an array configuration
+groups and items.</p>
+
+
+<h2 class="linked-headline" id="groups">
+    <a href="/docs/config-screen/config-yaml/#groups" class="anchor" id="#groups"></a>
+    Groups
+</h2>
+
+
+<p>Groups map to links within the left sidebar navigation. Groups are comprised of a <code>name</code>,
+<code>title</code>, <code>description</code> and an array of items.</p>
+
+<pre><code class="language-yaml">config:
+- name: authentication
+  title: Authentication
+  description: Configure application authentication below.
+</code></pre>
+
+
+<h2 class="linked-headline" id="items">
+    <a href="/docs/config-screen/config-yaml/#items" class="anchor" id="#items"></a>
+    Items
+</h2>
+
+
+<p>Items map to input fields and belong to a single group. All items should have <code>name</code>, <code>title</code>
+and <code>type</code> properties. Specific item types can including new types.</p>
+
+<h3 id="available-item-types">Available Item Types</h3>
+
+<blockquote>
+<p><code>label</code>
+<code>text</code>
+<code>password</code>
+<code>file</code>
+<code>bool</code>
+<code>select_one</code>
+<code>select_many</code>
+<code>textarea</code>
+<code>select</code></p>
+</blockquote>
+
+
+<h2 class="linked-headline" id="examples">
+    <a href="/docs/config-screen/config-yaml/#examples" class="anchor" id="#examples"></a>
+    Examples
+</h2>
+
+
+<h3 id="bool"><code>bool</code></h3>
+
+<p>The <code>bool</code> input type should use a &ldquo;0&rdquo; or &ldquo;1&rdquo; to set the value</p>
+
+<pre><code class="language-yaml">- name: toggles
+  items:
+  - name: http_enabled
+    title: HTTP Enabled
+    help_text: When enabled we will listen to http
+    type: bool
+    default: &quot;0&quot;
+</code></pre>
+
+<h3 id="label"><code>label</code></h3>
+
+<p>The <code>label</code> input type allows you to display an input label.</p>
+
+<pre><code class="language-yaml">- name: Email
+  items:
+  - name: email-address
+    title: Email Address
+    type: text
+  - name: description
+    type: label
+    title: &quot;Note: The system will send you an email every hour.&quot;
+
+</code></pre>
+
+<h3 id="select"><code>select</code></h3>
+
+<p>Types <code>select_one</code> and <code>select_many</code> are special cases. These types must have nested items
+that act as options. These types will be displayed as radio buttons (<code>select_one</code>) or
+checkboxes (<code>select_many</code>) in the admin console.</p>
+
+<p>At this time these two control types do not support the <code>title</code> field.</p>
+
+<pre><code class="language-yaml">- name: inputs
+  title: Inputs
+  description: &quot;&quot;
+  items:
+  - name: logstash_input_enabled
+    default: &quot;&quot;
+    type: select_many
+    items:
+    - name: logstash_input_file_enabled
+      title: File
+      default: &quot;0&quot;
+    - name: logstash_input_lumberjack_enabled
+      title: Lumberjack
+      default: &quot;0&quot;
+- name: authentication
+  title: Authentication
+  description: &quot;&quot;
+  items:
+  - name: authentication_type
+    default: authentication_type_anonymous
+    type: select_one
+    items:
+    - name: authentication_type_anonymous
+      title: Anonymous
+    - name: authentication_type_password
+      title: Password
+</code></pre>
+
+<h3 id="textarea"><code>textarea</code></h3>
+
+<p>A <code>textarea</code> can specify a <code>props</code> that will map into the HTML element directly.</p>
+
+<pre><code class="language-yaml">- name: custom_key
+  title: Set your secret key for your app
+  description: Paste in your Custom Key
+  items:
+  - name: key
+    title: Key
+    type: textarea
+    props:
+      rows: 8
+  - name: hostname
+    title: Hostname
+    type: text
+</code></pre>
+
+
+<h2 class="linked-headline" id="properties">
+    <a href="/docs/config-screen/config-yaml/#properties" class="anchor" id="#properties"></a>
+    Properties
+</h2>
+
+
+<h3 id="default-and-value"><code>default</code> and <code>value</code></h3>
+
+<p>A default value will be applied to the ConfigOption template function when no value is
+specified. A default value provided via a command (default_cmd) is treated as ephemeral
+data that will get overwritten each time commands are executed. It will appear as
+placeholder text in the settings section of the On-Prem Console.</p>
+
+<p>A value is data that will be overwritten by user input on non-readonly fields. A value
+provided as the result of a command (value_cmd or data_cmd) will persist and will never
+change after the first execution of the command. It will appear as the HTML input value
+in the settings section of the On-Prem Console.</p>
+
+<p><em>Please note that setting <code>readonly:true</code> will render a value generated by a command to be ephemeral.  This feature has since been deprecated and may change in the future.</em></p>
+
+<pre><code class="language-yaml">- name: custom_key
+  title: Set your secret key for your app
+  description: Paste in your Custom Key
+  items:
+  - name: key
+    title: Key
+    type: text
+    value: &quot;&quot;
+    default: localhost
+</code></pre>
+
+<h3 id="required"><code>required</code></h3>
+
+<p>A required field will prevent the application from starting until it has a value.</p>
+
+<pre><code class="language-yaml">    required: true
+</code></pre>
+
+<h3 id="when"><code>when</code></h3>
+
+<p>The when value is used to denote conditional inputs that will only be visible (or required) when the condition evaluates to true. The <code>when</code> item can be used on groups, items and select_one or select_many options.</p>
+
+<p>The settings UI will update right away when a field used in a when clause is updated (no need to save) and can be used to used to show optional config sections. The equality check should match exactly without quotes.</p>
+
+<p>The when property can be configured in two different formats. The legacy format is in form <code>config_item_name=value</code> or <code>config_item_name!=value</code>. As of Replicated <span class="version">v2.9.0</span>
+ <a href="/docs/packaging-an-application/template-functions">template functions</a> that evaluate to a parsable boolean can be used as a value to the when property.</p>
+
+<pre><code class="language-yaml">- name: database_settings_group
+  items:
+  - name: db_type
+    type: select_one
+    default: embedded
+    items:
+    - name: external
+      title: External
+    - name: embedded
+      title: Embedded DB
+  - name: database_host
+    title: Database Hostname
+    type: text
+    when: db_type=external
+  - name: database_password
+    title: Database Password
+    type: password
+    when: '{{repl or (ConfigOptionEquals &quot;select_one&quot; &quot;external&quot;) (ConfigOptionEquals &quot;select_one&quot; &quot;embedded&quot;)}}'
+</code></pre>
+
+<h3 id="recommended"><code>recommended</code></h3>
+
+<p>An item can be recommended. This item will bear the tag &ldquo;recommended&rdquo; in the admin console.</p>
+
+<pre><code class="language-yaml">    recommended: true
+</code></pre>
+
+<h3 id="hidden"><code>hidden</code></h3>
+
+<p>Items can be hidden. They will not be visible if hidden.</p>
+
+<pre><code class="language-yaml">    hidden: true
+</code></pre>
+
+<h3 id="readonly"><code>readonly</code></h3>
+
+<p>Items can be readonly.</p>
+
+<pre><code class="language-yaml">    readonly: true
+</code></pre>
+
+<h3 id="affix"><code>affix</code></h3>
+
+<p>Items can be affixed left or right. These items will appear in the admin console on the same line.</p>
+
+<pre><code class="language-yaml">    affix: left
+</code></pre>
+
+
+<h2 class="linked-headline" id="using-cmd-commands-as-input-to-options">
+    <a href="/docs/config-screen/config-yaml/#using-cmd-commands-as-input-to-options" class="anchor" id="#using-cmd-commands-as-input-to-options"></a>
+    Using CMD (commands) as input to options
+</h2>
+
+
+<p>Commands can be used as defaults, values, or data with <code>default_cmd</code>, <code>value_cmd</code> and
+<code>data_cmd</code> respectively. Data is a special property of the file type. The value corresponds
+to the file name while the data corresponds to its contents.</p>
+
+<pre><code class="language-yaml">    value_cmd:
+      name: hash_key
+      value_at: 0
+</code></pre>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+												<a href="/docs/config-screen/commands/">
+													Commands
+													<span class="icon u-chevronIcon"></span>
+												</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

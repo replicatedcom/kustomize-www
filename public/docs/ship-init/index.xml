@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship Init on Replicated Help Center</title>
+    <link>/docs/ship-init/</link>
+    <description>Recent content in Ship Init on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    
+	<atom:link href="/docs/ship-init/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

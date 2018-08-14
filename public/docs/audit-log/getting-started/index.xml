@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audit Log Overview on Replicated Help Center</title>
+    <link>/docs/audit-log/getting-started/</link>
+    <description>Recent content in Audit Log Overview on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/audit-log/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Audit Log Overview</title>
+      <link>/docs/audit-log/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/overview/</guid>
+      <description>The Replicated Audit Log is a self-hosted platform that provides an audit log for your application; one that meets all of the principles of what makes a good audit log. The Replicated Audit Log provides both an API to send audit events to, and several different methods for your customers to view and extract their events.</description>
+    </item>
+    
+    <item>
+      <title>Replicated Audit Log Basics</title>
+      <link>/docs/audit-log/getting-started/basics/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/basics/</guid>
+      <description>At it&amp;rsquo;s core, the Replicated Audit Log consists of 3 components:
+ The Publisher API, which is used by a vendor application to report audit events to Retraced. A Logs Viewer which can be embedded in the frontend of a vendor application to allow end customers to view, search, and export logs. The Enterprise IT Integration API which be used by end customers to consume audit log events programmatically.  The first step in any Retraced integration is sending an event to the Publisher API.</description>
+    </item>
+    
+    <item>
+      <title>First Audit Log Event</title>
+      <link>/docs/audit-log/getting-started/first-event/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/first-event/</guid>
+      <description>Getting started with Retraced is easy. The best way to start is to pick a single event to start sending to confirm that everything is set up right. If your site has a login event, it&amp;rsquo;s a perfect first event because it covers most of the scenarios that can be tricky when starting to audit log. Login events can have both a successful and failed response, it can be anonymous or authenticated and it may or may not belong to a group.</description>
+    </item>
+    
+    <item>
+      <title>Searching For Events</title>
+      <link>/docs/audit-log/getting-started/searching/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/searching/</guid>
+      <description>The Retraced interface supports searching for events. While it&amp;rsquo;s presented as a single, simple input field, the Retraced search interface supports complex structured queries.
+Free Text Search By default, the search query you type in the search box will seach all fields for this value.
+Structured (Advanced) Search If you use the advanced search syntax, you can perform very specific and exact searches to find the data you are looking for.</description>
+    </item>
+    
+    <item>
+      <title>Reporting Event Timing</title>
+      <link>/docs/audit-log/getting-started/time-synchronization/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/time-synchronization/</guid>
+      <description>Recording Event Timing in Retraced Retraced allows clients to specify a created time for any event. In addition to allowing clients to report event timing, the Retraced Publisher API will record an NTP-synchronized received timestamp for all events.</description>
+    </item>
+    
+    <item>
+      <title>Renaming Properties</title>
+      <link>/docs/audit-log/getting-started/renaming-properties/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/renaming-properties/</guid>
+      <description>Some properties of an audit event can be renamed after the event is received. There is a limited amount of these and the original event is still immutable. But data can change over time, and it&amp;rsquo;s important to be able to link to and find events later.
+Actor When sending an event, an actor is a required field. The id property of the actor is immutable and is linked and cross referenced in Retraced to make it possible to search for and find all events that a specific actor performed.</description>
+    </item>
+    
+    <item>
+      <title>Embedded Viewer</title>
+      <link>/docs/audit-log/getting-started/embedded-viewer/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/embedded-viewer/</guid>
+      <description>Now that you&amp;rsquo;ve sent some events into Retraced, it&amp;rsquo;s time to expose them to your end users. Retraced has an advanced, highly customizable log viewer that you can embed on your own site.
+Note: Currently, a React-based site is required to embed the viewer, but support for embedding without React will be available soon.
+Installing There are a few short steps to getting the embedded viewer integrated into your site.</description>
+    </item>
+    
+  </channel>
+</rss>

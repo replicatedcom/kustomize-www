@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snapshots on Replicated Help Center</title>
+    <link>/categories/snapshots/</link>
+    <description>Recent content in Snapshots on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Thu, 07 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/snapshots/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Custom Backup Commands</title>
+      <link>/docs/snapshots/custom-scripts/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/custom-scripts/</guid>
+      <description>Custom Backup Commands  Snapshots include customer console configuration, data from bind mounted volumes of all containers and if the customer instance is a multi-host instance, docker registry data will be backed up as well. You also have the ability to specify a custom script that will be run at the time of a backup. This script will run on the host that is running the primary Replicated container, not inside any of your containers.</description>
+    </item>
+    
+    <item>
+      <title>Customer Configuration Options</title>
+      <link>/docs/snapshots/customer-snapshot-configuration/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/customer-snapshot-configuration/</guid>
+      <description>Customer Snapshot Configuration Options  If snapshots are enabled for an application, end customers can configure the destination, retention, timeout and schedule automated snapshots on the Console Settings screen.
+Remote Backends
+Replicated supports S3, SFTP, and local backends for snapshots. The use of local storage is highly discouraged in production instances for the following reasons:
+ Moving large number of files to local host can become a resource consuming operation, which will slow down other containers running on the host.</description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm</title>
+      <link>/docs/snapshots/swarm/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/swarm/</guid>
+      <description>Snapshots with Docker Swarm  Any volumes holding your application data can be included in snapshots by listing them under the backup section in your config. Replicated will check all nodes in your cluster for volumes with a matching name and include them in your snapshot.
+--- # kind: replicated replicated_api_version: 2.17.0 name: &amp;quot;Swarm&amp;quot; admin_commands: - alias: backup-redis-to-rdb command: [redis-cli, bgsave] run_type: exec service: redis - alias: mv-backup-rdb-to-safe-place command: [mv, /data/dump.</description>
+    </item>
+    
+    <item>
+      <title>Snapshots</title>
+      <link>/docs/snapshots/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snapshots Overview</title>
+      <link>/docs/snapshots/overview/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/overview/</guid>
+      <description>Replicated gives customers the ability to take a snapshot of a running app. The customer will have the option to restore this snapshot as an option on the &amp;ldquo;Upload license&amp;rdquo; screen when starting the Replicated management container. Snapshots can be taken at an automatic interval and can also be manually triggered via the dashboard of the console.</description>
+    </item>
+    
+    <item>
+      <title>Snapshotting with the Replicatedctl CLI</title>
+      <link>/docs/snapshots/cli/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/snapshots/cli/</guid>
+      <description>Using the CLI to Restore Snapshots  The Replicated CLI can be used to examine and restore snapshots. There are two ways to configure snapshots backend without accessing the UI. Configuration options can be added to the /etc/replicated.conf file or specified on the command line.
+{ &amp;quot;SnapshotsStore&amp;quot;: &amp;quot;s3&amp;quot;, &amp;quot;SnapshotsPath&amp;quot;: &amp;quot;/data&amp;quot;, &amp;quot;SnapshotsS3Bucket&amp;quot;: &amp;quot;snapshots&amp;quot;, &amp;quot;SnapshotsAWSRegion&amp;quot;: &amp;quot;us-east-1&amp;quot;, &amp;quot;SnapshotsAWSKeyID&amp;quot;: &amp;quot;xxxx&amp;quot;, &amp;quot;SnapshotsAWSSecretKey&amp;quot;: &amp;quot;xxxx&amp;quot;, &amp;quot;SnapshotsSFTPHost&amp;quot;: &amp;quot;192.168.0.10&amp;quot;, &amp;quot;SnapshotsSFTPUsername&amp;quot;: &amp;quot;jondoe&amp;quot;, &amp;quot;SnapshotsSFTPPrivateKeyPEM&amp;quot;: &amp;quot;pem data&amp;quot; }  replicatedctl snapshot ls \ --backend-options SnapshotsStore=s3 \ --backend-options SnapshotsS3Bucket=snapshots \ --backend-options SnapshotsAWSRegion=us-east-1 \ --backend-options SnapshotsAWSKeyID=ABCDEFGHIJK123456789 \ --backend-options SnapshotsAWSSecretKey=xxxx \ --backend-options SnapshotsSFTPPrivateKeyPEM=YmFzZTY0IGVuY29kZWQgcGVtIGRhdGE= Snapshot backend options SnapshotsStore: Snapshot backend type.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/docs/snapshots/kubernetes/</link>
+      <pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/snapshots/kubernetes/</guid>
+      <description>Kubernetes Snapshots can be used to configure incremental backups for any Kubernetes resources that use a Persistent Volume Claim (PVC) for persistent storage.
+Configuration In addition to storing your application data in a PVC, you&amp;rsquo;ll need to whitelist it in your Replicated application yaml&amp;rsquo;s backup section. For example, to back up a PVC named redis-data-volume, use the following backup config.
+backup: enabled: true kubernetes: pvc_names: [ &amp;quot;redis-data-volume&amp;quot; ]  Example Below is an End-to-end application config for a PVC-backed redis deployment.</description>
+    </item>
+    
+  </channel>
+</rss>

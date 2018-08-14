@@ -1,0 +1,1347 @@
+{
+    "help_center_distributing": [
+        {
+            "title": "Adding Nodes To A Replicated Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-replicated",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing additional nodes with a Replicated cluster"
+        },
+        {
+            "title": "Adding Nodes To A Swarm Cluster",
+            "uri": "docs/distributing-an-application/add-nodes-swarm",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing additional nodes with a Swarm cluster"
+        },
+        {
+            "title": "Add Nodes",
+            "uri": "docs/distributing-an-application/add-nodes",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "When a Replicated-orchestrated application is configured with a clustering strategy, additional nodes can be installed on remote instances to take part in the cluster."
+        },
+        {
+            "title": "Airgapped Installations",
+            "uri": "docs/distributing-an-application/airgapped-installations",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "The steps required of the end customer to install a Replicated application into an air gapped environment."
+        },
+        {
+            "title": "Airgapped Installations",
+            "uri": "docs/distributing-an-application/create-licenses",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "The steps required of the end customer to install a Replicated application into an air gapped environment."
+        },
+        {
+            "title": "Installing Replicated 1.2",
+            "uri": "docs/distributing-an-application/installing-1.2",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "How to install the legacy version of Replicated 1.2 via Deb and Yum packages."
+        },
+        {
+            "title": "Manually Installing Replicated",
+            "uri": "docs/distributing-an-application/installing-manually",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for manually installing Replicated 2"
+        },
+        {
+            "title": "Installing Replicated on Kubernetes",
+            "uri": "docs/distributing-an-application/installing-on-kubernetes",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated on a Kubernetes cluster."
+        },
+        {
+            "title": "Installing Replicated with the Easy Install Script",
+            "uri": "docs/distributing-an-application/installing-via-script",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated via the easy install script."
+        },
+        {
+            "title": "Installing Replicated with Docker Swarm",
+            "uri": "docs/distributing-an-application/installing-with-swam",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated with a Swarm cluster"
+        },
+        {
+            "title": "Installing Replicated",
+            "uri": "docs/distributing-an-application/installing",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Instructions for installing Replicated via the easy install script, manually or behind a proxy. Also includes instructions for uninstalling Replicated."
+        },
+        {
+            "title": "Maintenance",
+            "uri": "docs/distributing-an-application/maintenance",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "Maintenance processes to use after Replicated is installed"
+        },
+        {
+            "title": "Promote Releases",
+            "uri": "docs/distributing-an-application/promote-releases",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
+        },
+        {
+            "title": "Supported Operating Systems",
+            "uri": "docs/distributing-an-application/support-operating-systems",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "View the supported operating systems"
+        },
+        {
+            "title": "Promote Releases",
+            "uri": "docs/distributing-an-application/upgrading-1.2",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "The process for leveraging Replicated's release channel management functionality to stage versions and deliver updates to customers."
+        },
+        {
+            "title": "Upgrading Replicated",
+            "uri": "docs/distributing-an-application/upgrading",
+            "categories": [
+                "Distributing"
+            ],
+            "description": "The process for end customers to update Replicated services to access the latest improvements to the underlying system since their installation."
+        }
+    ],
+    "help_center_examples": [
+        {
+            "title": "Certificate Chain Example",
+            "uri": "docs/examples/certificate-chain",
+            "categories": [
+                "Examples"
+            ],
+            "description": "An advanced walk through for using the Replicated cert command in an app's YAML definition to generate new TLS certificates for customer use in an application."
+        },
+        {
+            "title": "Counter App Example",
+            "uri": "docs/examples/counter-app",
+            "categories": [
+                "Examples"
+            ],
+            "description": "An example of a general-purpose Replicated app definition. This can be used as a starting point as it covers the basic functionality of the Replicated platform."
+        },
+        {
+            "title": "GetELK",
+            "uri": "docs/examples/getelk",
+            "categories": [
+                "Examples"
+            ],
+            "description": "An advanced example of the ELK Stack deployed through Replicated with a complex and complete configuration section."
+        },
+        {
+            "title": "Kubernetes Guestbook",
+            "uri": "docs/examples/kubernetes-guestbook",
+            "categories": [
+                "Examples"
+            ],
+            "description": "The Kubernetes Guestbook Application, in a Replicated YAML."
+        },
+        {
+            "title": "Docker Swarm Voting Application",
+            "uri": "docs/examples/swarm-votingapp",
+            "categories": [
+                "Examples"
+            ],
+            "description": "The Docker Swarm Voting Application, in a Replicated YAML."
+        }
+    ],
+    "help_center_getting_started": [
+        {
+            "title": "Concepts and Terminology",
+            "uri": "docs/getting-started/concepts-and-terms",
+            "categories": [
+                "Getting Started"
+            ],
+            "description": "The core concepts and terms used in these documents to describe the Replicated functionality."
+        },
+        {
+            "title": "Getting Started",
+            "uri": "docs/getting-started/get-started",
+            "categories": [
+                "Getting Started"
+            ],
+            "description": "A quick overview of how to get started with the Replicated platform."
+        },
+        {
+            "title": "Create & Manage Releases",
+            "uri": "docs/getting-started/manage-releases",
+            "categories": [
+                "Getting Started"
+            ],
+            "description": "An introduction to the release channel management workflow for development on the Replicated platform."
+        },
+        {
+            "title": "Replicated Private Registry",
+            "uri": "docs/getting-started/replicated-private-registry",
+            "categories": [
+                "Getting Started"
+            ],
+            "description": "How to push and access private images in Replicated's hosted private registry."
+        },
+        {
+            "title": "Choosing A Scheduler",
+            "uri": "docs/getting-started/schedulers",
+            "categories": [
+                "Getting Started"
+            ],
+            "description": "Schedulers"
+        }
+    ],
+    "help_center_knowledgebase": [
+        {
+            "title": "Automate Install for Testing",
+            "uri": "docs/kb/developer-resources/automate-install",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Branding Your Configuration Screen",
+            "uri": "docs/kb/developer-resources/branding",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Custom Supplied TLS Certs and Keys",
+            "uri": "docs/kb/developer-resources/certs-and-keys",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Configuration Screen Overview",
+            "uri": "docs/kb/developer-resources/config-screen-overview",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Create and Promote a Release",
+            "uri": "docs/kb/developer-resources/create-promote-release",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Manage Custom License Fields",
+            "uri": "docs/kb/developer-resources/custom-license-fields",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Using cmd To Populate Values & Defaults",
+            "uri": "docs/kb/developer-resources/default-or-value",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Devicemapper Warning",
+            "uri": "docs/kb/developer-resources/devicemapper-warning",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker File Copy",
+            "uri": "docs/kb/developer-resources/docker-file-copy",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker IPTables and the No-Chain Error",
+            "uri": "docs/kb/developer-resources/docker-iptables",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker Links",
+            "uri": "docs/kb/developer-resources/docker-links",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Domains Used by Replicated",
+            "uri": "docs/kb/developer-resources/domains-required-by-replicated",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Migrating Your Application With Ephemeral Containers",
+            "uri": "docs/kb/developer-resources/ephemeral-containers",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Finding Your API Token and App ID",
+            "uri": "docs/kb/developer-resources/finding-your-api-token-and-app-id",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Generate an API Token",
+            "uri": "docs/kb/developer-resources/generate-api-token",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "GitHub Integration For Config File Versioning And Storage",
+            "uri": "docs/kb/developer-resources/github-integration-config-files",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Integrating GitHub",
+            "uri": "docs/kb/developer-resources/github-integration",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Image Tagging Best Practices",
+            "uri": "docs/kb/developer-resources/image-tagging",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "LDAP Integration",
+            "uri": "docs/kb/developer-resources/ldap",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "License Controlled Settings",
+            "uri": "docs/kb/developer-resources/license-controlled-settings",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Speed Up Development By Using Local Images",
+            "uri": "docs/kb/developer-resources/local-images",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Local Testing Setup",
+            "uri": "docs/kb/developer-resources/local-testing",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Creating a Multi-Node Cassandra Cluster",
+            "uri": "docs/kb/developer-resources/multi-node-cassandra",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "One-Click Updates",
+            "uri": "docs/kb/developer-resources/one-click-updates",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Understanding Optional/Required Releases",
+            "uri": "docs/kb/developer-resources/optional-required",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Running Commands on the Host OS",
+            "uri": "docs/kb/developer-resources/running-commands-on-the-host-os",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Sequence Your App Startup and Know When it's Ready",
+            "uri": "docs/kb/developer-resources/sequencing-startup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Adding SMTP Support On-Premises",
+            "uri": "docs/kb/developer-resources/smtp",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Third Party Registries",
+            "uri": "docs/kb/developer-resources/third-party-registries",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Updating Expiration on Licenses",
+            "uri": "docs/kb/developer-resources/updating-expiration-on-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Zero Downtime Backups with Replicated (Redis)",
+            "uri": "docs/kb/developer-resources/zero-downtime-backup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Automated Snapshot Configuration",
+            "uri": "docs/kb/supporting-your-customers/automated-snapshot-configuration",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Replicated CLI Alias",
+            "uri": "docs/kb/supporting-your-customers/cli-alias",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Creating An AMI",
+            "uri": "docs/kb/supporting-your-customers/creating-an-ami",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Customer Facing Installation Instructions",
+            "uri": "docs/kb/supporting-your-customers/customer-install-instructions",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Replicated Data Policy",
+            "uri": "docs/kb/supporting-your-customers/data-policy",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Firewalls",
+            "uri": "docs/kb/supporting-your-customers/firewalls",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Known Versions of Replicated",
+            "uri": "docs/kb/supporting-your-customers/install-known-versions",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installation Script",
+            "uri": "docs/kb/supporting-your-customers/installation-script",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Docker Enterprise Edition and Replicated on RHEL",
+            "uri": "docs/kb/supporting-your-customers/installing-docker-ee",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Docker in an Airgapped Environment",
+            "uri": "docs/kb/supporting-your-customers/installing-docker-in-airgapped",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Licenses",
+            "uri": "docs/kb/supporting-your-customers/installing-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Instance Reporting",
+            "uri": "docs/kb/supporting-your-customers/instance-reporting",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "New License UX",
+            "uri": "docs/kb/supporting-your-customers/license-screen",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Multi-channel Licenses",
+            "uri": "docs/kb/supporting-your-customers/multichannel-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Networking Setup",
+            "uri": "docs/kb/supporting-your-customers/networking-setup",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Registries",
+            "uri": "docs/kb/supporting-your-customers/registries",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Resetting the Console Password",
+            "uri": "docs/kb/supporting-your-customers/resetting-console-password",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Restoring From a Snapshot",
+            "uri": "docs/kb/supporting-your-customers/restoring-from-a-snapshot",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Setting Up Two Factor Authentication",
+            "uri": "docs/kb/supporting-your-customers/set-up-2fa",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Generate a Support Bundle from the CLI",
+            "uri": "docs/kb/supporting-your-customers/support-bundle-from-cli",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Two Factor Activation for Customers",
+            "uri": "docs/kb/supporting-your-customers/two-factor-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating SSL/TLS Certificates for On-Prem Admin",
+            "uri": "docs/kb/supporting-your-customers/update-certs",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating a Live Release",
+            "uri": "docs/kb/supporting-your-customers/update-live-release",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating Replicated",
+            "uri": "docs/kb/supporting-your-customers/updating-replicated",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Upgrading to Replicated 2.0",
+            "uri": "docs/kb/supporting-your-customers/upgrading-to-replicated-2",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        }
+    ],
+    "help_center_developer_resources": [
+        {
+            "title": "Automate Install for Testing",
+            "uri": "docs/kb/developer-resources/automate-install",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Branding Your Configuration Screen",
+            "uri": "docs/kb/developer-resources/branding",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Custom Supplied TLS Certs and Keys",
+            "uri": "docs/kb/developer-resources/certs-and-keys",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Configuration Screen Overview",
+            "uri": "docs/kb/developer-resources/config-screen-overview",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Create and Promote a Release",
+            "uri": "docs/kb/developer-resources/create-promote-release",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Manage Custom License Fields",
+            "uri": "docs/kb/developer-resources/custom-license-fields",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Using cmd To Populate Values & Defaults",
+            "uri": "docs/kb/developer-resources/default-or-value",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Devicemapper Warning",
+            "uri": "docs/kb/developer-resources/devicemapper-warning",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker File Copy",
+            "uri": "docs/kb/developer-resources/docker-file-copy",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker IPTables and the No-Chain Error",
+            "uri": "docs/kb/developer-resources/docker-iptables",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Docker Links",
+            "uri": "docs/kb/developer-resources/docker-links",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Domains Used by Replicated",
+            "uri": "docs/kb/developer-resources/domains-required-by-replicated",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Migrating Your Application With Ephemeral Containers",
+            "uri": "docs/kb/developer-resources/ephemeral-containers",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Finding Your API Token and App ID",
+            "uri": "docs/kb/developer-resources/finding-your-api-token-and-app-id",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Generate an API Token",
+            "uri": "docs/kb/developer-resources/generate-api-token",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "GitHub Integration For Config File Versioning And Storage",
+            "uri": "docs/kb/developer-resources/github-integration-config-files",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Integrating GitHub",
+            "uri": "docs/kb/developer-resources/github-integration",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Image Tagging Best Practices",
+            "uri": "docs/kb/developer-resources/image-tagging",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "LDAP Integration",
+            "uri": "docs/kb/developer-resources/ldap",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "License Controlled Settings",
+            "uri": "docs/kb/developer-resources/license-controlled-settings",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Speed Up Development By Using Local Images",
+            "uri": "docs/kb/developer-resources/local-images",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Local Testing Setup",
+            "uri": "docs/kb/developer-resources/local-testing",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Creating a Multi-Node Cassandra Cluster",
+            "uri": "docs/kb/developer-resources/multi-node-cassandra",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "One-Click Updates",
+            "uri": "docs/kb/developer-resources/one-click-updates",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Understanding Optional/Required Releases",
+            "uri": "docs/kb/developer-resources/optional-required",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Running Commands on the Host OS",
+            "uri": "docs/kb/developer-resources/running-commands-on-the-host-os",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Sequence Your App Startup and Know When it's Ready",
+            "uri": "docs/kb/developer-resources/sequencing-startup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Adding SMTP Support On-Premises",
+            "uri": "docs/kb/developer-resources/smtp",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Third Party Registries",
+            "uri": "docs/kb/developer-resources/third-party-registries",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Updating Expiration on Licenses",
+            "uri": "docs/kb/developer-resources/updating-expiration-on-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        },
+        {
+            "title": "Zero Downtime Backups with Replicated (Redis)",
+            "uri": "docs/kb/developer-resources/zero-downtime-backup",
+            "categories": [
+                "Knowledgebase",
+                "Developer Resources"
+            ]
+        }
+    ],
+    "help_center_supporting_your_customers": [
+        {
+            "title": "Automated Snapshot Configuration",
+            "uri": "docs/kb/supporting-your-customers/automated-snapshot-configuration",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Replicated CLI Alias",
+            "uri": "docs/kb/supporting-your-customers/cli-alias",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Creating An AMI",
+            "uri": "docs/kb/supporting-your-customers/creating-an-ami",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Customer Facing Installation Instructions",
+            "uri": "docs/kb/supporting-your-customers/customer-install-instructions",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Replicated Data Policy",
+            "uri": "docs/kb/supporting-your-customers/data-policy",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Firewalls",
+            "uri": "docs/kb/supporting-your-customers/firewalls",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Known Versions of Replicated",
+            "uri": "docs/kb/supporting-your-customers/install-known-versions",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installation Script",
+            "uri": "docs/kb/supporting-your-customers/installation-script",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Docker Enterprise Edition and Replicated on RHEL",
+            "uri": "docs/kb/supporting-your-customers/installing-docker-ee",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Docker in an Airgapped Environment",
+            "uri": "docs/kb/supporting-your-customers/installing-docker-in-airgapped",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Installing Licenses",
+            "uri": "docs/kb/supporting-your-customers/installing-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Instance Reporting",
+            "uri": "docs/kb/supporting-your-customers/instance-reporting",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "New License UX",
+            "uri": "docs/kb/supporting-your-customers/license-screen",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Multi-channel Licenses",
+            "uri": "docs/kb/supporting-your-customers/multichannel-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Networking Setup",
+            "uri": "docs/kb/supporting-your-customers/networking-setup",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Registries",
+            "uri": "docs/kb/supporting-your-customers/registries",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Resetting the Console Password",
+            "uri": "docs/kb/supporting-your-customers/resetting-console-password",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Restoring From a Snapshot",
+            "uri": "docs/kb/supporting-your-customers/restoring-from-a-snapshot",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Setting Up Two Factor Authentication",
+            "uri": "docs/kb/supporting-your-customers/set-up-2fa",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Generate a Support Bundle from the CLI",
+            "uri": "docs/kb/supporting-your-customers/support-bundle-from-cli",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Two Factor Activation for Customers",
+            "uri": "docs/kb/supporting-your-customers/two-factor-licenses",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating SSL/TLS Certificates for On-Prem Admin",
+            "uri": "docs/kb/supporting-your-customers/update-certs",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating a Live Release",
+            "uri": "docs/kb/supporting-your-customers/update-live-release",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Updating Replicated",
+            "uri": "docs/kb/supporting-your-customers/updating-replicated",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        },
+        {
+            "title": "Upgrading to Replicated 2.0",
+            "uri": "docs/kb/supporting-your-customers/upgrading-to-replicated-2",
+            "categories": [
+                "Knowledgebase",
+                "Supporting Your Customers"
+            ]
+        }
+    ],
+    "help_center_packaging": [
+        {
+            "title": "Admin Commands",
+            "uri": "docs/packaging-an-application/admin-commands",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Implementation guide for application vendors to provide customers with aliased CLI commands that can be performed in the containers across a cluster."
+        },
+        {
+            "title": "Application Properties",
+            "uri": "docs/packaging-an-application/application-properties",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The Replicated YAML section `properties` allows several high level items to be defined."
+        },
+        {
+            "title": "Clustering",
+            "uri": "docs/packaging-an-application/clustering",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "An implementation guide for using the Replicated built in clustering functionality."
+        },
+        {
+            "title": "Commands",
+            "uri": "docs/packaging-an-application/commands",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The `cmds` section of the Replicated YAML allows you to leverage the power of external commands within your application configuration."
+        },
+        {
+            "title": "Components And Containers",
+            "uri": "docs/packaging-an-application/components-and-containers",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The `components` section of the Replicated YAML defines how the containers will be created and started."
+        },
+        {
+            "title": "Config Screen",
+            "uri": "docs/packaging-an-application/config-screen",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The `config` section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance."
+        },
+        {
+            "title": "Custom Metrics",
+            "uri": "docs/packaging-an-application/custom-metrics",
+            "categories": [
+                "Packaging"
+            ]
+        },
+        {
+            "title": "Custom Preflight Checks",
+            "uri": "docs/packaging-an-application/custom-preflight-checks",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "A guide to implementing the Custom Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
+        },
+        {
+            "title": "Docker Swarm",
+            "uri": "docs/packaging-an-application/docker-swarm",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Packaging a Docker Swarm application in Replicated"
+        },
+        {
+            "title": "Events and Orchestration",
+            "uri": "docs/packaging-an-application/events-and-orchestration",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The `events` section of the Replicated YAML allows application vendors to sequence and orchestrate containers based on events from other containers."
+        },
+        {
+            "title": "Kubernetes",
+            "uri": "docs/packaging-an-application/kubernetes",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Packaging a Kubernetes application in Replicated"
+        },
+        {
+            "title": "LDAP and Identity Integration",
+            "uri": "docs/packaging-an-application/ldap-integration",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Enabling LDAP and AD user auth and sync in an application through Replicated."
+        },
+        {
+            "title": "Kubernetes Preflight Checks",
+            "uri": "docs/packaging-an-application/preflight-checks-k8s",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "A guide to implementing the Kubernetes Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
+        },
+        {
+            "title": "Preflight Checks",
+            "uri": "docs/packaging-an-application/preflight-checks",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "A guide to implementing the Preflight Checks feature to analyze customer systems to determine if the environment meets the minimum requirements for installation or update."
+        },
+        {
+            "title": "Snapshots",
+            "uri": "docs/packaging-an-application/snapshots",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Guide to enabling application snapshots for backup and restore functionality."
+        },
+        {
+            "title": "Support Bundle",
+            "uri": "docs/packaging-an-application/support-bundle",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Installed instances can generate a support bundle with relevant logs and instance information."
+        },
+        {
+            "title": "Template Functions",
+            "uri": "docs/packaging-an-application/template-functions",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "The dynamic configuration management functionality available throughout the Replicated YAML."
+        },
+        {
+            "title": "Test Procs",
+            "uri": "docs/packaging-an-application/test-procs",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "Test Procs enable customers to easily test the validity of the unsaved configuration parameters they're entering during installation."
+        },
+        {
+            "title": "YAML Overview",
+            "uri": "docs/packaging-an-application/yaml-overview",
+            "categories": [
+                "Packaging"
+            ],
+            "description": "An overview of the various sections of the Replicated YAML."
+        }
+    ],
+    "help_center_integration_api": [
+        {
+            "title": "Audit API",
+            "uri": "docs/reference/integration-api/audit-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Read and write to audit events to the Replicated audit log."
+        },
+        {
+            "title": "Console API",
+            "uri": "docs/reference/integration-api/console-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "API to use the Replicated console settings"
+        },
+        {
+            "title": "Identity API",
+            "uri": "docs/reference/integration-api/identity-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides authentication and syncing with LDAP sever"
+        },
+        {
+            "title": "License API",
+            "uri": "docs/reference/integration-api/license-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides methods for your application to query properties of the installed license"
+        },
+        {
+            "title": "Provisioning API",
+            "uri": "docs/reference/integration-api/provisioning-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides authentication and syncing with LDAP sever"
+        },
+        {
+            "title": "Status API",
+            "uri": "docs/reference/integration-api/status-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Provides endpoints for your application to report various kinds of status information back to the management console"
+        },
+        {
+            "title": "Version API",
+            "uri": "docs/reference/integration-api/version-api",
+            "categories": [
+                "Integration API"
+            ],
+            "description": "Read the current application version, release notes, pending updates and apply updates"
+        }
+    ],
+    "help_center_reference": [
+        {
+            "title": "Replicated CLI Reference",
+            "uri": "docs/reference/replicated-cli",
+            "categories": [
+                "Reference"
+            ],
+            "description": "Generated documentation on the default Replicated CLI commands available for all Replicated installed instances."
+        },
+        {
+            "title": "Replicated YAML Reference",
+            "uri": "docs/reference/yaml",
+            "categories": [
+                "Reference"
+            ],
+            "description": "Generated documentation for the Replicated YAML spec."
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advanced Audit Logging on Replicated Help Center</title>
+    <link>/categories/advanced-audit-logging/</link>
+    <description>Recent content in Advanced Audit Logging on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/advanced-audit-logging/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced Audit Logging</title>
+      <link>/docs/audit-log/advanced/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automated Events</title>
+      <link>/docs/audit-log/advanced/automated-events/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/automated-events/</guid>
+      <description>When an end customer uses a Viewer or Enterprise token to view logs directly from the Publisher API, the Replicated Audit Log will record the read event in your audit log.
+You can configure these events with the optional view_log_action parameter when you create a new Viewer or Enterprise token through the Publisher API. The default action is &amp;ldquo;audit.log.view&amp;rdquo;. Viewer tokens also require an actor_id parameter at creation time, while Enterprise token audit events generate an actor.</description>
+    </item>
+    
+    <item>
+      <title>Display Templates</title>
+      <link>/docs/audit-log/advanced/display-templates/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/display-templates/</guid>
+      <description>Display templates is an important part of controlling how the events are rendered in the browser, exports or over any other stream.
+A display template has the following components:
+Definitions Name The name is internal only to the admin site. This is a place for you to record what the template is attempting to do.
+Rules The rules field is a collection of rules that will be evaluated by the Replicated Audit Log rules engine to determine if this template shoud be applied to the event.</description>
+    </item>
+    
+    <item>
+      <title>SSH Event Streaming</title>
+      <link>/docs/audit-log/advanced/ssh-streaming/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/ssh-streaming/</guid>
+      <description>SSH Event Streaming allows Enterprise API users to stream events as they occur over ssh using an Enterprise API Token.
+Usage To use the SSH event streaming feature, you&amp;rsquo;ll need to start by getting an Enterprise API token.
+To open a stream for your sandbox, connect to tail.auditlog.replicated.com using your Enterprise API token as the username:
+ssh aeb1c315b9a8ed11a3f998d8e8ff@tail.auditlog.replicated.com  Once the connection is open, CSV events will begin to stream through stdout, and can be piped to a file or other event ingest system.</description>
+    </item>
+    
+    <item>
+      <title>Template Comparators</title>
+      <link>/docs/audit-log/advanced/template-comparators/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/template-comparators/</guid>
+      <description>The following values are acceptable for &amp;ldquo;comparator&amp;rdquo; field in rules in the Replicated Audit Log rules engine:
+   Comparator Desscription     eq Matches when the value is equal to the event object data at path. This compares values only and doesn&amp;rsquo;t compare types.   is The same as eq but it also compares types of objects.   neq Matches when the value is not equal to the event object data at path.</description>
+    </item>
+    
+    <item>
+      <title>Tracking Publisher Versions</title>
+      <link>/docs/audit-log/advanced/tracking-versions/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/tracking-versions/</guid>
+      <description>When sending events to your Audit Log, consumers of the Publisher API may send event metadata like the name and version of the vendor component that is sending the events. A minimal event payload that includes this metadata might look like
+{ &amp;quot;action&amp;quot;: &amp;quot;user.login&amp;quot;, &amp;quot;crud&amp;quot;: &amp;quot;c&amp;quot;, &amp;quot;group&amp;quot;: { &amp;quot;id&amp;quot;: &amp;quot;7890123&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;some.customer&amp;quot; }, &amp;quot;actor&amp;quot;: { &amp;quot;id&amp;quot;: &amp;quot;123456&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;user@example.com&amp;quot; }, &amp;quot;component&amp;quot;: &amp;quot;authentication-api&amp;quot;, &amp;quot;version&amp;quot;: &amp;quot;ae242df&amp;quot; }  Where component describes a single versioned piece of a architecture like authentication-api or spreadsheet-processor and version is usually one of</description>
+    </item>
+    
+  </channel>
+</rss>

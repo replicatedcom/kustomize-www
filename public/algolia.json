@@ -1,0 +1,407 @@
+{
+    "ship_other": [
+        {
+            "title": "Replicated Ship",
+            "uri": "",
+            "content": "",
+            "objectID": "",
+            "type": "home"
+        }
+    ],
+    "ship_docs": [
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-init/getting-started/overview",
+            "content": "Replicated Ship modern  composable define package application so configured  installed  updated operated someone limited knowledge software works",
+            "objectID": "docs/ship-init/getting-started/overview",
+            "title": "Ship Overview",
+            "description": "An overview of Ship Init",
+            "weight": "40002",
+            "categories": [
+                "Ship Init"
+            ],
+            "index": "docs",
+            "aliases": [
+                "/docs/ship-init/",
+                "/docs/ship-init/getting-started"
+            ],
+            "gradient": "console"
+        },
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-update/getting-started/overview",
+            "content": "Replicated Ship modern  composable define package application so configured  installed  updated operated someone limited knowledge software works",
+            "objectID": "docs/ship-update/getting-started/overview",
+            "title": "Ship Overview",
+            "description": "An overview of Ship Update",
+            "weight": "40002",
+            "categories": [
+                "Ship Update"
+            ],
+            "index": "docs",
+            "aliases": [
+                "/docs/ship-update/",
+                "/docs/ship-update/getting-started"
+            ],
+            "gradient": "console"
+        },
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-watch/getting-started/overview",
+            "content": "Replicated Ship modern  composable define package application so configured  installed  updated operated someone limited knowledge software works",
+            "objectID": "docs/ship-watch/getting-started/overview",
+            "title": "Ship Overview",
+            "description": "An overview of Ship Watch",
+            "weight": "40002",
+            "categories": [
+                "Ship Watch"
+            ],
+            "index": "docs",
+            "aliases": [
+                "/docs/ship-watch/",
+                "/docs/ship-watch/getting-started"
+            ],
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/assets/asset-types",
+            "content": "Assets core object enables describe applications managed Ship  allow define scripts  manifests  application artifacts needed deploy application end customer s internal infrastructure  goal Ship assets give customers controlled  transparent access resources use deploy SaaS application own private cloud  Assets include things like  Scripts installing upgrading application cloud server Private Docker images  tar gz archives Container orchestration manifests Kubernetes Docker Compose Modules infrastructure automation tools Chef  Ansible  Salt  Terraform web content accessible private public URL Documented number methods Ship provides facilitating distributing assets on prem customers  Inline application spec Proxied private docker registries Proxied private github repos Mirrored public github repos Ship  short assets section pull run private docker container look like  assets  v1  docker  dest  images myimage tar image  registry replicated com myapp myimage 1 0 source  replicated inline  dest  scripts install sh mode  755 contents       bin bash echo  starting application     docker load   images myimage tar docker run  d registry replicated com myapp myimage 1 0 echo  started   exit 0",
+            "objectID": "docs/ship-yaml/assets/asset-types",
+            "title": "Asset Types",
+            "description": "Types of assets available in Ship",
+            "weight": "41002",
+            "categories": [
+                "Ship Assets"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/assets/docker",
+            "content": "Docker asset types useful deliver private public Docker images installation  It s recommended build airgapped environments  images cannot pulled directly upstream registry  Using docker asset type  it s possible pull load images workstation running installation  Once pulled  adding simple script push local registry will ensure cluster bootstrap run offline  YAML reference documentation published defines available keys  Delivering Public Image following example will create redis tar installer s workstation  inline script load push registry  assets  v1  docker  dest    images redis tar image  redis 4 0 9 inline  dest    install sh mode  0755 contents       bin bash docker load     images redis tar docker tag redis 4 0 9   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    redis 4 0 9 docker push   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    redis 4 0 9 config  v1  name  registry title  Docker Registry items  name  registry_endpoint type  text required  true help_text  registry mycompany com name  registry_namespace type  text required  true help_text  myapp Delivering Private Image Replicated Private Registry good deliver private images used Ship  Pushing images registry will ensure available pulled authorized customers when using valid licenses  following example will download private image Replicated Private Registry will retag push local registry  assets  v1  docker  dest    images worker tar image  registry replicated com application worker 1 0 1 source  replicated inline  dest    install sh mode  0755 contents       bin bash docker load     images worker tar docker tag worker 1 0 1   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    worker 1 0 1 docker push   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    worker 1 0 1 config  v1  name  registry title  Docker Registry items  name  registry_endpoint type  text required  true help_text  registry mycompany com name  registry_namespace type  text required  true help_text  myapp",
+            "objectID": "docs/ship-yaml/assets/docker",
+            "title": "Docker Asset Type",
+            "description": "Description of the docker asset type",
+            "weight": "41004",
+            "categories": [
+                "Ship Assets"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/assets/github",
+            "content": "GitHub assets used pull content private public GitHub repositories  GitHub asset  deliver of  entire repository directory repository single file repository Delivering Assets Private Repositories deliver asset private github repository  you ll need install Replicated GitHub Application organization give access repositories you d deliver       following example will create rook operator yml rook examples repository installer s workstation  script deploy operator existing Kubernetes cluster  assets  v1  github  dest  rook operator yml repo  rook rook ref  82425aafcc96b6b5e2673fe82dff86a157f806bd path  cluster examples kubernetes ceph operator yaml inline  dest  install sh mode  0755 contents       bin bash kubectl apply  f installer k8s rook operator yml Delivering directory following example will pull guestbook example kubernetes examples repository installer s workstation  script deploy guestbook application existing Kubernetes cluster  assets  v1  github  dest  k8s  repo  kubernetes examples ref  master path  guestbook  inline  dest  install sh mode  0755 contents       bin bash kubectl apply  f installer k8s guestbook",
+            "objectID": "docs/ship-yaml/assets/github",
+            "title": "Github Asset Type",
+            "description": "Deliver assets from private or public GitHub repositories",
+            "weight": "41006",
+            "categories": [
+                "Ship Assets"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/assets/inline",
+            "content": "Inline asset types useful deliver text files Kubernetes manifests  application config files shell scripts  YAML reference documentation published defines available keys  Kubernetes Manifests example delivering simple Kubernetes manifest inline asset Ship is  assets  v1  inline  dest    k8s redis yml contents        apiVersion  v1 kind  Pod metadata  labels  name  redis redis sentinel   true  role  master name  redis master spec  containers  name  master image  redis 4 0 9 ports  containerPort  6379 resources  limits  cpu   0 1  value   true  Application Config example delivering applicastion config file inline asset  redis conf  Ship is  assets  v1  inline  dest    conf redis conf contents    slaveof redis master 6379 slave serve stale data yes Shell Scripts example delivering shell script inline asset Ship is  assets  v1  inline  dest    install sh mode  755 contents       bin bash kubectl apply  f   k8s   n   repl ConfigOption  k8s_namespace",
+            "objectID": "docs/ship-yaml/assets/inline",
+            "title": "Inline Asset Type",
+            "description": "Description of the inline asset type",
+            "weight": "41003",
+            "categories": [
+                "Ship Assets"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/assets/web",
+            "content": "Web Asset types useful deliver web content private public URL  Web Asset types ideal pulling data private data stores used Ship application  ability interact HTTP HTTPS web services provides flexibility configure Ship application  YAML reference documentation published defines available keys  When use Web Asset Type Compared asset types supported Ship  Web Asset types offer  Pulling content public private data stores  Amazon S3 Bucket  used Ship app  Oftentimes useful inject data Ship application  Web Asset type provides functionality retrieve data private public data store use directly Ship application Versatility interacting Ship components  Web Asset type used pull down web content used Ship application  means Ship assets advantage resources made available Web Asset When Use Asset Types cases using asset types provides better Ship experience  Pulling Docker image  Use Docker Asset pull image public docker registry  registry replicated com  configured third party registry produce tar archive container image Pulling content GitHub  Create GitHub Asset files downloaded either public linked Github repo Delivering Web Content following example will pull content public Amazon S3 Bucket place contents bucket   installation terms and conditions installer s workstation  assets  v1  web  url  https   s3 us east 2 amazonaws com path to installation terms and conditions dest    installation terms and conditions Note method parameter omitted simple example  Unless specified  Web Asset types will default Leveraging Web Asset Type Across Ship Assets Suppose want deliver public Docker image Ship application load push registry  Amazon S3 Bucket containing script that  when executed  loads  tags  pushes image registry  look something this     bin bash docker load     images redis tar docker tag redis 4 0 9 registryendpoint registrynamespace redis 4 0 9 docker push registryendpoint registrynamespace redis 4 0 9 Instead providing script inline  retrieve Web Asset  assets  v1  docker  dest    images redis tar image  redis 4 0 9 web  url  https   s3 us east 2 amazonaws com path to install sh dest    install sh mode  0755 headers  Accept  text x shellscript",
+            "objectID": "docs/ship-yaml/assets/web",
+            "title": "Web Asset Type",
+            "description": "Deliver any web content",
+            "weight": "41005",
+            "categories": [
+                "Ship Assets"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/config/overview",
+            "content": "config key define dynamic values end customers need configure use application  include things like  External Database connection details credentials internal integrations settings SMTP auth API keys Tunable settings application  number worker processes   log level  Replicated Ship  simple config section one item look config  v1  name   database_info  title   Database Info  items  name  pg_connstring title   Connection string PostgreSQL server  type  text configuration options API identical used applications managed Replicated s scheduler suite  documentation found Config Screen YAML  Config values  not defaults  will saved  ship state json when assets generated  subsequent runs ship  saved values will used instead values within config when preparing initial settings screen user  item readonly  true set  values saved state will not used item  allows users existing settings prepopulated when rerunning ship",
+            "objectID": "docs/ship-yaml/config/overview",
+            "title": "Config Overview",
+            "description": "Introduction to the Ship Config syntax",
+            "weight": "43002",
+            "categories": [
+                "Ship Config"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-yaml/getting-started/overview",
+            "content": "Replicated Ship modern  composable define package application so configured  installed  updated operated someone limited knowledge software works",
+            "objectID": "docs/ship-yaml/getting-started/overview",
+            "title": "Ship Init Overview",
+            "description": "An overview of Ship Init",
+            "weight": "40002",
+            "categories": [
+                "Ship Init"
+            ],
+            "index": "docs",
+            "aliases": [
+                "/docs/ship-yaml/",
+                "/docs/ship-yaml/getting-started"
+            ],
+            "gradient": "console"
+        },
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-yaml/getting-started/yaml-overview",
+            "content": "artifacts  assets config required install configure modern application  Replicated Ship requires single YAML file defines objects needed install application  Ship YAML three distinct top level sections  Assets assets section defines public private assets required available start application  Replicated Ship provides functionality securely deliver assets licensed customers  format assets specification fully documented Assets documentation  Lifecycle lifecycle section defines custom messages steps will displayed enforced during installation update application  format lifecycle specification fully documented Lifecycle documentation  Config config section defines values calculated input person installing application  config required  regardless method used install application  CLI  Web UI  Automation   format config specification fully documented Config Screen documentation",
+            "objectID": "docs/ship-yaml/getting-started/yaml-overview",
+            "title": "YAML Overview",
+            "description": "An overview of Ship",
+            "weight": "40003",
+            "categories": [
+                "Ship"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/lifecycle/overview",
+            "content": "lifecycle key define customize end user experience customers installing application  lifecycle two step types   message    print message console  used multiple times   render    collect configuration generate assets  commonly used once application  ship  short assets section pull run private docker container look lifecycle  v1  message  contents    installer will prepare assets so run CoolTool Enterprise  render     message  contents    Asset rendering complete  Copy following files production server   scripts install sh   images myimage tar then  server  run bash   scripts install sh start app  Thanks using CoolTool",
+            "objectID": "docs/ship-yaml/lifecycle/overview",
+            "title": "Lifecycle Overview",
+            "description": "Introduction to the Ship lifecycle definition",
+            "weight": "42002",
+            "categories": [
+                "Ship Lifecycle"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/playbooks/airgap-kubernetes",
+            "content": "When distributing Kubernetes  or Helm  application using Replicated Ship  will running Kubernetes cluster deploy to  Enterprise Kubernetes clusters used internal applications installed operated airgapped environments  airgap cluster cluster doesn t outbound Internet access  therefore cannot pull application images Docker registry  recommended deploy applications airgap clusters require Docker registry that s already running customer environment  When requiring existing Docker registry use  images will retagged pushed registry install time  Replicated Ship supports workflow workstation that s performing installation  Require installer provide registry name namespace registry Require workstation running installation logged registry Once requirements met  Ship assets scripts can  Pull public private images using Docker Retag images match registry endpoint namespace Update Kubernetes YAML reflect correct registry pull      assets  v1  docker  dest    images redis tar image  redis 4 1 inline  dest    k8s redis yml contents    apiVersion  v1 kind  Pod metadata  name  redis spec  containers  name  redis image    repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    redis 4 1 env  name  MASTER value   true  ports  containerPort  6379 inline  dest    install sh mode  0755 contents       bin bash docker load     installer images redis tar docker tag redis 4 1   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    redis 4 1 docker push   repl ConfigOption  registryendpoint      repl ConfigOption  registrynamespace    redis 4 1 kubectl apply  f   installer k8s config  v1  name  registry title  Docker Registry items  name  registry_endpoint type  text required  true help_text  registry mycompany com name  registry_namespace type  text required  true help_text  myapp",
+            "objectID": "docs/ship-yaml/playbooks/airgap-kubernetes",
+            "title": "Kubernetes and Airgap",
+            "description": "Best practices for creating airgap installations on Kubernetes",
+            "weight": "44002",
+            "categories": [
+                "Ship Playbooks"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/playbooks/random-passwords",
+            "content": "When distributing applications  useful generate passwords part bootstrap process  example  app bundles SQL database  you ll want set password database  allow application components use password access data  done use hidden  mutable string value RandomString template function  config  v1  items  name  db_password hidden  true value     repl RandomString 32    Assuming state json file right location when ship run end customer  will ensure database password will generated one time  subsequent ship runs will read initially generated password  config item behave exactly without hidden  true  besides displayed user  However  may not wish allow user edit password  databases support setting root password during initial configuration require additional steps change existing password  wished allow user view password without editing it  add readonly template function referred value  config  v1  items  name  db_password hidden  true value     repl RandomString 32    name  dbpasswordview title   The Database Password  readonly  true value     repl ConfigOption  db_password           cases may wish generate nonce will regenerated every time ship run  done using struture persistent password example addition readonly  true  Readonly values not loaded saved state json file  so random string will recreated every time  config  v1  items  name  random_nonce hidden  true readonly  true value     repl RandomString 32",
+            "objectID": "docs/ship-yaml/playbooks/random-passwords",
+            "title": "Generating Random Passwords",
+            "description": "Generate static password values that are unique to each customer's installation",
+            "weight": "44005",
+            "categories": [
+                "Ship Playbooks"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/playbooks/registry-kubernetes",
+            "content": "When distributing Kubernetes  or Helm  application  customers will able provide Docker registry required application images pushed to  Replicated Ship retag rewrite Kubernetes YAML work scenario  Kubernetes cluster   set using Replicated Kubernetes installer  Docker registry not available  Replicated Kubernetes installer will pre pull registry 2 image nodes cluster       start  include following assets Ship release  define Docker registry  will help registry bootstrapped cluster  Note imagePullPolicy pod set cluster not attempt pull image Docker Hub  instead expect image will already present  assets  v1  inline  dest    k8s registry registry service yml contents        kind  Service apiVersion  v1 metadata  name  registry namespace  docker registry spec  selector  app  registry ports  port  5000 targetPort  5000 inline  dest    k8s registry registry pod yml contents        apiVersion  v1 kind  Pod metadata  name  registry labels  app  registry namespace  docker registry spec  containers  name  registry image  registry 2 imagePullPolicy  ports  containerPort  5000 volumes  name  registry data awsElasticBlockStore  volumeID  fsType  ext4 volumeMounts  mountPath   var lib registry name  registry data      Next  include private images Ship YAML assets  will force Ship download installation workstation  assets  v1  docker  dest    images private image tar image  registry replicated com myapplication private image 1 source  replicated inline  dest    k8s pod yml contents        apiVersion  v1 kind  Pod metadata  name  app labels  app  app spec  containers  name  app image  docker registry svc registry myapplication private image 1 imagePullPolicy  Always      assets  v1  inline  dest    scripts install sh contents       bin bash kubectl create ns docker registry kubectl apply  f    k8s registry  kubectl svc registry   namespace docker registry docker load     installer images private image tar docker tag registry replicated com myapplication private image 1   REGISTRY_ADDRESS  myapplication private image 1 docker push   REGISTRY_ADDRESS  myapplication private image 1",
+            "objectID": "docs/ship-yaml/playbooks/registry-kubernetes",
+            "title": "Docker Registries",
+            "description": "Shipping a Docker Registry to support Airgap applications",
+            "weight": "44003",
+            "categories": [
+                "Ship Playbooks"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-05-02T01:19:20Z",
+            "uri": "docs/ship-yaml/playbooks/support-kubernetes",
+            "content": "When distributing Kubernetes  or Helm  application  things may sometimes go wrong getting app running end customer s installation environment  few examples  may running incompatible kubernetes version may short resources CPU Memory may networking restrictions keeping app components communicating No matter issue is  you ll likely need collect logs  workload statuses  information installation environment order help end customer running  Replicated s Support Bundle help automate organize collection information  highly customizable configurable tool allows collecting files command results portable  tar gz file customer upload https   console replicated com send support team diagnose       example include two assets  Kubernetes deployment runs support bundle pod cluster script kubectl exec running support bundle pod stream support bundle back workstation attaching stdout  assets  v1  inline  dest    k8s troubleshoot support deployment yml contents        apiVersion  extensions v1beta1 kind  Deployment metadata  name  support bundle spec  replicas  1 selector  matchLabels  tier  support bundle template  metadata  labels  tier  support bundle spec  containers  name  support bundle image  replicated support bundle alpha imagePullPolicy  Always command   bin sleep infinity inline  dest    scripts troubleshoot support bundle sh contents       bin sh OUTPUT_PATH supportbundle tar gz set  e echo  Finding support bundle pod  pod   kubectl pods   selector tier support bundle  o jsonpath    items    metadata name    echo  Collecting pod   pod    bin sh  c  kubectl exec   pod     support bundle generate   customer id   repl Installation  customerid      out     quiet   yes upload      OUTPUTPATH echo  Bundle generated   OUTPUT_PATH   lifecycle  v1  render          above example uses   yes upload call support bundle generate  change   no upload disable uploading https   console replicated com",
+            "objectID": "docs/ship-yaml/playbooks/support-kubernetes",
+            "title": "Troubleshoot A Kubernetes Application",
+            "description": "Including Replicated's flexible Troubleshoot tooling to support your end customers",
+            "weight": "44004",
+            "categories": [
+                "Ship Playbooks"
+            ],
+            "index": "docs",
+            "icon": "replicatedShip",
+            "gradient": "console"
+        },
+        {
+            "date": "2018-03-03T04:02:20Z",
+            "uri": "docs/ship-yaml/troubleshooting/overview",
+            "content": "Replicated Ship modern  composable define package application so configured  installed  updated operated someone limited knowledge software works",
+            "objectID": "docs/ship-yaml/troubleshooting/overview",
+            "title": "Troubleshooting Overview",
+            "description": "Tools and best practices for troubleshooting a Ship application.",
+            "weight": "40002",
+            "categories": [
+                "Ship Init"
+            ],
+            "index": "docs",
+            "aliases": [
+                "/docs/ship-yaml/troubleshooting"
+            ],
+            "gradient": "console"
+        }
+    ],
+    "ship_guides": [
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/automated-deployment-kubernetes-app",
+            "content": "Kubernetes applications delivered Replicated Ship deployed using automation instead manually running kubectl deploy laptop  It s possible deploy first release application completely automated  even airgapped environmnets  document walks example application will configured initially deployed  Prerequisites addition external resources software vendor requries  databases  etc   you ll need have  version control system  VCS   GitHub Enterprise secure storage location  store single  small  encrypted file continuous intergration   continuous delivery platform  CircleCI Enterprise TravisCI Enterprise local Docker Registry  accessible target Kubernetes cluster  Artifactory working Kubernetes cluster meets minimum requirements provided software vendor Overview process deploy first release  complete automated configure release laptop running MacOS  Windows Linux  store release source file  ship yaml  local VCS  configured Ship state  state json  secure storage location  Then  workflow built two inputs automate build deployment target Kubernetes cluster  Initial Configuration laptop running Docker  run setup command provided software vendor  curl  sSL https   get replicated com ship customer_id    docker compose  f   will download couple Docker containers show message similar this  Please visit following URL browser continue installation http   localhost 8800 Next  open URL provided  http   localhost 8800   supply intial configuration values click Save  Extract state json ship yml point  laptop required Docker images  configured Kubernetes manifests  scripts needed deploy application using kubectl  That s not goal here  so don t run provided scripts commands  state json configured state single file  stored  ship state json  file may contain secrets confidental information database passwords more  Encrypt file command line     TODO provide example here  manually upload secure storage location  example    aws s3 upload my app config   encrypt   ship state json ship yaml original YAML file software vendor created used input create local assets stored   installer ship ship yaml  file doesn t contain secrets  it s generic release manifest  Commit file new repo source control  example  cd installer ship git init git add ship yml git remote add     git push origin master Configure CI CD workflow Next  configure CI CD workflow state json ship yml inputs  run ship container headless  automated  mode  will produce assets created when running Admin Console locally  following commands added CI CD process    docker pull repliated ship 1   aws s3 my app config state json   decrypt state json   docker run  v PWD  in  vPWD installer  out  e CUSTOMER_ID  replicated ship 1   headless     installer scripts install sh     installer scripts test sh   aws s3 upload my app config   encrypt   ship state json will pull Replicated Ship container  download encrypted state  decrypt state  will use Ship container build fetch required assets  Then  CI CD server will run installation script test created installation  Finally  above script will encrypt latest state values  store securely next release",
+            "objectID": "guides/automated-deployment-kubernetes-app",
+            "title": "Automated Deployment with a Kubernetes App",
+            "description": "Automated Deployment with a Kubernetes App",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "icon": "replicatedKubernetes",
+            "categories": [
+                "Deploying"
+            ],
+            "index": "guides",
+            "resources": [
+                {
+                    "title": "ship_spec.yaml",
+                    "src": "resources/ship_spec.yaml"
+                },
+                {
+                    "title": "circle.config",
+                    "src": "resources/circle.config"
+                }
+            ]
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/automated-deployment",
+            "content": "Applications delivered Replicated Ship deployed using automation instead manually running installation scripts  It s possible deploy first release application completely automated  even airgapped environments  process automate deployment application varies  depending automation tools used  document defines steps involved automating deployment on prem application  links specific implementations  when possible  process automate deployment application involves 3 steps  Create initial state json release yml  2 files  automate creation required assets Execute install script deploy Create state json release yml workstation  not server  running Docker  run setup command provided software vendor  example  curl  sSL https   get replicated com ship customer_id    docker compose  f   will download couple Docker containers show message similar this  Please visit following URL browser continue installation http   localhost 8800 Next  open URL provided  http   localhost 8800   Admin Console  UI will prompt input values provide instructions install  Using Admin Console  supply intial configuration values click Save Continue  Extract state json ship yml point  two new directories created workstation   ship installer    installer  directory contains generated scripts assets needed deploy application  contains docker images  kubernetes manifests  anything else needed deploy run application airgapped environment  goal automate deployment  directory isn t needed now  It s ok delete    ship  directory contains two files needed automate initial installation  Find files named   ship state json   ship release yml  files described below  state json configured state will single file  stored  ship state json  file may contain secrets confidental information database passwords more  Don t check file source control without taking proper steps ensure remains secret  release yaml original YAML file software vendor created used input create local assets stored    ship release yaml  file doesn t contain secrets  it s generic release manifest  file commited configuration management repo tool automate deployment  Automate release creation state json release yml  it s possible generate assets originally created installer  directory  using following command    docker run  v PWD  in  vPWD  out    e CUSTOMER_ID  replicated ship 1     headless     studio file   ship release yml will pull Replicated Ship container  will use Ship container build fetch required assets  command will mount release yml state json files known locations replicated ship container read  Using customer_id provided  the license key   ship container will pull images artifacts  apply state json values create deployable assets  Deploy Deploying application simple running   installer scripts install sh  installer customized configuration info passed in  will deploy target servers clusters defined  Related documents Automated Deployment Kubernetes application Automated Updates CircleCI Automated Testing",
+            "objectID": "guides/automated-deployment",
+            "title": "Automated Deployment",
+            "description": "Automated Deployment",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "icon": "replicatedCircle",
+            "categories": [
+                "Deploying"
+            ],
+            "index": "guides"
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/automated-testing",
+            "content": "process enabled automatically deploy latest version application production server  it s good idea deploy release different environment run series tests confirm application working expected  commonn feature Ship applications include everything necessary test application  packaged bash script  enables you  operator  rely operational knowledge software vendor included ensure deployment update successful  Understanding tests common tools patterns used when testing application  it s nearly impossible properly test entire  complex application without deep understanding architecture application works  help here  Replicated Ship encourages every application vendor write bash script will created   installer scripts test sh  bash script entrypoint testing application  once it s deployed server  script exits 0 status code  tests passed it s safe deploy version production server",
+            "objectID": "guides/automated-testing",
+            "title": "Automated Testing",
+            "description": "Automated Testing",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "categories": [
+                "Testing"
+            ],
+            "index": "guides"
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/automated-updates-ansible",
+            "content": "",
+            "objectID": "guides/automated-updates-ansible",
+            "title": "Automated Updates with Ansible",
+            "description": "Automated Updates with Ansible",
+            "weight": "30003",
+            "icon": "replicatedAnsible",
+            "gradient": "greenToGreen",
+            "index": "guides"
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/automated-updates-circleci",
+            "content": "CircleCI  and CircleCI Enterprise  workflows used automatically deploy updates Ship application when there s update available  document will walk setting automated process update already deployed Ship application whenever update available  end result two environments running application  one testing validation  one production  process defined will automatically deploy test environment  deploy production when tests pass  following workflow will created CircleCI  commit  updated Ship YAML   build will start CircleCI will download state GitHub Enterprise repository  decrypt CircleCI will pull replicated ship container image new release will built release will deployed test environmnet Vendor supplied tests will run against test environment Once validated  production release will updated Prepare CircleCI build environment CircleCI build environment will need access secrets  Add following secrets CircleCI project settings  STATEENCRYPTIONKEY  variable will used encrypt state file storing GitHub Enterprise repository CUSTOMER_ID  variable static  supplied application vendor  Credentials needed deploy application  case  it s Kubernetes application  so credentials log cluster using kubectl  Download decrypt state Pull latest Ship container Build latest release Deploy test envrionment Execute tests Deploy production environment defaults   defaults docker  image  replicated ship 1 working_directory    repo version  2 jobs  configure",
+            "objectID": "guides/automated-updates-circleci",
+            "title": "Automated Updates with CircleCI",
+            "description": "Automated Updates with CircleCI",
+            "weight": "30003",
+            "icon": "replicatedCircleCI",
+            "gradient": "greenToGreen",
+            "index": "guides",
+            "resources": [
+                {
+                    "title": ".circleci/config.yaml",
+                    "src": "resources/circle.config"
+                }
+            ]
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/deploying-manually",
+            "content": "",
+            "objectID": "guides/deploying-manually",
+            "title": "Deploying Manually",
+            "description": "Deploying Manually",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "categories": [
+                "Configuring"
+            ],
+            "index": "guides"
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/initial-configuration",
+            "content": "When configuring deploying Ship application  it s common create initial configuration  build audited  workflow driven process automate deployment future updates  When initially configuring deploying unfamiliar application  it s helpful start easy to use tools help bootstrap process  best deploy Replicated Ship application run replicated ship process workstation doesn t direct access production servers  Complete initial configuration process create assets workstation  Ship provides web based UI runs locally  in Docker  process similar across different applications  Generating initial configuration application installed  initial configuration generated  Start workstation  MacOS  Windows  Linux  Docker installed  process designed run workstation pull external resources  not airgapped   prepare deployment inside network  workstation running configuration isn t required access target server s   start  run command software vendor provided  example  curl  sSL https   get replicated com ship customer_id    docker compose  f   will download couple Docker containers show message similar this  Please visit following URL browser continue installation http   localhost 8800 Admin Console Visiting URL workstation will open web based workflow configure application bring initial artifacts configuration directory workstation  deployed time  application will require different inputs generate initial configuration  Once complete this  message will show it s completed  show next steps  next steps will vary  depending application configured  sure read these  Deploying completing initial configuration steps using Admin Console  applications will download generate various assets  configuration files  docker images  kubernetes manifests  etc   default  will stored directory named   installer  relative directory Admin Console started from   Ship application will create several directories        ship           state json       release yaml         installer           scripts           install sh       test sh       images     k8s   ship  Every Ship application will create  ship directory two files  state json  file contains version information values provided Admin Console release yaml  raw  configured application manifest used automate installation script installer  Every Ship application will create installer directory  contains scripts assets needed present deploy application  replicated ship container will produce everything directory when given   ship state json   ship release yaml  defined above   installer scripts convention  Ship application will create installer scripts directory  directory will contain scripts necessary install  update test application  installer images applications packaged Docker containers  installer images directory will contain exported   tar files application images required run application  Deploying Once application configured locally    ship state json   ship release yaml securely stored configured automatically deployed",
+            "objectID": "guides/initial-configuration",
+            "title": "Initial configuration",
+            "description": "Configuring an application for the first deployment",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "index": "guides"
+        },
+        {
+            "date": "2018-05-01T19:00:00Z",
+            "uri": "guides/manage-state",
+            "content": "When Replicated Ship application initially configured  state file created stored  ship state json  file contains generated manually entered values initial setup  When upgrade available application  state file read applied new update  useful install application updates  Secrets State state file will often contain secrets confidental information database passwords keys  file stored securely  recommend encrypting storing secure  internal storage location used CI CD workflow help manage future updates application  Storing State Ship state file simple JSON text file  state file accessible automation procss that s performing update  Once update generated deployed  it s important update original state file  application update generate new values config automatically  will written state file when update built  Storing State S3 private  secured S3 bucket used store state file  desired  storing Ship state file S3  it s recommended to  Enable encryption at rest bucket properties Encrypt state file uploading example downloading  decrypting updating state file S3 bucket named third party applications  Download state file S3   aws s3 cp s3   third party applications application name state json enc    ship state json enc Decrypt state file   openssl enc  d  aes 256 cbc  pass pass  ENCRYPTION_KEY  in    ship state json enc  out    ship state json Ship build phase executes   docker run replicated ship        Customized ship build command Encrypt updated state file   openssl enc  aes 256 cbc  salt  pass pass  ENCRYPTION_KEY  in    ship state json  out    ship state json enc Upload updated state file S3   aws s3 cp    ship state json enc s3   third party applications application name state json Storing State GitHub Enterprise repository GitHub Enterprise server used securely store state files  encrypted commiting  example including state file repo Ship YAML  Clone repo   git clone git github com thirdpartyapps application name git   cd application name Decrypt state file   openssl enc  d  aes 256 cbc  a  pass pass  ENCRYPTION_KEY  in    ship state json enc  out    ship state json Ship build phase executes   docker run replicated ship        Customized ship build command Encrypt updated state file  base64 encode   openssl enc  aes 256 cbc  a  salt  pass pass  ENCRYPTION_KEY  in    ship state json  out    ship state json enc Add updated state file Ship YAML repo commit   git add    ship state json enc   git add   installer ship yml   git commit  m  Update my application release    git push origin master",
+            "objectID": "guides/manage-state",
+            "title": "Managing State",
+            "description": "Best practices to securely store and maange state",
+            "weight": "30003",
+            "gradient": "greenToGreen",
+            "categories": [
+                "Best Practices"
+            ],
+            "index": "guides"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicated and Docker Swarm on Replicated Help Center</title>
+    <link>/docs/swarm/getting-started/</link>
+    <description>Recent content in Replicated and Docker Swarm on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/swarm/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Replicated and Docker Swarm</title>
+      <link>/docs/swarm/getting-started/overview/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/overview/</guid>
+      <description>Replicated can be used with a Docker Swarm application to deploy an enterprise-installable version of your application. Replicated provides developers with the ability to support their applications, allow users to configure it for their enterprise environment, and offer their application as an appliance. When using Docker Swarm with Replicated, developers continue to get all of the functionality of the Replicated platform while having access to all of the Docker Swarm functionality.</description>
+    </item>
+    
+    <item>
+      <title>Concepts and Terminology</title>
+      <link>/docs/swarm/getting-started/concepts/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/concepts/</guid>
+      <description>Before shipping your application, there are a few terms to learn, as they are used throughout this guide.
+Application An application is the software package you are installing onto your customer&amp;rsquo;s servers. It isn&amp;rsquo;t a single binary, rather it&amp;rsquo;s all of the individual components and containers that are required to get a functional version of your product.
+Release A Release is an installable version of the application, complete with all metadata such as release notes and instructions.</description>
+    </item>
+    
+    <item>
+      <title>Development Environment</title>
+      <link>/docs/swarm/getting-started/development-environment/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/development-environment/</guid>
+      <description>Once your application is working in Docker, you&amp;rsquo;ll want to set up a simple environment to iterate on your Replicated YAML. Our Replicated Studio is designed to let shorten the cycle between writing and testing YAML and will recommend best practices to help you solve problems quickly.
+ Install Replicated Studio  First, use the easy install script to install Replicated with Swarm.
+curl -sSL https://get.replicated.com/swarm-init | sudo bash  Update the Replicated Configuration Find the private IP of the host:</description>
+    </item>
+    
+    <item>
+      <title>Create &amp; Manage Releases</title>
+      <link>/docs/swarm/getting-started/manage-releases/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/manage-releases/</guid>
+      <description>Create Releases  The Replicated vendor portal provides you with a location to create and release versions of your application to various release channels. The vendor portal hosts a built-in YAML editor and linter to help you write and validate YAML for the Replicated Native Scheduler.
+ Promoting Releases  Once a release is ready to be installed, the release can be promoted to one or more release channels.</description>
+    </item>
+    
+    <item>
+      <title>Create Customers &amp; Licenses</title>
+      <link>/docs/swarm/getting-started/create-licenses/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/create-licenses/</guid>
+      <description>Each customer you deploy to via Replicated will need a separate license file for their installation. This license file identifies the customer &amp;amp; application during the installation and update processes. A customer license is created in the Customers section of the vendor portal. You can manage the values and properties of that customer and license, including custom license fields, by selecting an individual customer.
+If you are looking to create or manage custom license fields you can do so in the License Fields section of the vendor portal or via the Vendor License API.</description>
+    </item>
+    
+    <item>
+      <title>Docker Registries</title>
+      <link>/docs/swarm/getting-started/docker-registries/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/swarm/getting-started/docker-registries/</guid>
+      <description>When building your application, you have the option to use the Replicated private registry, or any supported external private or public registry.
+ Replicated Registry  Every application created in Replicated has a completely isolated, private Docker registry available. You can push images to your private registry by finding the endpoint at (https://vendor.replicated.com/#/images) and using the Docker CLI to tag and push images. When using the Swarm Scheduler, Replicated will be able to automatically use the customer license file to authenticate and pull any images from the Replicated Registry.</description>
+    </item>
+    
+  </channel>
+</rss>

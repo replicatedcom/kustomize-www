@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Reporting Event Timing</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--console main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Reporting Event Timing</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">Events in an audit log must be ordered</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-replicatedAuditLog u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Audit Log</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Audit Log</h3>
+                
+                    
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/getting-started/overview/" class=" u-color--tuna ">Audit Log Overview</a>
+                        </h3>
+                        
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/basics/" class=" u-color--curiousBlue ">
+                                            Replicated Audit Log Basics
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/first-event/" class=" u-color--curiousBlue ">
+                                            First Audit Log Event
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/searching/" class=" u-color--curiousBlue ">
+                                            Searching For Events
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/time-synchronization/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                                            Reporting Event Timing
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/renaming-properties/" class=" u-color--curiousBlue ">
+                                            Renaming Properties
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/audit-log/getting-started/embedded-viewer/" class=" u-color--curiousBlue ">
+                                            Embedded Viewer
+                                        </a>
+                                    </p>
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/how-to/basics/" class=" u-color--tuna ">Audit Logging Basics</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/advanced/overview/" class=" u-color--tuna ">Advanced Audit Logging</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/exposing-events/overview/" class=" u-color--tuna ">Exposing Events</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/architecture/overview/" class=" u-color--tuna ">Architecture</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/sdks/available-sdks/" class=" u-color--tuna ">SDKs</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/apis/overview/" class=" u-color--tuna ">APIs</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/audit-log/troubleshooting/resources/" class=" u-color--tuna ">Troubleshooting</a>
+                        </h3>
+                        
+                    
+                
+            </div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<h2 id="recording-event-timing-in-retraced">Recording Event Timing in Retraced</h2>
+
+<p>Retraced allows clients to specify a <code>created</code> time for any event. In addition to allowing clients to report event timing, the Retraced Publisher API will record an NTP-synchronized <code>received</code> timestamp for all events.</p>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+												<a href="/docs/audit-log/getting-started/searching/">
+													<span class="icon u-chevronIcon"></span>
+													Searching For Events
+												</a>
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+												<a href="/docs/audit-log/getting-started/renaming-properties/">
+													Renaming Properties
+													<span class="icon u-chevronIcon"></span>
+												</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

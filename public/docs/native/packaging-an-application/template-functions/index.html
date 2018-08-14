@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Template Functions</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Template Functions</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">The dynamic configuration management functionality available throughout the Replicated YAML.</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-replicatedCircle u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Native Scheduler</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-lineHeight--normal u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Native Scheduler</h3>
+                
+                    
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/getting-started/overview/" class=" u-color--tuna ">Replicated Native Scheduler</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/packaging-an-application/overview/" class=" u-color--tuna ">Packaging An Application</a>
+                        </h3>
+                        
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/components-and-containers/" class=" u-color--curiousBlue ">
+                                            Components And Containers
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/volumes/" class=" u-color--curiousBlue ">
+                                            Container Volumes
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/environment_variables/" class=" u-color--curiousBlue ">
+                                            Environment Variables
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/config-files/" class=" u-color--curiousBlue ">
+                                            Config Files
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/ports-and-networking/" class=" u-color--curiousBlue ">
+                                            Ports / Networking
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/docker-options/" class=" u-color--curiousBlue ">
+                                            Docker Options
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/restart-policies/" class=" u-color--curiousBlue ">
+                                            Restart Policies
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/starting-and-stopping/" class=" u-color--curiousBlue ">
+                                            Starting and Stopping
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/events-and-orchestration/" class=" u-color--curiousBlue ">
+                                            Events and Orchestration
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/clustering/" class=" u-color--curiousBlue ">
+                                            Clustering
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/template-functions/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                                            Template Functions
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/support-bundle/" class=" u-color--curiousBlue ">
+                                            Support Bundle
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/custom-preflight-checks/" class=" u-color--curiousBlue ">
+                                            Custom Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/programmable-preflight-checks/" class=" u-color--curiousBlue ">
+                                            Programmable Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/custom-metrics/" class=" u-color--curiousBlue ">
+                                            Custom Metrics
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/admin-commands/" class=" u-color--curiousBlue ">
+                                            Admin Commands
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/application-properties/" class=" u-color--curiousBlue ">
+                                            Application Properties
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/native/packaging-an-application/promote-releases/" class=" u-color--curiousBlue ">
+                                            Promote Releases
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/customer-installations/overview/" class=" u-color--tuna ">Managing Customer Installations</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/native/examples/overview/" class=" u-color--tuna ">Native Scheduler Examples</a>
+                        </h3>
+                        
+                    
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<p>Template functions are marked by the double curly bracket + <em>&ldquo;repl&rdquo;</em> escape sequence. They allow for user input to be dynamically inserted into application configuration values. The sequence should be <code>{{repl</code>, not <code>{{ repl</code>.</p>
+
+<p>Template functions that refer to your containers are always addressed in pairs with &ldquo;component name&rdquo; and &ldquo;image name&rdquo;.  You should use the full image name as it appears in your container definition.</p>
+
+<h3 id="go-templates">Go Templates</h3>
+
+<p>Replicated uses Go&rsquo;s <a href="http://golang.org/pkg/text/template">template engine</a> to execute the following functions.  In addition to the functions listed here, all of the Go template runtime is available. Note that Go template functions must still be escaped with &ldquo;repl&rdquo; escape sequence as demonstrated below.</p>
+
+<pre><code class="language-go">{{repl if pipeline}} T1 {{repl else}} T0 {{repl end}}
+</code></pre>
+
+
+<h2 class="linked-headline" id="list-of-template-functions-for-the-native-scheduler">
+    <a href="/docs/native/packaging-an-application/template-functions/#list-of-template-functions-for-the-native-scheduler" class="anchor" id="#list-of-template-functions-for-the-native-scheduler"></a>
+    List Of Template Functions For The Native Scheduler
+</h2>
+
+
+
+<h2 class="linked-headline" id="configoption">
+    <a href="/docs/native/packaging-an-application/template-functions/#configoption" class="anchor" id="#configoption"></a>
+    ConfigOption
+</h2>
+
+
+
+<pre><code class="language-go">func ConfigOption(optionName string) string
+</code></pre>
+
+<p>Returns the value of the config option as a string.</p>
+
+<pre><code class="language-yaml">properties:
+  app_url: http://{{repl ConfigOption &quot;hostname&quot; }}
+</code></pre>
+
+<p>
+<h2 class="linked-headline" id="configoptiondata">
+    <a href="/docs/native/packaging-an-application/template-functions/#configoptiondata" class="anchor" id="#configoptiondata"></a>
+    ConfigOptionData
+</h2>
+
+
+(only supports <code>type: file</code>)</p>
+
+<pre><code class="language-go">func ConfigOptionData(fileName string) string
+</code></pre>
+
+<p>Returns the contents of the file uploaded for a configuration option as a string.</p>
+
+<pre><code class="language-yaml">config_files:
+- filename: /opt/certs/server.key
+  contents: {{repl ConfigOptionData &quot;ssl_key&quot;}}
+</code></pre>
+
+
+<h2 class="linked-headline" id="configoptionequals">
+    <a href="/docs/native/packaging-an-application/template-functions/#configoptionequals" class="anchor" id="#configoptionequals"></a>
+    ConfigOptionEquals
+</h2>
+
+
+
+<pre><code class="language-go">func ConfigOptionEquals(optionName string, expectedValue string) bool
+</code></pre>
+
+<p>Returns true if the configuration option value is equal to the supplied value.</p>
+
+<pre><code class="language-yaml">ports:
+   - private_port: &quot;80&quot;
+     public_port: &quot;80&quot;
+     port_type: tcp
+     when: '{{repl ConfigOptionEquals &quot;http_enabled&quot; &quot;1&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="configoptionnotequals">
+    <a href="/docs/native/packaging-an-application/template-functions/#configoptionnotequals" class="anchor" id="#configoptionnotequals"></a>
+    ConfigOptionNotEquals
+</h2>
+
+
+
+<pre><code class="language-go">func ConfigOptionNotEquals(optionName string, expectedValue string) bool
+</code></pre>
+
+<p>Returns true if the configuration option value is not equal to the supplied value.</p>
+
+<pre><code class="language-yaml">ports:
+   - private_port: &quot;443&quot;
+     public_port: &quot;443&quot;
+     port_type: tcp
+     when: '{{repl ConfigOptionNotEquals &quot;http_enabled&quot; &quot;1&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="nodeprivateipaddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodeprivateipaddress" class="anchor" id="#nodeprivateipaddress"></a>
+    NodePrivateIPAddress
+</h2>
+
+
+
+<pre><code class="language-go">func NodePrivateIPAddress(componentName string, imageName string) string
+</code></pre>
+
+<p>Returns Private IP Address of a given Component as a string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: REDIS_HOST_PRIVATE
+  value: '{{repl NodePrivateIPAddress &quot;DB&quot; &quot;redis&quot; }}'
+</code></pre>
+
+<p>Replaces HostPrivateIpAddress which is deprecated.</p>
+
+
+<h2 class="linked-headline" id="nodeprivateipaddressfirst">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodeprivateipaddressfirst" class="anchor" id="#nodeprivateipaddressfirst"></a>
+    NodePrivateIPAddressFirst
+</h2>
+
+
+
+<pre><code class="language-go">func NodePrivateIPAddressFirst(componentName string, imageName string) string
+</code></pre>
+
+<p>Returns the first node&rsquo;s Private IP Address of a given Component as a string.</p>
+
+
+<h2 class="linked-headline" id="nodeprivateipaddressall">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodeprivateipaddressall" class="anchor" id="#nodeprivateipaddressall"></a>
+    NodePrivateIPAddressAll
+</h2>
+
+
+
+<pre><code class="language-go">func NodePrivateIPAddressAll(componentName string, imageName string) []string
+</code></pre>
+
+<p>Returns node private IP addresses for all instances of a given Component as an array of strings.
+Replaces HostPrivateIpAddressAll which is deprecated.</p>
+
+<p>Note: <code>ContainerExposedPortAll</code>, <code>NodePrivateIPAddressAll</code>, <code>NodePublicIPAddressAll</code> are guaranteed to return in the same order</p>
+
+
+<h2 class="linked-headline" id="nodepublicipaddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodepublicipaddress" class="anchor" id="#nodepublicipaddress"></a>
+    NodePublicIPAddress
+</h2>
+
+
+
+<pre><code class="language-go">func NodePublicIPAddress(componentName string, imageName string) string
+</code></pre>
+
+<p>Returns Public IP Address of a given Component as a string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: REDIS_HOST_PUBLIC
+  value: '{{repl NodePublicIPAddress &quot;DB&quot; &quot;redis&quot; }}'
+</code></pre>
+
+<p>Replaces HostPublicIpAddress which is deprecated.</p>
+
+
+<h2 class="linked-headline" id="nodepublicipaddressfirst">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodepublicipaddressfirst" class="anchor" id="#nodepublicipaddressfirst"></a>
+    NodePublicIPAddressFirst
+</h2>
+
+
+
+<pre><code class="language-go">func NodePublicIPAddressFirst(componentName string, imageName string) string
+</code></pre>
+
+<p>Returns first node&rsquo;s public IP addresses for a given Component as a string.</p>
+
+
+<h2 class="linked-headline" id="nodepublicipaddressall">
+    <a href="/docs/native/packaging-an-application/template-functions/#nodepublicipaddressall" class="anchor" id="#nodepublicipaddressall"></a>
+    NodePublicIPAddressAll
+</h2>
+
+
+
+<pre><code class="language-go">func NodePublicIPAddressAll(componentName string, imageName string) []string
+</code></pre>
+
+<p>Returns node public IP addresses for all instances of a given Component as an array of strings.
+Replaces HostPublicIpAddressAll which is deprecated.</p>
+
+<p>Note: <code>ContainerExposedPortAll</code>, <code>NodePrivateIPAddressAll</code>, <code>Node PublicIPAddressAll</code> are guaranteed to return in the same order</p>
+
+
+<h2 class="linked-headline" id="containerexposedport">
+    <a href="/docs/native/packaging-an-application/template-functions/#containerexposedport" class="anchor" id="#containerexposedport"></a>
+    ContainerExposedPort
+</h2>
+
+
+
+<pre><code class="language-go">func ContainerExposedPort(componentName string, imageName string, internalPort string) string
+</code></pre>
+
+<p>Returns the node&rsquo;s public port mapped to the supplied exposed container port as a string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: REDIS_PORT
+  value: '{{repl ContainerExposedPort &quot;DB&quot; &quot;redis&quot; &quot;6379&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="containerexposedportfirst">
+    <a href="/docs/native/packaging-an-application/template-functions/#containerexposedportfirst" class="anchor" id="#containerexposedportfirst"></a>
+    ContainerExposedPortFirst
+</h2>
+
+
+
+<pre><code class="language-go">func ContainerExposedPortFirst(componentName string, imageName string, internalPort string) string
+</code></pre>
+
+<p>Returns the first node&rsquo;s public port mapped to the supplied exposed container port as a string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: REDIS_PORT
+  value: '{{repl ContainerExposedPortFirst &quot;DB&quot; &quot;redis&quot; &quot;6379&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="containerexposedportall">
+    <a href="/docs/native/packaging-an-application/template-functions/#containerexposedportall" class="anchor" id="#containerexposedportall"></a>
+    ContainerExposedPortAll
+</h2>
+
+
+
+<pre><code class="language-go">func ContainerExposedPortAll(componentName string, imageName string, internalPort string) string
+</code></pre>
+
+<p>Returns the node public port mapped to the supplied exposed container port for all instances of a given Component as an array of strings.</p>
+
+<p>Note: <code>ContainerExposedPortAll</code>, <code>NodePrivateIPAddressAll</code>, <code>NodePublicIPAddressAll</code> are guaranteed to return in the same order</p>
+
+
+<h2 class="linked-headline" id="licensefieldvalue">
+    <a href="/docs/native/packaging-an-application/template-functions/#licensefieldvalue" class="anchor" id="#licensefieldvalue"></a>
+    LicenseFieldValue
+</h2>
+
+
+
+<pre><code class="language-go">func LicenseFieldValue(customLicenseFieldName string) string
+</code></pre>
+
+<p>Returns the value for the Custom License Field as a string.</p>
+
+<pre><code class="language-yaml">config_files:
+  - filename: /opt/app/config.yml
+    contents: |
+      max_users: '{{repl LicenseFieldValue &quot;maximum_users&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="licenseproperty">
+    <a href="/docs/native/packaging-an-application/template-functions/#licenseproperty" class="anchor" id="#licenseproperty"></a>
+    LicenseProperty
+</h2>
+
+
+
+<pre><code class="language-go">func LicenseProperty(propertyName string) string
+</code></pre>
+
+<p>Returns a property from the License as a string.  Valid propertyNames are &ldquo;assignee&rdquo;, &ldquo;channel.name&rdquo;, &ldquo;expiration.date&rdquo;, and &ldquo;expiration.policy&rdquo;.</p>
+
+<pre><code class="language-yaml">config_files:
+  - filename: /opt/app/config.yml
+    contents: |
+      expiration.date: {{repl LicenseProperty &quot;expiration.date&quot;}}
+</code></pre>
+
+
+<h2 class="linked-headline" id="appid">
+    <a href="/docs/native/packaging-an-application/template-functions/#appid" class="anchor" id="#appid"></a>
+    AppID
+</h2>
+
+
+
+<pre><code class="language-go">func AppID() string
+</code></pre>
+
+<p>Returns the app id.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: APP_ID
+  value: '{{repl AppID }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="appversion">
+    <a href="/docs/native/packaging-an-application/template-functions/#appversion" class="anchor" id="#appversion"></a>
+    AppVersion
+</h2>
+
+
+
+<pre><code class="language-go">func AppVersion() int
+</code></pre>
+
+<p>Returns the app version sequence.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: APP_VERSION
+  value: '{{repl AppVersion }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="appversionfirst">
+    <a href="/docs/native/packaging-an-application/template-functions/#appversionfirst" class="anchor" id="#appversionfirst"></a>
+    AppVersionFirst
+</h2>
+
+
+
+<pre><code class="language-go">func AppVersionFirst() int
+</code></pre>
+
+<p>Returns the version sequence of the first version installed.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: APP_VERSION_FIRST
+  value: '{{repl AppVersionFirst }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="appversioncurrent">
+    <a href="/docs/native/packaging-an-application/template-functions/#appversioncurrent" class="anchor" id="#appversioncurrent"></a>
+    AppVersionCurrent
+</h2>
+
+
+
+<pre><code class="language-go">func AppVersionCurrent() int
+</code></pre>
+
+<p>Returns the current app version sequence.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: APP_VERSION_CURRENT
+  value: '{{repl AppVersionCurrent }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="runoffline">
+    <a href="/docs/native/packaging-an-application/template-functions/#runoffline" class="anchor" id="#runoffline"></a>
+    RunOffline
+</h2>
+
+
+
+<pre><code class="language-go">func RunOffline() bool
+</code></pre>
+
+<p>Returns whether or not we are running in airgap mode. This is available in the Kubernetes and Swarm implementations, but will always return false.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: IS_AIRGAP
+  value: '{{repl RunOffline }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="appsetting">
+    <a href="/docs/native/packaging-an-application/template-functions/#appsetting" class="anchor" id="#appsetting"></a>
+    AppSetting
+</h2>
+
+
+
+<pre><code class="language-go">func AppSetting(key string) string
+</code></pre>
+
+<p>Returns a setting from the current app release.</p>
+
+<p>Possible Options:
+<code>version.label</code>
+<code>release.notes</code>
+<code>release.date</code>
+<code>install.date</code>
+<code>release.channel</code></p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VERSION
+  value: '{{repl AppSetting &quot;version.label&quot;}}'
+- name: RELEASE_NOTES
+  value: '{{repl AppSetting &quot;release.notes&quot;}}'
+- name: INSTALL_DATE
+  value: '{{repl AppSetting &quot;install.date&quot;}}'
+- name: RELEASE_DATE
+  value: '{{repl AppSetting &quot;release.date&quot;}}'
+- name: RELEASE_CHANNEL
+  value: '{{repl AppSetting &quot;release.channel&quot;}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="consolesetting">
+    <a href="/docs/native/packaging-an-application/template-functions/#consolesetting" class="anchor" id="#consolesetting"></a>
+    ConsoleSetting
+</h2>
+
+
+
+<pre><code class="language-go">func ConsoleSetting(consoleSettingName string) string
+</code></pre>
+
+<p>Returns customer defined console settings for the TLS data or proxy settings. Values are returned as a string.</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Returned Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>tls.key.name</td>
+<td>TLS key filename</td>
+</tr>
+
+<tr>
+<td>tls.key.data</td>
+<td>TLS key contents</td>
+</tr>
+
+<tr>
+<td>tls.cert.name</td>
+<td>TLS cert filename</td>
+</tr>
+
+<tr>
+<td>tls.cert.data</td>
+<td>TLS cert contents</td>
+</tr>
+
+<tr>
+<td>tls.hostname</td>
+<td>Hostname used to secure Replicated TLS traffic</td>
+</tr>
+
+<tr>
+<td>tls.source</td>
+<td>Source of the TLS cert, either &ldquo;self-signed&rdquo;, &ldquo;key-cert&rdquo; or &ldquo;server-path&rdquo;</td>
+</tr>
+
+<tr>
+<td>http.proxy</td>
+<td>Proxy http address (e.g. <a href="http://10.128.0.4:3128">http://10.128.0.4:3128</a>)</td>
+</tr>
+
+<tr>
+<td>http.proxy.enabled</td>
+<td>Proxy is enabled when value is 1, not enabled when it is 0</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-yaml">config:
+- name: console_info
+  title: Console Info
+  items:
+  - name: key_filename
+    type: text
+    readonly: true
+    value: '{{repl ConsoleSetting &quot;tls.key.name&quot;}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="consolesettingequals">
+    <a href="/docs/native/packaging-an-application/template-functions/#consolesettingequals" class="anchor" id="#consolesettingequals"></a>
+    ConsoleSettingEquals
+</h2>
+
+
+
+<pre><code class="language-go">func ConsoleSettingEquals(name string, value string) bool
+</code></pre>
+
+<p>Returns a bool indicating if the value is the currently applied value for ConsoleSetting with name.</p>
+
+
+<h2 class="linked-headline" id="consolesettingnotequals">
+    <a href="/docs/native/packaging-an-application/template-functions/#consolesettingnotequals" class="anchor" id="#consolesettingnotequals"></a>
+    ConsoleSettingNotEquals
+</h2>
+
+
+
+<pre><code class="language-go">func ConsoleSettingNotEquals(name string, value string) bool
+</code></pre>
+
+<p>Returns a bool indicating if the value is not the currently applied value for ConsoleSetting with name.</p>
+
+<p>
+<h2 class="linked-headline" id="thishostinterfaceaddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#thishostinterfaceaddress" class="anchor" id="#thishostinterfaceaddress"></a>
+    ThisHostInterfaceAddress
+</h2>
+
+
+Deprecated, please use ThisNodePublicIPAddress, ThisNodePrivateIPAddress or ThisNodeDockerAddress instead.</p>
+
+<pre><code class="language-go">func ThisHostInterfaceAddress(interfaceName string) string
+</code></pre>
+
+<p>Returns the valid IPv4 address associated with the given network interface of the host on which the current container instance is deployed as a string. For a clustered application this value will be different for each host.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
+  value: '{{repl ThisHostInterfaceAddress &quot;docker0&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="thisnodepublicipaddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#thisnodepublicipaddress" class="anchor" id="#thisnodepublicipaddress"></a>
+    ThisNodePublicIPAddress
+</h2>
+
+
+
+<pre><code class="language-go">func ThisNodePublicIPAddress() string
+</code></pre>
+
+<p>Returns the public IP address of the host on which the current container instance is deployed as a string. For a clustered application this value will be different for each host.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: CASSANDRA_ADDRESS_PUBLIC
+  value: '{{repl ThisNodePublicIPAddress }}'
+</code></pre>
+
+<p>Replaces ThisHostPublicIpAddress which is deprecated.</p>
+
+
+<h2 class="linked-headline" id="thisnodeprivateipaddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#thisnodeprivateipaddress" class="anchor" id="#thisnodeprivateipaddress"></a>
+    ThisNodePrivateIPAddress
+</h2>
+
+
+
+<pre><code class="language-go">func ThisNodePrivateIPAddress() string
+</code></pre>
+
+<p>Returns the private IP address of the host on which the current container instance is deployed as a string. This address is either what was entered manually when host was provisioned or detected from eth0 interface by default. For a clustered application this value will be different for each host.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: CASSANDRA_BROADCAST_ADDRESS_INTERNAL
+  value: '{{repl ThisNodePrivateIPAddress }}'
+</code></pre>
+
+<p>Replaces ThisHostPrivateIpAddress which is depreciated.</p>
+
+
+<h2 class="linked-headline" id="thisnodedockeraddress">
+    <a href="/docs/native/packaging-an-application/template-functions/#thisnodedockeraddress" class="anchor" id="#thisnodedockeraddress"></a>
+    ThisNodeDockerAddress
+</h2>
+
+
+
+<pre><code class="language-go">func ThisNodeDockerAddress() string
+</code></pre>
+
+<p>Returns the docker0 address on the host on which the current container instance is deployed.
+For a clustered application this value will be different for each host.</p>
+
+
+<h2 class="linked-headline" id="ldapcopyauthfrom">
+    <a href="/docs/native/packaging-an-application/template-functions/#ldapcopyauthfrom" class="anchor" id="#ldapcopyauthfrom"></a>
+    LDAPCopyAuthFrom
+</h2>
+
+
+
+<pre><code class="language-go">func LdapCopyAuthFrom(keyName string) interface{}
+</code></pre>
+
+<p>Possible Options:</p>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Hostname</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>Port</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>SearchUsername</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>SearchPassword</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>BaseDN</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>UserSearchDNFirst</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>UserSearchDNAll</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>RestrictedGroupCNFirst</td>
+<td>[]string</td>
+</tr>
+
+<tr>
+<td>RestrictedGroupCNAll</td>
+<td>[]string</td>
+</tr>
+
+<tr>
+<td>FieldUsername</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>LoginUsername</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>AdvancedSearchBool</td>
+<td>boolean</td>
+</tr>
+
+<tr>
+<td>UserQuery</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>RestrictedGroupQuery</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-yaml">env_vars:
+- name: LDAP_HOSTNAME
+  value: '{{repl LdapCopyAuthFrom &quot;Hostname&quot;}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="now">
+    <a href="/docs/native/packaging-an-application/template-functions/#now" class="anchor" id="#now"></a>
+    Now
+</h2>
+
+
+
+<pre><code class="language-go">func Now() string
+</code></pre>
+
+<p>Returns the current timestamp as an RFC3339 formatted string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: START_TIME
+  value: '{{repl Now }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="nowfmt">
+    <a href="/docs/native/packaging-an-application/template-functions/#nowfmt" class="anchor" id="#nowfmt"></a>
+    NowFmt
+</h2>
+
+
+
+<pre><code class="language-go">func NowFmt(format string) string
+</code></pre>
+
+<p>Returns the current timestamp as a formatted string. See Go&rsquo;s time formatting guidelines [here](<a href="https://golang.org/pkg/time/#pkg-constants">https://golang.org/pkg/time/#pkg-constants</a>.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: START_DATE
+  value: '{{repl Now &quot;20060102&quot; }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="trimspace">
+    <a href="/docs/native/packaging-an-application/template-functions/#trimspace" class="anchor" id="#trimspace"></a>
+    TrimSpace
+</h2>
+
+
+
+<pre><code class="language-go">func TrimSpace(s string) string
+</code></pre>
+
+<p>Trim returns a string with all leading and trailing spaces removed.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | Trim }}
+</code></pre>
+
+
+<h2 class="linked-headline" id="trim">
+    <a href="/docs/native/packaging-an-application/template-functions/#trim" class="anchor" id="#trim"></a>
+    Trim
+</h2>
+
+
+
+<pre><code class="language-go">func Trim(s string, args ...string) string
+</code></pre>
+
+<p>Trim returns a string with all leading and trailing string contained in the optional args removed (default space).</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | Trim &quot; &quot; &quot;.&quot; }}
+</code></pre>
+
+
+<h2 class="linked-headline" id="split">
+    <a href="/docs/native/packaging-an-application/template-functions/#split" class="anchor" id="#split"></a>
+    Split
+</h2>
+
+
+
+<pre><code class="language-go">func Split(s string, sep string) []string
+</code></pre>
+
+<p>Split slices s into all substrings separated by sep and returns an array of the substrings between those separators.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: BROKEN_APART_A_B_C
+  value: '{{repl Split &quot;A,B,C&quot; &quot;,&quot; }}'
+</code></pre>
+
+<p>Combining <code>Split</code> and <code>index</code>:
+Assuming the <code>github_url</code> param is set to <code>https://github.mycorp.internal:3131</code>, the following would set
+<code>GITHUB_HOSTNAME</code> to <code>github.mycorp.internal</code>.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: GITHUB_HOSTNAME
+  value: '{{repl index (Split (index (Split (ConfigOption &quot;github_url&quot;) &quot;/&quot;) 2) &quot;:&quot;) 0}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="tolower">
+    <a href="/docs/native/packaging-an-application/template-functions/#tolower" class="anchor" id="#tolower"></a>
+    ToLower
+</h2>
+
+
+
+<pre><code class="language-go">func ToLower(stringToAlter string) string
+</code></pre>
+
+<p>Returns the string, in lowercase.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: COMPANY_NAME
+  value: '{{repl ConfigOption &quot;company_name&quot; | ToLower }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="toupper">
+    <a href="/docs/native/packaging-an-application/template-functions/#toupper" class="anchor" id="#toupper"></a>
+    ToUpper
+</h2>
+
+
+
+<pre><code class="language-go">func ToUpper(stringToAlter string) string
+</code></pre>
+
+<p>Returns the string, in uppercase.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: COMPANY_NAME
+  value: '{{repl ConfigOption &quot;company_name&quot; | ToUpper }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="humansize">
+    <a href="/docs/native/packaging-an-application/template-functions/#humansize" class="anchor" id="#humansize"></a>
+    HumanSize
+</h2>
+
+
+
+<pre><code class="language-go">func HumanSize(size interface{}) string
+</code></pre>
+
+<p>HumanSize returns a human-readable approximation of a size in bytes capped at 4 valid numbers (eg. &ldquo;2.746 MB&rdquo;, &ldquo;796 KB&rdquo;). The size must be a integer or floating point number.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: MIN_SIZE_HUMAN
+  value: '{{repl ConfigOption &quot;min_size_bytes&quot; | HumanSize }}
+</code></pre>
+
+
+<h2 class="linked-headline" id="urlencode">
+    <a href="/docs/native/packaging-an-application/template-functions/#urlencode" class="anchor" id="#urlencode"></a>
+    UrlEncode
+</h2>
+
+
+
+<pre><code class="language-go">func UrlEncode(stringToEncode string) string
+</code></pre>
+
+<p>Returns the string, url encoded.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: SMTP_CONNECTION_URL
+  value: '{{repl ConfigOption &quot;smtp_email&quot; | UrlEncode }}:{{repl ConfigOption &quot;smtp_password&quot; | UrlEncode }}@smtp.example.com:587'
+</code></pre>
+
+
+<h2 class="linked-headline" id="base64encode">
+    <a href="/docs/native/packaging-an-application/template-functions/#base64encode" class="anchor" id="#base64encode"></a>
+    Base64Encode
+</h2>
+
+
+
+<pre><code class="language-go">func Base64Encode(stringToEncode string) string
+</code></pre>
+
+<p>Returns a Base64 encoded string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: NAME_64_VALUE
+  value: '{{repl ConfigOption &quot;name&quot; | Base64Encode }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="base64decode">
+    <a href="/docs/native/packaging-an-application/template-functions/#base64decode" class="anchor" id="#base64decode"></a>
+    Base64Decode
+</h2>
+
+
+
+<pre><code class="language-go">func Base64Decode(stringToDecode string) string
+</code></pre>
+
+<p>Returns decoded string from a Base64 stored value.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: NAME_PLAIN_TEXT
+  value: '{{repl ConfigOption &quot;base_64_encoded_name&quot; | Base64Decode }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="parsebool">
+    <a href="/docs/native/packaging-an-application/template-functions/#parsebool" class="anchor" id="#parsebool"></a>
+    ParseBool
+</h2>
+
+
+
+<pre><code class="language-go">func ParseBool(str string) bool
+</code></pre>
+
+<p>ParseBool returns the boolean value represented by the string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | ParseBool }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="parsefloat">
+    <a href="/docs/native/packaging-an-application/template-functions/#parsefloat" class="anchor" id="#parsefloat"></a>
+    ParseFloat
+</h2>
+
+
+
+<pre><code class="language-go">func ParseFloat(str string) float64
+</code></pre>
+
+<p>ParseFloat returns the float value represented by the string.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | ParseFloat }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="parseint">
+    <a href="/docs/native/packaging-an-application/template-functions/#parseint" class="anchor" id="#parseint"></a>
+    ParseInt
+</h2>
+
+
+
+<pre><code class="language-go">func ParseInt(str string, args ...int) int64
+</code></pre>
+
+<p>ParseInt returns the integer value represented by the string with optional base (default 10).</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | ParseInt }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="parseuint">
+    <a href="/docs/native/packaging-an-application/template-functions/#parseuint" class="anchor" id="#parseuint"></a>
+    ParseUint
+</h2>
+
+
+
+<pre><code class="language-go">func ParseUint(str string, args ...int) uint64
+</code></pre>
+
+<p>ParseUint returns the unsigned integer value represented by the string with optional base (default 10).</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: VALUE
+  value: '{{repl ConfigOption &quot;str_value&quot; | ParseUint }}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="add">
+    <a href="/docs/native/packaging-an-application/template-functions/#add" class="anchor" id="#add"></a>
+    Add
+</h2>
+
+
+
+<pre><code class="language-go">func Add(x interface{}, y interface{}) interface{}
+</code></pre>
+
+<p>Adds x and y.</p>
+
+<p>If at least one of the operands is a floating point number, the result will be a floating point number.</p>
+
+<p>If both operands are integers, the result will be an integer.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: MAX_USERS_PLUS_ONE
+  value: '{{repl Add (LicenseFieldValue &quot;maximum_users&quot;) 1}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="sub">
+    <a href="/docs/native/packaging-an-application/template-functions/#sub" class="anchor" id="#sub"></a>
+    Sub
+</h2>
+
+
+
+<pre><code class="language-go">func Sub(x interface{}, y interface{}) interface{}
+</code></pre>
+
+<p>Subtracts y from x.</p>
+
+<p>If at least one of the operands is a floating point number, the result will be a floating point number.</p>
+
+<p>If both operands are integers, the result will be an integer.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: MAX_USERS_MINUS_ONE
+  value: '{{repl Sub (LicenseFieldValue &quot;maximum_users&quot;) 1}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="mult">
+    <a href="/docs/native/packaging-an-application/template-functions/#mult" class="anchor" id="#mult"></a>
+    Mult
+</h2>
+
+
+
+<pre><code class="language-go">func Mult(x interface{}, y interface{}) interface{}
+</code></pre>
+
+<p>Multiplies x and y.</p>
+
+<p>If at least one of the operands is a floating point number, the result will be a floating point number.</p>
+
+<p>If both operands are integers, the result will be an integer.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: DOUBLE_NUM_ADDRESSES
+  value: '{{repl Mult (NodePrivateIPAddressAll &quot;DB&quot; &quot;redis&quot; | len) 2}}'
+</code></pre>
+
+
+<h2 class="linked-headline" id="div">
+    <a href="/docs/native/packaging-an-application/template-functions/#div" class="anchor" id="#div"></a>
+    Div
+</h2>
+
+
+
+<pre><code class="language-go">func Div(x interface{}, y interface{}) interface{}
+</code></pre>
+
+<p>Divides x by y.</p>
+
+<p>If at least one of the operands is a floating point number, the result will be a floating point number.</p>
+
+<p>If both operands are integers, the result will be an integer and will be rounded down.</p>
+
+<pre><code class="language-yaml">env_vars:
+- name: HALF_MAX_USERS
+  value: '{{repl Div (LicenseFieldValue &quot;maximum_users&quot;) 2.0}}'
+</code></pre>
+
+<h2 id="notes">Notes</h2>
+
+<p>When referencing another container in a template object, you must make sure the referenced container is started first.  Please see the <a href="/docs/native/packaging-an-application/events-and-orchestration/">Events and Orchestration</a> section for more information on orchestrating container startup.</p>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+												<a href="/docs/native/packaging-an-application/clustering/">
+													<span class="icon u-chevronIcon"></span>
+													Clustering
+												</a>
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+												<a href="/docs/native/packaging-an-application/support-bundle/">
+													Support Bundle
+													<span class="icon u-chevronIcon"></span>
+												</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search-native.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

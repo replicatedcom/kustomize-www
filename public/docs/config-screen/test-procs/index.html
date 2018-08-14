@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test Procedures</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--redToRed main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Test Procedures</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">The config section of the Replicated YAML creates a dynamic settings page that customers can use to configure their instance.</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u- u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Config Screen</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            
+            
+            
+            <div class="u-marginBottom--most">
+              <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Config Screen</h3>
+              
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/config-yaml/" class=" u-color--curiousBlue ">
+                              Config Screen YAML
+                          </a>
+                      </p>
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/commands/" class=" u-color--curiousBlue ">
+                              Commands
+                          </a>
+                      </p>
+                  
+                      <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                          <a href="/docs/config-screen/test-procs/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                              Test Procedures
+                          </a>
+                      </p>
+                  
+                  
+              
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								<p>Using the <code>test_proc</code> directive in your app definition YAML, you enable your customers to
+easily test the validity of the unsaved configuration parameters they&rsquo;re entering.</p>
+
+<p>You can specify a <code>run_on_save</code> property in any <code>test_proc</code>. if this evaluates to true, all
+installations will automatically run the <code>test_proc</code> whenever the settings page is saved.
+If the <code>test_proc</code> fails, a dialog will be displayed.</p>
+
+<p>Test commands are built directly into the Replicated platform. We currently offer the
+following set of commands:</p>
+
+
+<h2 class="linked-headline" id="resolve-host">
+    <a href="/docs/config-screen/test-procs/#resolve-host" class="anchor" id="#resolve-host"></a>
+    Resolve Host
+</h2>
+
+
+<p><code>resolve_host</code> – Test whether or not a hostname can be resolved. Applies to a single item.
+The item&rsquo;s value will be resolved on the Replicated Management machine. Success or failure
+is reported directly on the configuration screen.</p>
+
+<pre><code class="language-yaml">config:
+  items:
+  - name: hostname
+    title: Hostname
+    type: text
+    test_proc:
+      run_on_save: true
+      display_name: Test Hostname Resolution
+      command: resolve_host
+      arg_fields:
+      - hostname
+</code></pre>
+
+
+<h2 class="linked-headline" id="github-app-auth">
+    <a href="/docs/config-screen/test-procs/#github-app-auth" class="anchor" id="#github-app-auth"></a>
+    GitHub App Auth
+</h2>
+
+
+<p><code>github_app_auth</code> – Test whether or not the supplied GitHub app key and secret are valid.
+Applies to a group of items. Both mainline and private enterprise versions of GitHub are
+supported. This command expects exactly 5 arguments. These arguments come from values
+entered by your customer into the config items within this group. The arguments, in
+expected order:</p>
+
+<ol>
+<li>GitHub service type. Either <code>github_type_public</code>, or <code>github_type_enterprise</code>.</li>
+<li>Enterprise service hostname, e.g. <code>github.mydomain.com</code></li>
+<li>Enterprise service protocol. Either <code>github_enterprise_protocol_http</code>, or <code>github_enterprise_protocol_https</code>.</li>
+<li>GitHub app OAuth key.</li>
+<li>GitHub app OAuth secret.</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: github
+  title: GitHub Integration
+  description: Provide the location of your GitHub account
+  test_proc:
+    display_name: Test GitHub Authentication
+    command: github_app_auth
+    timeout: 5 # in seconds, default is 10
+    arg_fields:
+    - github_type
+    - github_enterprise_host
+    - github_enterprise_protocol
+    - github_client_id
+    - github_client_secret
+  items:
+  - name: github_type
+</code></pre>
+
+
+<h2 class="linked-headline" id="aws-auth">
+    <a href="/docs/config-screen/test-procs/#aws-auth" class="anchor" id="#aws-auth"></a>
+    AWS Auth
+</h2>
+
+
+<p><code>aws_auth</code> – Test whether or not the supplied AWS key and secret are valid. Applies to a
+group of items. This command expects 3 arguments. These arguments come from values entered
+by your customer into the config items within this group. The arguments, in expected order:</p>
+
+<ol>
+<li>Access key ID.</li>
+<li>Secret access key.</li>
+<li>AWS service.  Valid values are <code>ec2</code>, <code>s3</code>, and <code>sqs</code>.  Credentials will be validated using <code>DescribeRegions</code>, <code>ListBuckets</code>, and <code>ListQueues</code> operations respectively.  All calls will be made using <code>us-east-1</code> region.</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: aws
+  title: AWS Integration
+  description: Provide your AWS access credentials
+  test_proc:
+    display_name: Test Authentication
+    command: aws_auth
+    timeout: 5
+    arg_fields:
+    - aws_access_key_id
+    - aws_secret_access_key
+    - aws_service
+  items:
+  - name: aws_access_key_id
+</code></pre>
+
+
+<h2 class="linked-headline" id="certificate-verification">
+    <a href="/docs/config-screen/test-procs/#certificate-verification" class="anchor" id="#certificate-verification"></a>
+    Certificate Verification
+</h2>
+
+
+<p><code>certificate_verify</code> – Test whether or not the supplied x509 certificate is valid. Optionally
+validate the key pair, hostname and CA certificate. Applies to a group of items. This command expects the
+certificate as the first argument with additional optional arguments private key and hostname. If a CA cert is not
+supplied and the certificate issuer is the same as the subject of the supplied certificate, it is treated as a
+self-signed certificate. These arguments come from values entered by your customer into the config items within this
+group. The arguments, in expected order:</p>
+
+<ol>
+<li>x509 certificate</li>
+<li>Private key (optional)</li>
+<li>Hostname (optional)</li>
+<li>x509 CA certificate (optional)</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: web_server
+  title: Web server settings
+  description: Please provide your hostname and TLS cert and key.
+  test_proc:
+    display_name: Verify TLS settings
+    command: certificate_verify
+    timeout: 5
+    arg_fields:
+    - ssl_cert
+    - ssl_key
+    - hostname
+    - ca_cert
+  items:
+  - name: hostname
+</code></pre>
+
+
+<h2 class="linked-headline" id="smtp-auth">
+    <a href="/docs/config-screen/test-procs/#smtp-auth" class="anchor" id="#smtp-auth"></a>
+    SMTP Auth
+</h2>
+
+
+<p><code>smtp_auth</code> – Test whether or not the supplied credentials are valid for the given SMTP
+server. Note that this procedure only tests authentication; it does not test whether or
+not mail is actually deliverable.</p>
+
+<p>The command expects 5 arguments. These arguments come from values entered by your customer
+into the config items within this group. The arguments, in expected order:</p>
+
+<ul>
+<li>Address:port of the SMTP server to test against</li>
+<li>Whether or not to use SSL/TLS. Possible values: &ldquo;0&rdquo; or &ldquo;1&rdquo;</li>
+<li>Type of authentication to try. Possible values: &ldquo;Plain&rdquo;, &ldquo;CRAM-MD5&rdquo;, &ldquo;Login&rdquo; or &ldquo;None&rdquo;</li>
+<li>Username to send</li>
+<li>Password to send</li>
+</ul>
+
+<p><strong>Note that the address of the SMTP server must contain the correct port number ie
+smtp.gmail.com:587 for the test proc to validate correctly. A type of &ldquo;None&rdquo; will only
+ensure the socket is available.</strong></p>
+
+<pre><code class="language-yaml">config:
+- name: email_settings
+  title: E-mail Settings
+  description: Provide SMTP details which will enable the sending of e-mails
+  test_proc:
+    display_name: Test SMTP Authentication
+    command: smtp_auth
+    arg_fields:
+    - smtp_address
+    - smtp_use_ssl
+    - smtp_auth_type
+    - smtp_auth_username
+    - smtp_auth_password
+  items:
+  - name: smtp_address
+    type: text
+</code></pre>
+
+
+<h2 class="linked-headline" id="file-exists">
+    <a href="/docs/config-screen/test-procs/#file-exists" class="anchor" id="#file-exists"></a>
+    File Exists
+</h2>
+
+
+<p><code>file_exists</code> - Test if a file exists on the host by giving its expected path. This can be
+applied to a group or an item, if applied to an item they imply the value, if applied to a
+group, then you must specify the item to get the value from. The following arguments are
+optional:</p>
+
+<ol>
+<li>Regular expression to run against file path (optional)</li>
+<li>File mode. (optional)</li>
+<li>File mode is at least (optional - default exact match)</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: some_itmes
+  title: Config Items
+  items:
+  - name: a_file_that_exists
+    type: text
+    title: Path to file that needs to exist
+    test_proc:
+      display_name: Check that file exists
+      command: file_exists
+      args:
+      - &quot;^\\/data\\/.+\\.tar$&quot;
+      - &quot;644&quot;
+      - true
+</code></pre>
+
+
+<h2 class="linked-headline" id="regex-match">
+    <a href="/docs/config-screen/test-procs/#regex-match" class="anchor" id="#regex-match"></a>
+    Regex Match
+</h2>
+
+
+<p><code>regex_match</code> - Test if a given value matches a a regular expression for validation purposes.
+This can be applied to a group or an item, if applied to an item they imply the value, if
+applied to a group, then you must specify the item to get the value from.</p>
+
+<ol>
+<li>Regular expression to run against text area</li>
+<li>Error message if regular expression doesn&rsquo;t match. (optional)</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: some_items
+  title: Config Items
+  items:
+  - name: phone_number
+    type: text
+    test_proc:
+      display_name: Is this a Phone Number?
+      command: regex_match
+      args:
+      - &quot;^[0-9()-]+$&quot;
+      - &quot;That doesn't seem to be a phone number!&quot;
+</code></pre>
+
+
+<h2 class="linked-headline" id="ldap-auth">
+    <a href="/docs/config-screen/test-procs/#ldap-auth" class="anchor" id="#ldap-auth"></a>
+    LDAP Auth
+</h2>
+
+
+<p><code>ldap_auth</code> - This test will ensure that the fields that your customer is supplying are
+complete and valid, for a detailed implementation reference see our LDAP integration section.
+Note you have to pass all the arg_fields for the test to validate correctly.</p>
+
+<p>These arguments come from values entered by your customer
+into the config items within this group.</p>
+
+<p>Required arguments:</p>
+
+<ol>
+<li><code>ldap_type</code> - Type of LDAP integration:
+
+<ul>
+<li><code>ldap_type_openldap</code> (A LDAP server other then Active Directory)</li>
+<li><code>ldap_type_ad</code> (Active directory)</li>
+</ul></li>
+<li><code>ldap_hostname</code> - The LDAP host, ie. <code>ldap.customer.com</code></li>
+<li><code>ldap_port</code> Port LDAP services are listening on ie <code>389</code> or <code>636</code></li>
+<li><code>ldap_encryption</code> - Type of encryption your LDAP is using:
+
+<ul>
+<li><code>ldap_encryption_plain</code> (Plain)</li>
+<li><code>ldap_encryption_starttls</code> (upgrade to SSL/TLS encrypted communication after initial communication)</li>
+<li><code>ldap_encryption_ldaps</code> (fully encrypted from start)</li>
+</ul></li>
+<li><code>ldap_search_user</code> - The LDAP search user that performs user lookup.</li>
+<li><code>ldap_search_password</code> - The password for the LDAP search user.</li>
+<li><code>ldap_base_dn</code> - The Distinguished Name (DN) of an LDAP subtree you want to search for users and groups.</li>
+<li><code>ldap_usersearch_dn</code> - DN to search for users.</li>
+<li><code>ldap_restricted_user_group</code> - Restricted DN group that only users from this group will be allowed to log in with. This can be an empty string.</li>
+<li><code>ldap_username_field</code> - The username that will appear on the user&rsquo;s app name field.</li>
+<li><code>ldap_login_username</code> - The LDAP username that identifies the LDAP user who attempts authentication.</li>
+<li><code>ldap_login_password</code> - The LDAP password for the user attempting authentication.</li>
+</ol>
+
+<p>Optional arguments:</p>
+
+<ol>
+<li><code>ldap_advanced_search</code> - True value indicates that advanced search queries is to be used.</li>
+<li><code>ldap_user_query</code> - The LDAP query to use to find the user.</li>
+<li><code>ldap_restricted_group_query</code> - The LDAP query to use to validate user group membership.</li>
+</ol>
+
+<pre><code class="language-yaml">config:
+- name: ldap_settings
+  title: LDAP Server Settings
+  when: auth_source=auth_type_ldap
+  test_proc:
+      display_name: Test Credentials
+      command: ldap_auth
+      arg_fields:
+        - ldap_type
+        - ldap_hostname
+        - ldap_port
+        - ldap_encryption
+        - ldap_search_user
+        - ldap_search_password
+        - ldap_base_dn
+        - ldap_usersearch_dn
+        - ldap_restricted_user_group
+        - ldap_username_field
+        - ldap_login_username
+        - ldap_login_password
+        - ldap_advanced_search
+        - ldap_user_query
+        - ldap_restricted_group_query
+
+</code></pre>
+
+
+<h2 class="linked-headline" id="json-validation">
+    <a href="/docs/config-screen/test-procs/#json-validation" class="anchor" id="#json-validation"></a>
+    JSON Validation
+</h2>
+
+
+<p><code>json_validate</code> - Tests for valid JSON.  The validate_json test_proc takes a single argument which is the item name that contains the JSON to test.</p>
+
+<pre><code class="language-yaml">config:
+- name: json
+  title: Advanced JSON Value
+  type: text
+  test_proc:
+    display_name: Validate JSON
+    command: validate_json
+    arg_fields:
+    - json
+</code></pre>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+												<a href="/docs/config-screen/commands/">
+													<span class="icon u-chevronIcon"></span>
+													Commands
+												</a>
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+											<a href="/docs/snapshots/overview/">
+												Snapshots Overview
+												<span class="icon u-chevronIcon"></span>
+											</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

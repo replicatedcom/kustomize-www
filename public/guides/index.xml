@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ship on Replicated Help Center</title>
+    <link>/guides/</link>
+    <description>Recent content in Ship on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Tue, 01 May 2018 19:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/guides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automated Deployment</title>
+      <link>/guides/automated-deployment/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-deployment/</guid>
+      <description>Applications delivered in Replicated Ship can be deployed using automation instead of manually running installation scripts. It&amp;rsquo;s possible to deploy the first release of an application completely automated, even to airgapped environments. The process to automate deployment of an application varies, depending on the automation tools used. This document defines the steps involved in automating the deployment of an on-prem application, with links to specific implementations, when possible.
+The process to automate deployment of an application involves 3 steps:</description>
+    </item>
+    
+    <item>
+      <title>Automated Deployment with a Kubernetes App</title>
+      <link>/guides/automated-deployment-kubernetes-app/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-deployment-kubernetes-app/</guid>
+      <description>Kubernetes applications delivered in Replicated Ship can be deployed using automation instead of manually running kubectl to deploy from a laptop. It&amp;rsquo;s possible to deploy the first release of an application completely automated, even to airgapped environmnets. This document walks through an example application and how it will be configured and initially deployed.
+Prerequisites In addition to any external resources the software vendor requries (databases, etc), you&amp;rsquo;ll need to have:</description>
+    </item>
+    
+    <item>
+      <title>Automated Testing</title>
+      <link>/guides/automated-testing/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-testing/</guid>
+      <description>Before a process should be enabled to automatically deploy the latest version of an application to a production server, it&amp;rsquo;s a good idea to deploy each release to a different environment and run a series of tests to confirm the application is working as expected.
+A common feature of most Ship applications is to include everything necessary to test the application, packaged as a bash script. This enables you, the operator, to rely on the operational knowledge that the software vendor has included to ensure each deployment and update is successful.</description>
+    </item>
+    
+    <item>
+      <title>Automated Updates with Ansible</title>
+      <link>/guides/automated-updates-ansible/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-updates-ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automated Updates with CircleCI</title>
+      <link>/guides/automated-updates-circleci/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-updates-circleci/</guid>
+      <description>CircleCI (and CircleCI Enterprise) workflows can be used to automatically deploy updates to a Ship application when there&amp;rsquo;s an update available.
+This document will walk through setting up an automated process to update an already-deployed Ship application whenever an update is available. The end result here is two environments running the application; one for testing and validation, and one for production. The process defined here will automatically deploy to the test environment, and then deploy to production when the tests pass.</description>
+    </item>
+    
+    <item>
+      <title>Deploying Manually</title>
+      <link>/guides/deploying-manually/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/deploying-manually/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Initial configuration</title>
+      <link>/guides/initial-configuration/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/initial-configuration/</guid>
+      <description>When configuring and deploying a Ship application, it&amp;rsquo;s common to create the initial configuration, then build a audited, workflow-driven process to automate the deployment and future updates. When initially configuring and deploying an unfamiliar application, it&amp;rsquo;s helpful to start with some easy-to-use tools to help bootstrap the process.
+The best way to deploy a Replicated Ship application is to run the replicated/ship process on a workstation that doesn&amp;rsquo;t have direct access to the production servers.</description>
+    </item>
+    
+    <item>
+      <title>Managing State</title>
+      <link>/guides/manage-state/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/manage-state/</guid>
+      <description>When a Replicated Ship application is initially configured, a state file is created and stored in .ship/state.json. This file contains all generated and manually entered values from the initial setup. When an upgrade is available for the application, the state file is read and applied to the new update. This is a useful way to install application updates.
+Secrets in State The state file will often contain secrets and confidental information such as database passwords and keys.</description>
+    </item>
+    
+  </channel>
+</rss>

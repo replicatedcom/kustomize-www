@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicated Audit Log on Replicated Help Center</title>
+    <link>/categories/replicated-audit-log/</link>
+    <description>Recent content in Replicated Audit Log on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/replicated-audit-log/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Audit Log Overview</title>
+      <link>/docs/audit-log/getting-started/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Audit Log Overview</title>
+      <link>/docs/audit-log/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/getting-started/overview/</guid>
+      <description>The Replicated Audit Log is a self-hosted platform that provides an audit log for your application; one that meets all of the principles of what makes a good audit log. The Replicated Audit Log provides both an API to send audit events to, and several different methods for your customers to view and extract their events.</description>
+    </item>
+    
+    <item>
+      <title>Audit Log Overview</title>
+      <link>/docs/audit-log/advanced/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/advanced/overview/</guid>
+      <description>Once you&amp;rsquo;ve started sending events into your Audit Log, it&amp;rsquo;s time to explore some of the advanced functionality.
+Display Templates Display templates allow you to customize the display of audit events, after the event has been received. The events are still immutable. The display templates implement a rules engine that is applied when the event is rendered. This simply adds an additional field to the event, and can be excluded at any time.</description>
+    </item>
+    
+    <item>
+      <title>Entitlements Overview</title>
+      <link>/docs/entitlements/getting-started/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/entitlements/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Entitlements Overview</title>
+      <link>/docs/entitlements/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/entitlements/getting-started/overview/</guid>
+      <description>Ship it</description>
+    </item>
+    
+    <item>
+      <title>Exposing Event Data</title>
+      <link>/docs/audit-log/exposing-events/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/exposing-events/overview/</guid>
+      <description>There are two main way to expose your audit log data to your application&amp;rsquo;s users. Users can browse and search events using an embeddable viewer UI, or they can access data programmatically using API tokens.
+Using the embedded viewer As a vendor, you can embed the event viewer into frontend site. For a guide to viewer features, see Using the Embedded Viewer
+Using Enterprise IT Integration API Tokens In addition to the viewer, Audit events can be exposed via the Enterprise IT Integration API</description>
+    </item>
+    
+    <item>
+      <title>Troubleshoot Overview</title>
+      <link>/docs/troubleshoot/getting-started/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/troubleshoot/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Troubleshoot Overview</title>
+      <link>/docs/troubleshoot/getting-started/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/troubleshoot/getting-started/overview/</guid>
+      <description>Ship it</description>
+    </item>
+    
+  </channel>
+</rss>

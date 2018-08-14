@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicated Config Screen on Replicated Help Center</title>
+    <link>/categories/replicated-config-screen/</link>
+    <description>Recent content in Replicated Config Screen on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/replicated-config-screen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Config Screen</title>
+      <link>/docs/config-screen/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/config-screen/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API Reference on Replicated Help Center</title>
+    <link>/api/</link>
+    <description>Recent content in API Reference on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Wed, 17 Jan 2018 23:51:55 +0000</lastBuildDate>
+    
+	<atom:link href="/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Assets</title>
+      <link>/api/ship-assets/assets/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-assets/assets/</guid>
+      <description>Assets | Config | Lifecycle
+Ship Assets This is the reference documenation for Ship assets. To get started with Ship, head on over to Ship Guides
+Assets are the core object that enables you to describe applications managed by Ship. They allow you to define scripts, manifests, and application artifacts needed to deploy your application to your end customer&amp;rsquo;s internal infrastructure. The goal of Ship assets is to give your customers controlled, transparent access to the same resources you use to deploy your SaaS application to your own private cloud.</description>
+    </item>
+    
+    <item>
+      <title>Config</title>
+      <link>/api/ship-config/config/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-config/config/</guid>
+      <description>Assets | Config | Lifecycle
+Ship Config This is the reference documenation for Ship config. To get started with Ship, head on over to Ship Guides.
+Config is where you can define the dynamic values that end customers need to configure before they can use your application. It might include things like:
+ External Database connection details and credentials Other internal integrations settings like SMTP auth or API keys Tunable settings for your application like &amp;ldquo;number of worker processes&amp;rdquo; or &amp;ldquo;log level&amp;rdquo;   In ship, a minimal config section with one item might look like</description>
+    </item>
+    
+    <item>
+      <title>Lifecycle</title>
+      <link>/api/ship-lifecycle/lifecycle/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-lifecycle/lifecycle/</guid>
+      <description>Assets | Config | Lifecycle
+Ship Lifecycle This is the reference documenation for Ship lifecycle. To get started with Ship, head on over to Ship Guides
+Lifeycle is where you can define and customize the end-user experience for customers installing your application. Lifecycle has two step types at the moment:
+ message - print a message to the console render - collect configuration and generate assets  In ship, a short assets section to pull and run a private docker container might look like</description>
+    </item>
+    
+    <item>
+      <title>Support Bundle Lifecycle</title>
+      <link>/api/support-bundle-yaml-lifecycle/root/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-lifecycle/root/</guid>
+      <description>The Support Bundle spec allows for customizing the lifecycle of your bundle, including how and when it gets generated any uploaded, and the messaging provided to the end customer.
+If you do not specify a lifecycle in your YAML spec, the following default lifecyle will be used:
+lifecycle: - message: contents: &amp;quot;Starting support bundle collection...&amp;quot; - generate: use_defaults: true - upload: prompt: message: &amp;quot;Done! Do you want to upload the support bundle for analysis?</description>
+    </item>
+    
+    <item>
+      <title>Support Bundle YAML Specs</title>
+      <link>/api/support-bundle-yaml-specs/shared/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/shared/</guid>
+      <description>Support Bundle Collection Specs Support Bundle collection specs can be used to define and customize what kinds diagnostic information you want to collect to debug your application. All Support Bundle specs support the following shared parameters:
+Required Parameters  output_dir - The directory in the bundle to store the collection results  Optional Parameters  timeout_seconds - An amount of time to allow a collection to run before abandoning it</description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/api/ship-assets/docker/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-assets/docker/</guid>
+      <description>Assets | Config | Lifecycle
+docker A docker asset will pull an image from registry.replicated.com or from a configured third party private registry and produce a tar archive of the container image.
+assets: v1: - docker: image: &#39;quay.io/cooltool-enterprise/api:1.0.1&#39; dest: images/api.tar source: quayio-private  assets: v1: - docker: image: &#39;registry.replicated.com/cooltool/worker:1.1.0&#39; dest: images/worker.tar source: replicated  assets: v1: - docker: image: &#39;postgres:9.6&#39; dest: images/postgres.tar source: public  Required Parameters  dest - The destination for the docker image, such as api.</description>
+    </item>
+    
+    <item>
+      <title>docker.container-cp</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-cp/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-cp/</guid>
+      <description>docker.container-cp Collect a file by copying from a running docker container
+specs: - docker.container-cp: description: the supergoodtool www site access logs container: supergoodtool-www src_path: /var/log/nginx/access.log output_dir: /www/access/  Required Parameters  container - The name of the container to copy from
+ src_path - The path of the target file in the container&amp;rsquo;s filesystem
+  Outputs  {{.Name}} - Output will match the name of the file. If src_path is /var/log/nginx/access.</description>
+    </item>
+    
+    <item>
+      <title>docker.container-exec</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-exec/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-exec/</guid>
+      <description>docker.container-exec Collect the stdout and stderr of exec-ing a command on a running docker container
+specs: - docker.container-exec: container: supergoodtool-www output_dir: /www/debug/ exec_config: Cmd: - nginx - &#39;-t&#39;  Required Parameters  container - The name of the container to run the command in
+ exec_config - Same as would be passed to docker exec, as in The Docker API
+  Outputs  stdout.raw - The standard output of the command</description>
+    </item>
+    
+    <item>
+      <title>docker.container-inspect</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-inspect/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-inspect/</guid>
+      <description>docker.container-inspect Collect the docker inspect output for one or more running or stopped containers. One of container or container_list_options is required.
+specs: - docker.container-inspect: output_dir: /containers/cooltool/www-stack container_list_options: All: true Filters: name: - www - nginx - dnsmasq  Optional Parameters  container - the container name
+ container_list_options - Options to be used to filter the list of containers, as in The Docker API
+  Outputs  {{.Name}}.json - The json output of the inspect call.</description>
+    </item>
+    
+    <item>
+      <title>docker.container-logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-logs/</guid>
+      <description>docker.container-logs Collect the stdout/stderr logs from one or more docker containers. One of container or container_list_options is required.
+specs: - docker.container-logs: output_dir: /docker/cooltool/logs/www container_list_options: All: true Filters: name: - www - haproxy  Optional Parameters  container - A container name
+ container_list_options - Options to be used to filter the list of containers, as in The Docker API
+ container_logs_options - Args as would be given to docker logs, as in The Docker API</description>
+    </item>
+    
+    <item>
+      <title>docker.container-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-ls/</guid>
+      <description>docker.container-ls Collect information about one or more containers
+specs: - docker.container-ls: output_dir: /docker/cooltool/containers/ All: true Filters: name: - www - haproxy  Optional Parameters  All - Option to be used to filter the list of containers, as in The Docker API
+ Before - Option to be used to filter the list of containers, as in The Docker API
+ Filters - Option to be used to filter the list of containers, as in The Docker API</description>
+    </item>
+    
+    <item>
+      <title>docker.container-run</title>
+      <link>/api/support-bundle-yaml-specs/docker-container-run/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-container-run/</guid>
+      <description>docker.container-run Collect the stderr/stdout of running a single docker container
+specs: - docker.container-run: description: Listing of host&#39;s network interfaces output_dir: /host/network container_create_config: Config: Cmd: - ip - addr - show Image: &#39;debian:latest&#39; HostConfig: AutoRemove: true NetworkMode: host  Required Parameters  container_create_config - Container create options as would be passed to docker run   Optional Parameters  enable_pull - If true, allow this container to be pulled if not present   Outputs  stdout.</description>
+    </item>
+    
+    <item>
+      <title>docker.exec</title>
+      <link>/api/support-bundle-yaml-specs/docker-exec/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-exec/</guid>
+      <description>docker.exec Collect the stdout/stderr of executing a command in an already running docker container
+specs: - docker.exec: container: supergoodtool-www output_dir: /www/debug/ exec_config: Cmd: - toolctl - info - &#39;--verbose&#39;  Required Parameters  container - The container name
+ exec_config - Config options as would be passed to docker exec, as in The Docker API
+  Outputs  stdout.raw - The standard output of the command
+ stderr.raw - The standard error of the command</description>
+    </item>
+    
+    <item>
+      <title>docker.image-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-image-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-image-ls/</guid>
+      <description>docker.image-ls Collect a list of docker images present on the server
+specs: - docker.image-ls: output_dir: /cooltool/images/ All: true Filters: label: - com.supercooltool.app=supercooltool-enterprise  Optional Parameters  All - Same as would be passed to docker images
+ Filters - Same as would be passed to docker images
+  Outputs  image_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.images</title>
+      <link>/api/support-bundle-yaml-specs/docker-images/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-images/</guid>
+      <description>docker.images Collect a list of docker images present on the server
+specs: - docker.images: output_dir: /cooltool/images/ All: true Filters: label: - com.supercooltool.app=supercooltool-enterprise  Optional Parameters  All - Same as would be passed to docker images
+ Filters - Same as would be passed to docker images
+  Outputs  image_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.info</title>
+      <link>/api/support-bundle-yaml-specs/docker-info/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-info/</guid>
+      <description>docker.info Collect info about the Docker daemon
+specs: - docker.info: output_dir: /docker/daemon/ timeout_seconds: 10 description: Info about the docker daemon  Outputs  docker_info.json - A pretty-printed JSON representation   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-logs/</guid>
+      <description>docker.logs Collect the stdout/stderr logs from one or more docker containers. One of container or container_list_options is required.
+specs: - docker.logs: description: &amp;gt;- The docker logs for all the containers labeled with com.supercooltool.onprem output_dir: /docker/logs timeout_seconds: 100 container_list_options: All: true Filters: label: - com.supercooltool.onprem=true container_logs_options: Timestamps: true  Optional Parameters  container - A container name
+ container_list_options - Options to be used to filter the list of containers, as in The Docker API</description>
+    </item>
+    
+    <item>
+      <title>docker.node-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-node-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-node-ls/</guid>
+      <description>docker.node-ls Collect information about the nodes in a Docker Swarm installation
+specs: - docker.node-ls: description: List of swarm nodes output_dir: /swarm/nodes/ Filters: name: - cooltool-docker-swarm-  Optional Parameters  Filters - Same as would be passed to docker node ls   Outputs  node_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.ps</title>
+      <link>/api/support-bundle-yaml-specs/docker-ps/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-ps/</guid>
+      <description>docker.ps Collect information about containers
+specs: - docker.ps: output_dir: /docker/ps/ All: true  Optional Parameters  All - Option to be used to filter the list of containers, as in The Docker API
+ Before - Option to be used to filter the list of containers, as in The Docker API
+ Filters - Option to be used to filter the list of containers, as in The Docker API</description>
+    </item>
+    
+    <item>
+      <title>docker.run</title>
+      <link>/api/support-bundle-yaml-specs/docker-run/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-run/</guid>
+      <description>docker.run Collect the stderr/stdout of running a single docker container
+specs: - docker.run: description: Listing of host&#39;s network interfaces output_dir: /host/network container_create_config: Config: Cmd: - ip - addr - show Image: &#39;debian:latest&#39; HostConfig: AutoRemove: true NetworkMode: host  Required Parameters  container_create_config - Same as would be passed to docker run, as in The Docker API   Optional Parameters  enable_pull - If true, allow this container to be pulled if not present   Outputs  stdout.</description>
+    </item>
+    
+    <item>
+      <title>docker.service-logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-service-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-service-logs/</guid>
+      <description>docker.service-logs Collect logs from a docker swarm service. One of service or service_list_options is required.
+specs: - docker.service-logs: output_dir: /swarm/services/www service: cooltool-www  specs: - docker.service-logs: output_dir: /swarm/services/core-stack service_list_options: Filters: name: - cooltool-www - cooltool-api - cooltool-worker  Optional Parameters  container_logs_options - Args as would be given to docker logs, as in The Docker API
+ service - A single docker swarm service for which to collect logs</description>
+    </item>
+    
+    <item>
+      <title>docker.service-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-service-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-service-ls/</guid>
+      <description>docker.service-ls Collect a list of docker swarm services
+specs: - docker.service-ls: output_dir: /swarm/services/list/ description: List of all services starting with `cooltool-` Filters: name: - cooltool-  Optional Parameters  Filters - Same as would be passed to docker service ls   Outputs  service_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.service-ps</title>
+      <link>/api/support-bundle-yaml-specs/docker-service-ps/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-service-ps/</guid>
+      <description>docker.service-ps Collect information about the tasks run by one or more services
+specs: - docker.service-ps: output_dir: /swarm/services/www/tasks/ description: List of all services starting with `cooltool-` Filters: name: - cooltool-  Required Parameters  Filters - Same as would be passed to docker service ps   Outputs  service_ps.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.stack-service-logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-stack-service-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-stack-service-logs/</guid>
+      <description>docker.stack-service-logs Collect logs from one or more services in a stack
+specs: - docker.stack-service-logs: output_dir: /swarm/stacks/cooltool/service-logs description: Logs from services in the cooltool stack namespace: cooltool-core  Required Parameters  namespace - The stack&amp;rsquo;s namespace   Optional Parameters  container_logs_options - Args as would be given to docker logs, as in The Docker API
+ service_list_options - Options as would be passed to `docker stack services
+  Outputs  {{.</description>
+    </item>
+    
+    <item>
+      <title>docker.stack-service-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-stack-service-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-stack-service-ls/</guid>
+      <description>docker.stack-service-ls Collect information about services in a swarm stack
+specs: - docker.stack-service-ls: output_dir: /swarm/stacks/cooltool/services description: Logs from services in the cooltool stack namespace: cooltool-core  Required Parameters  namespace - The stack&amp;rsquo;s namespace   Optional Parameters  service_list_options - Options as would be passed to `docker stack services   Outputs  service_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.stack-service-ps</title>
+      <link>/api/support-bundle-yaml-specs/docker-stack-service-ps/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-stack-service-ps/</guid>
+      <description>docker.stack-service-ps Collect information about the tasks running in a service
+specs: - docker.stack-service-ps: output_dir: /swarm/stacks/cooltool/service-tasks description: Tasks owned by services in the cooltool stack namespace: cooltool-core task_list_options: Filters: label: - com.cooltool.tier=www - com.cooltool.tier=api  Required Parameters  namespace - The stack&amp;rsquo;s namespace   Optional Parameters  task_list_options - Options as would be passed to docker stack ps   Outputs  service_ps.json - JSON output</description>
+    </item>
+    
+    <item>
+      <title>docker.stack-task-logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-stack-task-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-stack-task-logs/</guid>
+      <description>docker.stack-task-logs Collect logs from a docker swarm task
+specs: - docker.stack-task-logs: output_dir: /swarm/stacks/cooltool/service-logs description: Logs from services in the cooltool stack namespace: cooltool-core task_list_options: Filters: label: - com.cooltool.tier=www - com.cooltool.tier=api  Required Parameters  namespace - The stack namespace   Optional Parameters  container_logs_options - Args as would be given to docker logs, as in The Docker API
+ task_list_options - Options for filtering stack tasks
+  Outputs  {{.</description>
+    </item>
+    
+    <item>
+      <title>docker.task-logs</title>
+      <link>/api/support-bundle-yaml-specs/docker-task-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-task-logs/</guid>
+      <description>docker.task-logs Collect logs from a docker swarm task
+specs: - docker.task-logs: output_dir: /swarm/tasks/logs description: Logs from cooltool tasks in the www and api tiers task_list_options: Filters: label: - com.cooltool.tier=www - com.cooltool.tier=api  Optional Parameters  container_logs_options - Args as would be given to docker logs, as in The Docker API
+ id - The id of a single task
+ task_list_options - Options for filtering stack tasks
+  Outputs  {{.</description>
+    </item>
+    
+    <item>
+      <title>docker.task-ls</title>
+      <link>/api/support-bundle-yaml-specs/docker-task-ls/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-task-ls/</guid>
+      <description>docker.task-ls List docker swarm tasks
+specs: - docker.task-ls: output_dir: /swarm/tasklist Filters: name: - cooltool-api- - cooltool-backend-  Optional Parameters  Filters - Filters for tasks   Outputs  task_ls.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>docker.version</title>
+      <link>/api/support-bundle-yaml-specs/docker-version/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/docker-version/</guid>
+      <description>docker.version Get the version of the docker server
+specs: - docker.version: output_dir: /docker/version  Outputs  docker_version.json - JSON output   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>inline</title>
+      <link>/api/ship-assets/inline/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-assets/inline/</guid>
+      <description>Assets | Config | Lifecycle
+inline An inline asset is one that is specified directly in your Ship application&amp;rsquo;s spec.
+assets: v1: - inline: dest: install.sh mode: 755 contents: &amp;gt;- #!/bin/sh kubectl apply -f ./deploy.yml -n {{repl ConfigOption &amp;quot;k8s_namespace&amp;quot; }}  assets: v1: - inline: dest: deploy.yml contents: |+ apiVersion: extensions/v1beta1 kind: Deployment metadata: name: api spec: replicas: 1 template: metadata: labels: app: retraced tier: api spec: volumes: - name: var-run hostPath: path: /var/run/retraced/ imagePullSecrets: - name: quayio containers: - name: api image: quay.</description>
+    </item>
+    
+    <item>
+      <title>journald.logs</title>
+      <link>/api/support-bundle-yaml-specs/journald-logs/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/journald-logs/</guid>
+      <description>journald.logs Collect logs from journald
+specs: - journald.logs: output_dir: /system/journald/cooltool-api reverse: true unit: cooltool-api since: &#39;2018-01-01&#39;  Required Parameters  unit - Systemd unit from which to collect logs   Optional Parameters  reverse - Store logs in reverse chronological order
+ since - Since date for log collection
+  Outputs  logs.raw - The raw output the journald logs for the unit   
+Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>message</title>
+      <link>/api/ship-lifecycle/message/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-lifecycle/message/</guid>
+      <description>Assets | Config | Lifecycle
+message A message step will print a message to the console or UI.
+lifecycle: v1: - message: contents: &amp;gt;- This tool will prepare assets to deploy CoolTool Enterprise to your Kubernetes cluster  lifecycle: v1: - message: contents: &amp;gt;- You may be missing a required prerequisite for this application. Please ensure docker is configured on the target server. level: warn  Required Parameters  contents - the message to display   Optional Parameters  level - the severity of the message &amp;ndash; defaults to info.</description>
+    </item>
+    
+    <item>
+      <title>os.hostname</title>
+      <link>/api/support-bundle-yaml-specs/os-hostname/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-hostname/</guid>
+      <description>os.hostname Get the hostname
+specs: - os.hostname: output_dir: /system/hostname  Outputs  stderr - The stdout from the command
+ stdout - The stdin from the command
+  
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>os.http-request</title>
+      <link>/api/support-bundle-yaml-specs/os-http-request/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-http-request/</guid>
+      <description>os.http-request Collect information about the response from making an HTTP request
+specs: - os.http-request: output_dir: /system/ping-ip url: &#39;https://api.replicated.com/market/v1/echo/ip&#39; method: get header: User-Agent: - cooltool/supportbundle 0.11.1  Required Parameters  method - HTTP request method
+ url - The HTTP request URL
+  Optional Parameters  body - The request body
+ header - One or more headers to send
+ insecure - Set to true to skip TLS verification</description>
+    </item>
+    
+    <item>
+      <title>os.loadavg</title>
+      <link>/api/support-bundle-yaml-specs/os-loadavg/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-loadavg/</guid>
+      <description>os.loadavg Collect information about CPU load
+specs: - os.loadavg: output_dir: /system/load  Optional Parameters  template - (Optional) a template for the human-readable output   Outputs  contents - The raw loadavg info   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>os.read-file</title>
+      <link>/api/support-bundle-yaml-specs/os-read-file/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-read-file/</guid>
+      <description>os.read-file Read a file from the filesystem
+specs: - os.read-file: output_dir: /files/etc/bigtool-conf filepath: /etc/bigtool.conf  Required Parameters  filepath - The file path on the host. If running Support Bundle via docker, this will work, but symlinks are not supported   Outputs  bigtool.conf - The file contents   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>os.run-command</title>
+      <link>/api/support-bundle-yaml-specs/os-run-command/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-run-command/</guid>
+      <description>os.run-command Run a command. Will be run in the support bundle container if docker run replicated/support-bundle is used. To run in a custom container, use docker.run instead
+specs: - os.run-command: output_dir: /system/commands/ping-google name: date  specs: - os.run-command: output_dir: /system/commands/ping-google name: cat args: - /etc/os-release  Required Parameters  name - The command to run   Optional Parameters  args - The command arguments
+ dir - The working directory of the command</description>
+    </item>
+    
+    <item>
+      <title>os.uptime</title>
+      <link>/api/support-bundle-yaml-specs/os-uptime/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/os-uptime/</guid>
+      <description>os.uptime Collect information about the system&amp;rsquo;s uptime
+specs: - os.uptime: output_dir: /system/uptime  Optional Parameters  template - Template for the human-readable output   Outputs  contents - The contents of the uptime file   
+Shared Parameters
+This spec also inherits all of the required and optional Shared Parameters</description>
+    </item>
+    
+    <item>
+      <title>render</title>
+      <link>/api/ship-lifecycle/render/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-lifecycle/render/</guid>
+      <description>Assets | Config | Lifecycle
+render A render step will do the work of collecting configuration values from a user and using them to generate the final assets that can be used to deploy an application.
+lifecycle: v1: - render: {}  lifecycle: v1: - render: skip_plan: true skip_state_warning: true  Optional Parameters  skip_plan - Whether to skip the &amp;ldquo;plan&amp;rdquo; phase of render, in which the user can confirm the actions that Ship will take to generate application assets</description>
+    </item>
+    
+    <item>
+      <title>retraced.events</title>
+      <link>/api/support-bundle-yaml-specs/retraced-events/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml-specs/retraced-events/</guid>
+      <description>retraced.events Collect Audit Log events from a running Retraced instance
+specs: - retraced.events: output_dir: /audit/events api_endpoint: &#39;https://auditlogs.mycorp.internal:8080&#39; api_token: aef342f32f22f3edf1f1f3f3ef project_id: f3edf1f1f3f3efaef342f32f22  specs: - retraced.events: output_dir: /audit/events api_endpoint: &#39;https://auditlogs.mycorp.internal:8080&#39; api_token: aef342f32f22f3edf1f1f3f3ef project_id: f3edf1f1f3f3efaef342f32f22 insecure: true timeout_seconds: 10 mask: Action: true Description: true ActorID: true ActorName: true CanonicalTime: true query: CRUD: &#39;c,u,d&#39;  Required Parameters  api_endpoint - The location of the Audit Logs API endpoint in the form http(s)://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Vendor API</title>
+      <link>/api/vendor-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/vendor-api/</guid>
+      <description>The Replicated Vendor API is available to create and manage applications, release, customers, licenses, and more.
+We publish a swagger spec at https://api.replicated.com/vendor/v1/spec/vendor-api.json. We also have an interactive API console available at https://replicated-vendor-api.readme.io/v1.0/reference
+Interacting with the Vendor API requires Finding your API Token and App ID.</description>
+    </item>
+    
+    <item>
+      <title>Integration API</title>
+      <link>/api/integration-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/</guid>
+      <description>The Integration API is the primary mechanism for developers to integrate their applications with Replicated&amp;rsquo;s management console and APIs.
+Accessing the Integration API The Integration API can be accessed by using the $REPLICATED_INTEGRATIONAPI environment variable injected into all application containers. After that, every resource can be used by applications to offer features such as airgap detection, LDAP authentication and syncing support, and update checks.
+Giving Users a Good Experience The Integration API is designed to enable application developers to seamlessly give every on-prem user the same experience, regardless of the environment it&amp;rsquo;s in.</description>
+    </item>
+    
+    <item>
+      <title>Replicated YAML Schema</title>
+      <link>/api/yaml/</link>
+      <pubDate>Fri, 15 Sep 2017 19:29:47 +0000</pubDate>
+      
+      <guid>/api/yaml/</guid>
+      <description>Schema The schema is published as a JSONSchema V4 document in the Replicated Lint Repository
+The canonical source for all available Replicated YAML options is available at github.com/replicatedhq/libyaml. This is a great reference to look up supported options and learn how different sections fit together.
+Additional Linter Rules The following list documents rules that will be applied by the Replicated release editor and the replicated-lint cli.
+prop-admincommand-component-exists Admin commands must reference an existing component and container</description>
+    </item>
+    
+    <item>
+      <title>Replicated CLI Reference</title>
+      <link>/api/replicated-cli/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/replicated-cli/</guid>
+      <description>After installing replicated onto a remote host a CLI is enabled that can be utilized for both management and maintenance. This tool can be especially helpful when debugging issues that can arise if the replicated-ui is not fully installed or working properly.
+Source replicated.alias If command not found is displayed when attempting to execute the replicated CLI we will need to source the replicated.alias file.
+source /etc/replicated.alias  Version List version of currently running replicated components.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl Reference</title>
+      <link>/api/replicatedctl/</link>
+      <pubDate>Tue, 13 Feb 2018 18:09:21 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/</guid>
+      <description> replicatedctl Replicated CLI
+Synopsis Replicated is a platform to deploy containerized SaaS applications behind a firewall (ie private cloud, private data center etc).
+replicatedctl  Options  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps replicatedctl app-config - Manage app config replicatedctl app-release - Manage app releases replicatedctl console-auth - Manage UI console authentication settings replicatedctl license - Manage the license replicatedctl license-load - Load the license from stdin replicatedctl params - Manage params replicatedctl preflight - View or manage preflight checks replicatedctl snapshot - Manage snapshots replicatedctl support-bundle - Generate a support bundle replicatedctl task - Manage tasks replicatedctl version - Get the Replicated CLI version information  </description>
+    </item>
+    
+    <item>
+      <title>Vendor CLI Reference</title>
+      <link>/api/replicated-vendor-cli/</link>
+      <pubDate>Mon, 23 Oct 2017 10:36:16 -0700</pubDate>
+      
+      <guid>/api/replicated-vendor-cli/</guid>
+      <description>The Replicated Vendor CLI provides a CLI for interacting with the Replicated Vendor API.
+CLI Installation MacOS Install brew install replicatedhq/replicated/cli  Linux Install curl -o install.sh -sSL https://raw.githubusercontent.com/replicatedhq/replicated/master/install.sh sudo bash ./install.sh  Setup The Replicated Vendor CLI requires an App ID or app name and an API token. These can either be passed as arguments to each command
+replicated channel ls --app my-app-name --token e8d7ce8e3d3278a8b1255237e6310069  or set as environment variables.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app</title>
+      <link>/api/replicatedctl/replicatedctl_app/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app/</guid>
+      <description> replicatedctl app Manage apps
+Synopsis Manage apps
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app inspect - Display detailed information on the app replicatedctl app start - Start the app replicatedctl app status - Manage the app status replicatedctl app stop - Stop the app  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_inspect/</guid>
+      <description> replicatedctl app inspect Display detailed information on the app
+Synopsis Display detailed information on the app
+replicatedctl app inspect  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app start</title>
+      <link>/api/replicatedctl/replicatedctl_app_start/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_start/</guid>
+      <description> replicatedctl app start Start the app
+Synopsis Start the app
+replicatedctl app start  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app status</title>
+      <link>/api/replicatedctl/replicatedctl_app_status/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_status/</guid>
+      <description> replicatedctl app status Manage the app status
+Synopsis Manage the app status
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps replicatedctl app status inspect - Display detailed information on the app&amp;rsquo;s status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app status inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app_status_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_status_inspect/</guid>
+      <description> replicatedctl app status inspect Display detailed information on the app&amp;rsquo;s status
+Synopsis Display detailed information on the app&amp;rsquo;s status
+replicatedctl app status inspect  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app status - Manage the app status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app stop</title>
+      <link>/api/replicatedctl/replicatedctl_app_stop/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_stop/</guid>
+      <description> replicatedctl app stop Stop the app
+Synopsis Stop the app
+replicatedctl app stop  Options  -a, --attach Attach to task -f, --force Force stop -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config</title>
+      <link>/api/replicatedctl/replicatedctl_app-config/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config/</guid>
+      <description> replicatedctl app-config Manage app config
+Synopsis Manage app config
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app-config export - Export app config settings replicatedctl app-config import - Import app config settings from stdin replicatedctl app-config set - Sets an individual app config value replicatedctl app-config view - View app config form  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config export</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_export/</guid>
+      <description> replicatedctl app-config export Export app config settings
+Synopsis Export app config settings
+replicatedctl app-config export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config import</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_import/</guid>
+      <description> replicatedctl app-config import Import app config settings from stdin
+Synopsis Import app config settings from stdin
+replicatedctl app-config import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config set</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_set/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_set/</guid>
+      <description> replicatedctl app-config set Sets an individual app config value
+Synopsis Sets an individual app config value
+replicatedctl app-config set NAME  Options  --data stringSlice Sets the item data --value stringSlice Sets the item value  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config view</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_view/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_view/</guid>
+      <description> replicatedctl app-config view View app config form
+Synopsis View app config form
+replicatedctl app-config view  Options  --group string Config group to filter by -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release</title>
+      <link>/api/replicatedctl/replicatedctl_app-release/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release/</guid>
+      <description> replicatedctl app-release Manage app releases
+Synopsis Manage app releases
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app-release apply - Applies pending app releases replicatedctl app-release inspect - Display detailed information on one or more app releases replicatedctl app-release ls - List app releases replicatedctl app-release notes - Display release notes for an app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release apply</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_apply/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_apply/</guid>
+      <description>replicatedctl app-release apply Applies pending app releases
+Synopsis Applies pending app releases
+replicatedctl app-release apply  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --sequence int Apply releases up to and including specified sequence (0 for all) --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_inspect/</guid>
+      <description> replicatedctl app-release inspect Display detailed information on one or more app releases
+Synopsis Display detailed information on one or more app releases
+replicatedctl app-release inspect SEQUENCE [SEQUENCE...]  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-release - Manage app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release ls</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_ls/</guid>
+      <description>replicatedctl app-release ls List app releases
+Synopsis List app releases
+replicatedctl app-release ls  Options  --all Display all app releases --fetch Fetch releases form Market API -o, --output string Output format. One of: json|yaml --pending Display only pending app releases -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release notes</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_notes/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_notes/</guid>
+      <description> replicatedctl app-release notes Display release notes for an app releases
+Synopsis Display release notes for an app releases
+replicatedctl app-release notes SEQUENCE  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-release - Manage app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth/</guid>
+      <description> replicatedctl console-auth Manage UI console authentication settings
+Synopsis Manage UI console authentication settings
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl console-auth export - Export console auth config for current auth type replicatedctl console-auth import - Import console authentication config from stdin replicatedctl console-auth reset - Resets console authentication to type anonymous  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth export</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_export/</guid>
+      <description>replicatedctl console-auth export Export console auth config for current auth type
+Synopsis Export console auth config for current auth type
+replicatedctl console-auth export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template --type string Get configuration for auth type (one of anonymous, password, ldap)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth import</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_import/</guid>
+      <description> replicatedctl console-auth import Import console authentication config from stdin
+Synopsis Import console authentication config from stdin
+replicatedctl console-auth import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl console-auth - Manage UI console authentication settings  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth reset</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_reset/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_reset/</guid>
+      <description> replicatedctl console-auth reset Resets console authentication to type anonymous
+Synopsis Resets console authentication to type anonymous
+replicatedctl console-auth reset  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl console-auth - Manage UI console authentication settings  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license</title>
+      <link>/api/replicatedctl/replicatedctl_license/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license/</guid>
+      <description> replicatedctl license Manage the license
+Synopsis Manage the license
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl license activate - Activate the license replicatedctl license inspect - Display detailed information on the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license activate</title>
+      <link>/api/replicatedctl/replicatedctl_license_activate/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license_activate/</guid>
+      <description> replicatedctl license activate Activate the license
+Synopsis Activate the license
+replicatedctl license activate CODE  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl license - Manage the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license inspect</title>
+      <link>/api/replicatedctl/replicatedctl_license_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license_inspect/</guid>
+      <description> replicatedctl license inspect Display detailed information on the license
+Synopsis Display detailed information on the license
+replicatedctl license inspect  Options  -o, --output string Output format. One of: json|yaml --sync Sync license --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl license - Manage the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license-load</title>
+      <link>/api/replicatedctl/replicatedctl_license-load/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license-load/</guid>
+      <description> replicatedctl license-load Load the license from stdin
+Synopsis Load the license from stdin
+replicatedctl license-load  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params</title>
+      <link>/api/replicatedctl/replicatedctl_params/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params/</guid>
+      <description> replicatedctl params Manage params
+Synopsis Manage params
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl params export - Export params replicatedctl params import - Import params from stdin replicatedctl params set - Sets an individual param value replicatedctl params unset - Unsets a runtime overridden param value  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params export</title>
+      <link>/api/replicatedctl/replicatedctl_params_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_export/</guid>
+      <description> replicatedctl params export Export params
+Synopsis Export params
+replicatedctl params export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params import</title>
+      <link>/api/replicatedctl/replicatedctl_params_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_import/</guid>
+      <description> replicatedctl params import Import params from stdin
+Synopsis Import params from stdin
+replicatedctl params import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params set</title>
+      <link>/api/replicatedctl/replicatedctl_params_set/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_set/</guid>
+      <description> replicatedctl params set Sets an individual param value
+Synopsis Sets an individual param value
+replicatedctl params set KEY  Options  --value string Sets the param value  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params unset</title>
+      <link>/api/replicatedctl/replicatedctl_params_unset/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_unset/</guid>
+      <description> replicatedctl params unset Unsets a runtime overridden param value
+Synopsis Unsets a runtime overridden param value
+replicatedctl params unset KEY  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight</title>
+      <link>/api/replicatedctl/replicatedctl_preflight/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight/</guid>
+      <description> replicatedctl preflight View or manage preflight checks
+Synopsis View or manage preflight checks
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl preflight dismiss - Dismiss preflight check warnings replicatedctl preflight run - Run the preflight checks replicatedctl preflight status - Get preflight status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight dismiss</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_dismiss/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_dismiss/</guid>
+      <description> replicatedctl preflight dismiss Dismiss preflight check warnings
+Synopsis Dismiss preflight check warnings
+replicatedctl preflight dismiss  Options  --checksum string Preflight checksum -f, --force Force dismiss checks --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight run</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_run/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_run/</guid>
+      <description> replicatedctl preflight run Run the preflight checks
+Synopsis Run the preflight checks
+replicatedctl preflight run  Options  -o, --output string Output format. One of: json|yaml -q, --quiet Only display checksum --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight status</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_status/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_status/</guid>
+      <description> replicatedctl preflight status Get preflight status
+Synopsis Get preflight status
+replicatedctl preflight status  Options  -q, --quiet Display true or false --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot/</guid>
+      <description>replicatedctl snapshot Manage snapshots
+Synopsis Manage snapshots
+Options  --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends. --s3-bucket string S3 bucket name. This option is only used with s3 backend. --s3-key-id string ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend. --s3-region string S3 bucket region.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot ls</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_ls/</guid>
+      <description>replicatedctl snapshot ls List snapshots
+Synopsis List snapshots
+replicatedctl snapshot ls  Options  -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot restore</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_restore/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_restore/</guid>
+      <description>replicatedctl snapshot restore Restore installation from the specified spanshot
+Synopsis Restore installation from the specified spanshot
+replicatedctl snapshot restore ID  Options  --dismiss-preflight-checks Dismiss preflight checks --id string Snapshot ID --node-timeout int Number of seconds to wait for nodes to connect (default 60)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot start</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_start/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_start/</guid>
+      <description>replicatedctl snapshot start Start a snapshot
+Synopsis Start a snapshot
+replicatedctl snapshot start  Options  --exclude-app-data Only backup Replicated data and exclude app data --wait Block until snapshot is complete  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends. --s3-bucket string S3 bucket name.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl support-bundle</title>
+      <link>/api/replicatedctl/replicatedctl_support-bundle/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_support-bundle/</guid>
+      <description> replicatedctl support-bundle Generate a support bundle
+Synopsis Generate a support bundle
+replicatedctl support-bundle  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task</title>
+      <link>/api/replicatedctl/replicatedctl_task/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task/</guid>
+      <description> replicatedctl task Manage tasks
+Synopsis Manage tasks
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl task attach - Stream task progress replicatedctl task inspect - Display detailed information on one or more tasks replicatedctl task ls - List tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task attach</title>
+      <link>/api/replicatedctl/replicatedctl_task_attach/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_attach/</guid>
+      <description> replicatedctl task attach Stream task progress
+Synopsis Stream task progress
+replicatedctl task attach ID  Options  -q, --quiet Suppress stdout --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task inspect</title>
+      <link>/api/replicatedctl/replicatedctl_task_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_inspect/</guid>
+      <description> replicatedctl task inspect Display detailed information on one or more tasks
+Synopsis Display detailed information on one or more tasks
+replicatedctl task inspect ID [ID...]  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task ls</title>
+      <link>/api/replicatedctl/replicatedctl_task_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_ls/</guid>
+      <description> replicatedctl task ls List tasks
+Synopsis List tasks
+replicatedctl task ls  Options  --all Display all tasks -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl version</title>
+      <link>/api/replicatedctl/replicatedctl_version/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_version/</guid>
+      <description> replicatedctl version Get the Replicated CLI version information
+Synopsis Get the Replicated CLI version information
+replicatedctl version  Options  --quiet Only print the version  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+    <item>
+      <title>Audit API</title>
+      <link>/api/integration-api/audit-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/audit-api/</guid>
+      <description>The Audit API provides endpoints for your application to read and write audit events into the audit log.
+By default, the audit log will record all Replicated-specific actions. However, to meet enterprise compliance requirements, your application may use the Audit API to log your application&amp;rsquo;s user&amp;rsquo;s actions. These can be viewed and searched from the Replicated console. We recommend combining the audit log with the Identity and Provisioning APIs to map the audit log to an enterprise&amp;rsquo;s identity environment.</description>
+    </item>
+    
+    <item>
+      <title>Version API</title>
+      <link>/api/integration-api/version-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/version-api/</guid>
+      <description>The Version API provides endpoints for your application to read the current application version, release notes, pending updates and apply updates. Applications that use automatic updates can use this to notify users of pending updates and apply them without having to visit the Replicated console.
+Version API The Version API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.</description>
+    </item>
+    
+    <item>
+      <title>License API</title>
+      <link>/api/integration-api/license-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/license-api/</guid>
+      <description>License API The License API provides methods for your application to query properties of the installed license. This can be used in a variety of ways to provide multiple plans for an application. For example, the license API can be used to limit the number of workers that can run and be used in an application.
+License API Endpoint The License API is part of the Integration API. To discover the Integration API base endpoint, query the REPLICATED_INTEGRATIONAPI environment variable from inside your container.</description>
+    </item>
+    
+    <item>
+      <title>Status API</title>
+      <link>/api/integration-api/status-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/status-api/</guid>
+      <description>The Status API provides a method for user applications to update the status of an application during it&amp;rsquo;s startup lifecycle. For applications with multiple startup steps, this can be used to inform users of long-running actions such as migrations and bootstrapping. The Status API can also aid in debugging by giving users insight into the application startup phase they experienced an issue with.
+Status API Endpoint The Status API is part of the Integration API.</description>
+    </item>
+    
+    <item>
+      <title>Identity API</title>
+      <link>/api/integration-api/identity-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/identity-api/</guid>
+      <description>About the Identity API  The Identity API provides synchronous authentication with an identity server, often a corporate LDAP or Active Directory (AD) service. In this model, login requests are made to the Replicated Integration API, which validates the credentials provided against the identity service. Applications using the Identity API rely on the upstream identity provider for local identity.
+ API Methods  The Identity API is part of the Integration API.</description>
+    </item>
+    
+    <item>
+      <title>Provisioning API</title>
+      <link>/api/integration-api/provisioning-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/provisioning-api/</guid>
+      <description>About the Provisioning API  The Provisioning API enables application developers to expose a set of API endpoints, which Replicated will sync to from the LDAP server.
+In this model, applications will have a list of all user accounts, without the passwords. Use the Identity API to authenticate a user in the application.
+Replicated brokers the interaction between the identity server and your application. Depending on the identity server used and it&amp;rsquo;s configuration, changes are propagated to Replicated via push or periodic polling.</description>
+    </item>
+    
+    <item>
+      <title>Console API</title>
+      <link>/api/integration-api/console-api/</link>
+      <pubDate>Sun, 03 Jul 2016 04:12:27 +0000</pubDate>
+      
+      <guid>/api/integration-api/console-api/</guid>
+      <description>The Console API offers developers the ability to retrieve Replicated console settings.
+Console settings are not the same as application config settings. Application config settings should be provided to your applications via template functions in the release YAML.   Applications may find it useful to know certain properties about a Replicated install, such as it&amp;rsquo;s airgap status, console host, or proxy settings. The Console API can be used to retrieve all of this information.</description>
+    </item>
+    
+    <item>
+      <title>Support Bundle YAML Reference</title>
+      <link>/api/support-bundle-yaml/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/support-bundle-yaml/</guid>
+      <description>Support Bundle Replicated&amp;rsquo;s standalone Support Bundle allows you to diagnose problems with any app, deployed any way, anywhere. This is the reference documentation for the Support Bundle YAML syntax.
+ Support Bundle Collection Specs allows you to specify which commands to run and files to collect to gather diagnostic info about your on-premise application. Support Bundle Collection Lifecycle allows you to modify the end-customer&amp;rsquo;s experience with custom messaging, automatic analysis of collected files, and more.</description>
+    </item>
+    
+    <item>
+      <title>Support Bundle YAML Specs</title>
+      <link>/categories/support-bundle-yaml-specs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/support-bundle-yaml-specs/</guid>
+      <description>Support Bundle Collection Specs Support Bundle collection specs can be used to define and customize what kinds diagnostic information you want to collect to debug your application. All Support Bundle specs support the following shared parameters:
+Required Parameters  output_dir - The directory in the bundle to store the collection results  Optional Parameters  timeout_seconds - An amount of time to allow a collection to run before abandoning it</description>
+    </item>
+    
+    <item>
+      <title>Ship YAML Reference</title>
+      <link>/api/ship-yaml/</link>
+      <pubDate>Wed, 17 Jan 2018 23:51:55 +0000</pubDate>
+      
+      <guid>/api/ship-yaml/</guid>
+      <description>Ship Ship is a flexible workflow tool that allows you to package your application for delivering it as an on-prem application to your customers. This is the reference documentation for the Ship yaml Spec. To get started with ship, check out the Ship Guides
+ Ship Assets allow you to define what files and application artifacts should be delivered to end customers Ship Config allows you to define what dynamic configuration options your end customers need to supply to configure your application to run in their on-prem environment.</description>
+    </item>
+    
+  </channel>
+</rss>

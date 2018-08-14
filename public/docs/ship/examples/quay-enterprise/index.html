@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quay Enterprise</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-04d1ef064d.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--console main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Quay Enterprise</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">Shipping Quay Enterprise on Replicated Ship</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-replicatedShip u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    
+                        <span>Ship</span>
+                    
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                    <p class="scheduler-menu-item" class="u-lineHeight--normal">Native Scheduler</p>
+                </a>
+                <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                    <p class="scheduler-menu-item" class="u-lineHeight--normal">Kubernetes</p>
+                </a>
+                <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                    <p class="scheduler-menu-item" class="u-lineHeight--normal">Docker Swarm</p>
+                </a>
+                <a href="/docs/config-screen/config-yaml" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                    <p class="scheduler-menu-item" class="u-lineHeight--normal">Replicated Features</p>
+                </a>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/products/getting-started" class="u-color--curiousBlue">Replicated Products</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/audit-log" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Audit Log</p>
+                        </a>
+                        <a href="/docs/entitlements" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Entitlements</p>
+                        </a>
+                        <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                        </a>
+                        <a href="/docs/troubleshoot" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Troubleshoot</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            
+            
+            
+            
+            
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Replicated Ship</h3>
+                
+                    
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/ship/getting-started/overview/" class=" u-color--tuna ">Ship Overview</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/ship/examples/quay-enterprise/" class=" u-color--tuna ">Ship Examples</a>
+                        </h3>
+                        
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/ship/examples/quay-enterprise/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                                            Quay Enterprise
+                                        </a>
+                                    </p>
+                                    
+                                
+                            </div>
+                        
+                    
+                
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<p><a href="https://coreos.com/quay-enterprise/">Quay Enterprise</a> is a proprietary, enterprise-ready container registry. Quay Enterprise is designed to run on Kubernetes, and has public installation instructions available on the <a href="https://coreos.com/quay-enterprise/docs/latest/tectonic/index.html">CoreOS documentation</a>. This is an example of converting these manual installation instructions into an easy-to-use, scriptable process.</p>
+
+<h2 id="what-we-will-do">What we will do</h2>
+
+<p>Quay Enterprise has a requirement that it be deployed to an existing Kubernetes cluster. There are several Kubernetes spec files that make up the product, and some configuration variables. Some of the Kubernetes definitions are optional, and only used in certain conditions. This example will include all of the options, and create a CLI/UI for the end user who is installing Quay to select how it will be installed.</p>
+
+<p>The end result is a Replicated Ship YAML file that is available in this <a href="https://gist.github.com/marccampbell/bae0e6177865d55828b5afd35bf55314">GitHub Gist</a>.</p>
+
+<h2 id="building-the-spec">Building the spec</h2>
+
+<p>At the time of the installation instructions, there are 6 Kubernetes YAML files that are needed. Let&rsquo;s start by adding these as <code>web</code> specs to our new YAML file. These are static YAML files; they don&rsquo;t change based on any environment or customer supplied data. We will let the end customer&rsquo;s installer automatically download these (they are public) and save these YAML files to a <code>./k8s/</code> directory on the installers workstation.</p>
+
+<pre><code class="language-yaml">assets:
+  v1:
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-namespace.yml
+        dest: ./installer/k8s/quay-enterprise-namespace.yml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-config-secret.yml
+        dest: ./installer/k8s/quay-enterprise-config-secret.yml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-redis.yml
+        dest: ./installer/k8s/quay-enterprise-redis.yml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-app-rc.yml
+        dest: ./installer/k8s/quay-enterprise-app-rc.yml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-service-nodeport.yml
+        dest: ./installer/k8s/quay-enterprise-service-nodeport.yml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-enterprise-service-loadbalancer.yml
+        dest: ./installer/k8s/quay-enterprise-service-loadbalancer.yml
+
+</code></pre>
+
+<h3 id="image-pull-secret">Image Pull Secret</h3>
+
+<p>The installation instructions also require that you download a Pull Secret from your account and store this in a file named <code>config.json</code>. This value changes per install, and is user-supplied data. We can write this as a dynamic file in Replicated Ship, and create a prompt (CLI and UI) for the user to supply this value when installing:</p>
+
+<pre><code class="language-yaml">assets:
+  v1:
+    - inline:
+        dest: ./installer/secrets/config.json
+        contents: |
+          {{repl ConfigOption &quot;pull_secret&quot;}}
+config:
+  v1:
+    - name: license
+      title: License
+      items:
+        - name: pull_secret
+          title: Pull Secret
+          required: true
+          type: textarea
+</code></pre>
+
+<p>The above YAML will create a required input when installing to enter the <code>pull_secret</code> variable. The <code>inline</code> asset defined contains just the contents of the pull secret that was supplied.</p>
+
+<h3 id="rbac">RBAC</h3>
+
+<p>CoreOS has defined 3 different RBAC policies, depending on which version of Tectonic you are running. In this example, we&rsquo;ll add each of these in, and let the install script automatically determine which version to include:</p>
+
+<pre><code class="language-yaml">assets:
+  v1:
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-k8s1-6.yaml
+        dest: ./installer/k8s/1.6/quay-servicetoken-role-k8s1-6.yaml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding-k8s1-6.yaml
+        dest: ./installer/k8s/1.6/quay-servicetoken-role-binding-k8s1-6.yaml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role.yaml
+        dest: ./installer/k8s/1.5/quay-servicetoken-role.yaml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding.yaml
+        dest: ./installer/k8s/1.5/quay-servicetoken-role-binding.yaml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role.yaml
+        dest: ./installer/k8s/1.4/quay-servicetoken-role.yaml
+    - web:
+        url: https://coreos.com/quay-enterprise/docs/latest/tectonic/files/quay-servicetoken-role-binding-k8s1-4.yaml
+        dest: ./installer/k8s/1.4/quay-servicetoken-role-binding-k8s1-4.yaml
+</code></pre>
+
+<h3 id="ingress">Ingress</h3>
+
+<p>Quay has two ingress options available: a load balancer or a nodeport. Selecting the right option depends on if the installer is targeting a cloud provider or not:</p>
+
+<pre><code class="language-yaml">config:
+  v1:
+    - name: ingress
+      title: Ingress
+      items:
+        - name: ingress_type
+          title: Ingress Type
+          type: select_one
+          default: node_port
+          items:
+            - name: node_port
+              title: Node Port
+            - name: load_balancer
+              title: Load Balancer
+</code></pre>
+
+<h2 id="install-script">Install Script</h2>
+
+<p>Now that all of the YAML is included, we can create a simple bash script to run the installation:</p>
+
+<pre><code class="language-yaml">assets:
+  v1:
+    - inline:
+        contents: |
+          #!/bin/bash
+          kubectl create -f ./installer/k8s/quay-enterprise-namespace.yml
+          kubectl create secret generic coreos-pull-secret --from-file=&quot;.dockerconfigjson=installer/secrets/config.json&quot; --type='kubernetes.io/dockerconfigjson' --namespace=quay-enterprise
+
+          server_version_major = $(kubectl version) ## todo
+          server_version_minor = $(kubectl version) ## todo
+
+          if [ $server_version_major == '1' ]; then
+            if [ $server_version_minor == '6' ]; then
+              kubectl create -f ./installer/k8s/1.6/quay-servicetoken-role-k8s1-6.yaml
+              kubectl create -f ./installer/k8s/1.6quay-servicetoken-role-binding-k8s1-6.yaml
+            fi
+
+            if [ $server_version_minor == '5' ]; then
+              kubectl create -f ./installer/k8s/1.5/quay-servicetoken-role.yaml
+              kubectl create -f ./installer/k8s/1.5/quay-servicetoken-role-binding.yaml
+            fi
+
+            if [ $server_version_minor == '4' ]; then
+              kubectl create -f ./installer/k8s/1.4/quay-servicetoken-role.yaml
+              kubectl create -f ./installer/k8s/1.4/quay-servicetoken-role-binding-k8s1-4.yaml
+            fi
+
+          fi
+
+          kubectl create -f quay-enterprise-config-secret.yml -f quay-enterprise-redis.yml -f quay-enterprise-app-rc.yml}
+
+          {{repl if ConfigOptionEquals &quot;ingress_type&quot; &quot;load_balancer&quot;}}
+          kubectl create -f ./installer/k8s/quay-enterprise-service-loadbalancer.yml
+          kubectl describe services quay-enterprise --namespace=quay-enterprise
+          {{repl end}}
+
+          {{repl if ConfigOptionEquals &quot;ingress_type&quot; &quot;node_port&quot;}}
+          kubectl create -f ./installer/k8s/quay-enterprise-service-nodeport.yml
+          {{repl end}}
+</code></pre>
+
+<h2 id="lifecycle-and-messages">Lifecycle and Messages</h2>
+
+<p>Finally, let&rsquo;s create some instructions and lifecycle messages for the user:</p>
+
+<pre><code class="language-yaml">lifecycle:
+  v1:
+  - message:
+      contents: |
+        This program will prepare a script and kubernetes manifests that can be used to deploy
+        Quay.io enterprise to your existing Kubernetes cluster.
+  - render: {}
+  - message:
+     contents: |
+        Quay.io Enterprise is ready to deploy to your kubernetes cluster.
+
+        If you have kubectl configured locally, you can
+        run the following command to deploy Quay.io to
+        your kubernetes cluster:
+
+            bash ./scripts/install.sh
+  - message:
+     level: warn
+     contents: |
+       A state file has been written to {{repl context &quot;state_file_path&quot; }} -- please store it
+       somewhere safe, you'll need it if you want to update or recover this installation of Quay.io Enterprise.
+</code></pre>
+
+<h1 id="installing">Installing</h1>
+
+<p>Once this <a href="https://gist.github.com/marccampbell/bae0e6177865d55828b5afd35bf55314">complete yaml</a> is saved in <a href="https://console.replicated.com">Replicated Console</a>, create a a customer, and generate an installation script. The installation process can be completed on the CLI or by using the Web-based Setup Console.</p>
+
+<h2 id="cli">CLI</h2>
+
+<p>Generating an install script for this will look like:</p>
+
+<pre><code class="language-bash">docker run ...
+</code></pre>
+
+<p>Once this is run on a workstation (not the server that will run Quay), it will walk through the defined lifecycle:</p>
+
+<pre><code class="language-shell">This program will prepare a script and kubernetes manifests that can be used to deploy
+Quay.io enterprise to your existing Kubernetes cluster.
+
+Enter a value for option &quot;pull_secret&quot; []: &lt;snip&gt;
+Enter a value for option &quot;ingress_type&quot; [node_port]:
+
+This command will generate the following resources:
+
+	./installer/secrets/config.json
+	./installer/scripts/install.sh
+	./installer/k8s/quay-enterprise-namespace.yml
+	./installer/k8s/quay-enterprise-config-secret.yml
+	./installer/k8s/quay-enterprise-redis.yml
+	./installer/k8s/quay-enterprise-app-rc.yml
+	./installer/k8s/quay-enterprise-service-nodeport.yml
+	./installer/k8s/quay-enterprise-service-loadbalancer.yml
+	./installer/k8s/1.6/quay-servicetoken-role.yaml
+	./installer/k8s/1.6/quay-servicetoken-role-binding.yaml
+	./installer/k8s/1.5/quay-servicetoken-role.yaml
+	./installer/k8s/1.5/quay-servicetoken-role-binding.yaml
+	./installer/k8s/1.4/quay-servicetoken-role.yaml
+	./installer/k8s/1.4/quay-servicetoken-role-binding-k8s1-4.yaml
+
+
+Is this ok? [Y/n]: y
+
+Quay.io Enterprise is ready to deploy to your kubernetes cluster.
+
+If you have kubectl configured locally, you can
+run the following command to deploy Quay.io to
+your kubernetes cluster:
+
+		bash ./scripts/install.sh
+
+
+A state file has been written to .ship/state.json -- please store it
+somewhere safe, you'll need it if you want to update or recover this installation of Quay.io Enterprise.
+</code></pre>
+
+<h2 id="setup-console">Setup Console</h2>
+
+<p>Generating a UI-based install script for this will look like:</p>
+
+<pre><code class="language-shell">docker-compose up -f https://console.replicated.com/...
+</code></pre>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

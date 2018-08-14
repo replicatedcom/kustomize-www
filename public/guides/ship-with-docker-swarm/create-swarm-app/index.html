@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Creating a Replicated &#43; Swarm Release</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<main>
+    <article class="single">
+            
+                <div class="u-gradient--swarm main-section header flex-column flex1 justifyContent--center">
+            
+            <div class="container">
+                <div class="paddingContainer">
+                    <div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+                        <div class="u-width--full u-marginRight--more">
+                            <h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Creating a Replicated &#43; Swarm Release</h1>
+                            <p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">Guide to creating a Replicated &#43; Docker Swarm Release</p>
+                        </div>
+                        <div class="flex-auto u-hidden--mobileTablet">
+                            <span class="icon u-replicatedDockerSwarm u-marginRight--normal"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="paddingContainer">
+                <div class="u-flexTabletReflow flex1">
+                    <div class="flex-auto sidebar-wrapper">
+                        <div class="sidebar">
+                            <div>
+                                
+                                    <h3 class="u-fontWeight--medium u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Docker Swarm Guide</h3>
+                                    <ul>
+                                    
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="blue"><a href="/guides/ship-with-docker-swarm/create-swarm-app/">Creating a Replicated &#43; Swarm Release</a></li>
+                                                
+                                            
+                                        
+                                            
+                                                
+                                                    <li><a href="/guides/ship-with-docker-swarm/installing/" class="u-color--curiousBlue">Installing Replicated</a></li>
+                                                
+                                            
+                                        
+                                            
+                                                
+                                                    <li><a href="/guides/ship-with-docker-swarm/iterating/" class="u-color--curiousBlue">Iterating on Releases</a></li>
+                                                
+                                            
+                                        
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex1 page-content-wrapper">
+                        <div class="page-content">
+                            <p>In this section, we will start by building a Redis service that can run on any Docker Swarm cluster, and end by turning it into a fully functional Replicated release.</p>
+
+
+<h2 class="linked-headline" id="prerequisites">
+    <a href="/guides/ship-with-docker-swarm/create-swarm-app/#prerequisites" class="anchor" id="#prerequisites"></a>
+    Prerequisites
+</h2>
+
+
+<p>To finish this section, you will need:</p>
+
+<ul>
+<li>A machine with Docker (version 1.13.1 and above) installed</li>
+<li>A Replicated account (sign up at <a href="https://vendor.replicated.com/">https://vendor.replicated.com/</a>)</li>
+</ul>
+
+
+<h2 class="linked-headline" id="create-a-docker-compose-app">
+    <a href="/guides/ship-with-docker-swarm/create-swarm-app/#create-a-docker-compose-app" class="anchor" id="#create-a-docker-compose-app"></a>
+    Create a Docker Compose App
+</h2>
+
+
+<p>Docker Compose is a tool for shipping a suite of services and containers as a single stack. Docker Swarm uses stacks and services defined as Docker Compose specs to deploy to a clustered environment. In this example, we will deploy a simple Redis service, but the specification can large scale, enterprise stacks.</p>
+
+<p>Create a file called <code>docker-compose.yaml</code> and add a basic Redis stack:</p>
+
+<pre><code class="language-yaml">version: '3'
+services:
+  redis:
+    image: redis:3.2-alpine
+</code></pre>
+
+<p>This is a minimal example that will create a Redis service with the <code>redis:3.2-alpine</code> image. On a computer with Docker running, we can start this by running: <code>docker-compose up</code>.</p>
+
+<p>After running this, you&rsquo;ll have a Redis service running in the foreground. Type <code>ctrl-C</code> into the terminal to exit. This is a great example, but runs locally in Docker (as opposed to Docker Swarm), and is a single instance in the foreground. To move this into something ready for production, let&rsquo;s launch it as a Docker Swarm Service.</p>
+
+<p>First, we should turn our Docker instance into a Swarm node. To do this, initialize Swarm:</p>
+
+<pre><code class="language-shell">$ docker swarm init
+
+Swarm initialized: current node (x1js134wd5td2ast6d3yixoq0) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-2fhvhgsummkv3ryq0721wdw53347wega00re637h4x1zrhpl53-72y223dujrw7ikm64wag2i509 192.168.65.3:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+</code></pre>
+
+<p>Now, we can turn our Compose file into a Stack:</p>
+
+<pre><code class="language-shell">$ docker stack deploy -c compose.yml my-redis
+
+Creating network my-redis_default
+Creating service my-redis_redis
+</code></pre>
+
+<p>In the next part of this guide, we will create a Replicated release with our Docker Compose specification. After this, we will license and ship an on-premise version of our software to end customers.</p>
+
+
+<h2 class="linked-headline" id="the-replicated-vendor-portal">
+    <a href="/guides/ship-with-docker-swarm/create-swarm-app/#the-replicated-vendor-portal" class="anchor" id="#the-replicated-vendor-portal"></a>
+    The Replicated Vendor Portal
+</h2>
+
+
+<p>The Replicated Vendor Portal offers tooling necessary to create and deploy software services, license software to customers, and iterate upon our software via releases. In this section, we will take the Redis service we created in the prior section and turn it into a licensable Replicated release. In the next sections, we will create a customer license, install Replicated on Swarm, and run our software in an on-premise environment.</p>
+
+<p>If you require help at any time with these steps, help is available through the <a href="https://help.replicated.com/community/">Replicated community</a> or via email at <a href="mailto:contact@replicated.com">contact@replicated.com</a>.</p>
+
+
+<h2 class="linked-headline" id="create-a-new-application">
+    <a href="/guides/ship-with-docker-swarm/create-swarm-app/#create-a-new-application" class="anchor" id="#create-a-new-application"></a>
+    Create a New Application
+</h2>
+
+
+<p>The first step in porting our software to a Replicated release is to create a new application in the <a href="https://vendor.replicated.com">Vendor Portal</a>. Sign up and activate your account to access the primary dashboard, which prompts you to create a new application. Fill in an application name, select the <code>Docker Swarm + Replicated</code> option, and click &ldquo;Create application&rdquo; to continue.</p>
+
+<p><img src="/images/guides/swarm/create-app.png" alt="" /></p>
+
+<p>Creating a Replicated application redirects you to a specific dashboard for this application. This dashboard is the main location for managing releases, customer licenses, and channels  releases to customer licenses. The default page for applications is the &ldquo;Channels&rdquo; page.</p>
+
+<p><img src="/images/guides/swarm/default-screen.png" alt="" /></p>
+
+<p>New applications have &ldquo;Stable&rdquo;, &ldquo;Beta&rdquo;, and &ldquo;Unstable&rdquo; channels that we can use to start creating releases. Click the &ldquo;Releases&rdquo; item on the left menu to navigate to the release history. Click the &ldquo;Create a release&rdquo; button to start the process of creating our first release.</p>
+
+<p><img src="/images/guides/swarm/create-release.png" alt="" /></p>
+
+
+<h2 class="linked-headline" id="create-a-release">
+    <a href="/guides/ship-with-docker-swarm/create-swarm-app/#create-a-release" class="anchor" id="#create-a-release"></a>
+    Create a Release
+</h2>
+
+
+<p>YAML is the language we use to define a Replicated application. Front and center is a YAML editor where you define the containers and configuration that comprises your application and how Replicated extends it to your customer&rsquo;s environment. To the right of the YAML editor is a preview of the configuration items as defined by your Replicated YAML. The default document stubs in a hostname field, but you will want to use config items to let end users customize your application to fit natively to their enterprise environments.</p>
+
+<p><img src="/images/guides/swarm/default-yaml.png" alt="" /></p>
+
+<p>In this editor, there will be two YAML documents separated by a page separator: <code>---</code>. The first document, annotated with <code># kind: replicated</code>, represents all of the Replicated-specific functionality available to you such as configuration, snapshots, and configuration files. The second document, annotated with <code># kind: scheduler-swarm</code> represents our Docker Compose file defining all of the Swarm services and their configuration.</p>
+
+<p>For now, we won&rsquo;t touch the Replicated configuration, and add our application&rsquo;s Compose specification. Under the <code># kind: scheduler-swarm</code> document, add the application we defined in our prior section:</p>
+
+<pre><code class="language-yaml">version: '3'
+services:
+  redis:
+    image: redis:3.2-alpine
+</code></pre>
+
+<p>Save the release to return to the Releases page with our new release listed.</p>
+
+<p><img src="/images/guides/swarm/release-list.png" alt="" /></p>
+
+<p>Next, let&rsquo;s make it available for installation. Click the &ldquo;Promote&rdquo; button on the right side of the release, check the &ldquo;Unstable&rdquo; channel, and click Promote again.</p>
+
+<p><img src="/images/guides/swarm/promote-release.png" alt="" /></p>
+
+<p>Our release is now ready to install for &ldquo;Unstable&rdquo; users of our application.</p>
+
+<p>In the <a href="../installing">next guide</a>, we&rsquo;ll walk through creating a customer, issuing a license, and installing this application on a test server.</p>
+
+                            <div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+                                <div class="next flex u-textAlign--left">
+                                
+                                    
+                                        <a href="/guides/helm-application/installing/">
+                                            <span class="icon u-chevronIcon"></span>
+                                            Testing The Customer Installation
+                                        </a>
+                                    
+                                
+                                </div>
+                                <div class="previous flex u-textAlign--right">
+                                
+                                    
+                                        <a href="/guides/ship-with-docker-swarm/installing/">
+                                            Installing Replicated
+                                            <span class="icon u-chevronIcon"></span>
+                                        </a>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+    </article>
+</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/prod/autocomplete-search.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

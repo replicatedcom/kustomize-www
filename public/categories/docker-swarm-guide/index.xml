@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker Swarm Guide on Replicated Help Center</title>
+    <link>/categories/docker-swarm-guide/</link>
+    <description>Recent content in Docker Swarm Guide on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Tue, 30 Jan 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/docker-swarm-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a Replicated &#43; Swarm Release</title>
+      <link>/guides/ship-with-docker-swarm/create-swarm-app/</link>
+      <pubDate>Tue, 30 Jan 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/guides/ship-with-docker-swarm/create-swarm-app/</guid>
+      <description>In this section, we will start by building a Redis service that can run on any Docker Swarm cluster, and end by turning it into a fully functional Replicated release.
+ Prerequisites  To finish this section, you will need:
+ A machine with Docker (version 1.13.1 and above) installed A Replicated account (sign up at https://vendor.replicated.com/)   Create a Docker Compose App  Docker Compose is a tool for shipping a suite of services and containers as a single stack.</description>
+    </item>
+    
+    <item>
+      <title>Installing Replicated</title>
+      <link>/guides/ship-with-docker-swarm/installing/</link>
+      <pubDate>Tue, 30 Jan 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/guides/ship-with-docker-swarm/installing/</guid>
+      <description>Installing a Release  In this guide, we will take the application we created in our last guide and install it onto a test customer server. If you do not currently have an application with a release promoted to the Unstable channel, go back to Create and Ship a Release to setup a Replicated account and create this application.
+Start by navigating to the Replicated Vendor Portal
+ Prerequisites  To successfully complete the guide, you will need the following:</description>
+    </item>
+    
+    <item>
+      <title>Iterating on Releases</title>
+      <link>/guides/ship-with-docker-swarm/iterating/</link>
+      <pubDate>Tue, 30 Jan 2018 04:03:20 +0000</pubDate>
+      
+      <guid>/guides/ship-with-docker-swarm/iterating/</guid>
+      <description>Iterating on Releases  In this guide, we will extend on the Redis service we released in earlier guides. If you haven&amp;rsquo;t created and installed a Redis service via Replicated on Swarm, please start with Creating a Swarm App and Installing.
+ Iterating on Releases  Now that our Redis service is running on a Replicated on Swarm install, it is time to start iterating on and deploying releases for our application.</description>
+    </item>
+    
+  </channel>
+</rss>

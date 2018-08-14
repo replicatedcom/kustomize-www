@@ -1,0 +1,578 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:8.7
+  working_directory: ~/repo
+
+cypress_staging: &cypress_staging
+  steps:
+    - setup_remote_docker:
+        version: 17.06.0-ce
+    - attach_workspace:
+        at: ~/repo
+    - run:
+        name: Integration Test Staging
+        command: |
+          if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedcom" ]; then
+            mkdir -p results
+            export CYPRESS_AUTH=$STAGING_AUTH_HOST
+            export CYPRESS_LOGIN_EMAIL=$STAGING_LOGIN_EMAIL
+            export CYPRESS_LOGIN_PASSWORD=$STAGING_LOGIN_PASSWORD
+            export CYPRESS_OTP_LOGIN_EMAIL=$STAGING_OTP_EMAIL
+            export CYPRESS_OTP_LOGIN_PASSWORD=$STAGING_OTP_PASSWORD
+            export CYPRESS_OTP_SECRET=$STAGING_OTP_SECRET
+            $(npm bin)/cypress run \
+              --spec $CY_SPEC_PATH \
+              --reporter junit \
+              --reporter-options "mochaFile=results/my-test-output.xml" \
+              --browser chrome
+          fi
+    - store_test_results:
+        path: results
+    - store_artifacts:
+        path: cypress/videos
+    - store_artifacts:
+        path: cypress/screenshots
+
+cypress_production: &cypress_production
+  steps:
+    - setup_remote_docker:
+        version: 17.06.0-ce
+    - attach_workspace:
+        at: ~/repo
+    - run:
+        name: Integration Test Production
+        command: |
+          if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedcom" ]; then
+            mkdir -p results
+            export CYPRESS_AUTH=$PRODUCTION_AUTH_HOST
+            export CYPRESS_LOGIN_EMAIL=$PRODUCTION_LOGIN_EMAIL
+            export CYPRESS_LOGIN_PASSWORD=$PRODUCTION_LOGIN_PASSWORD
+            export CYPRESS_OTP_LOGIN_EMAIL=$PRODUCTION_OTP_EMAIL
+            export CYPRESS_OTP_LOGIN_PASSWORD=$PRODUCTION_OTP_PASSWORD
+            export CYPRESS_OTP_SECRET=$PRODUCTION_OTP_SECRET
+            $(npm bin)/cypress run \
+              --spec $CY_SPEC_PATH \
+              --reporter junit \
+              --reporter-options "mochaFile=results/my-test-output.xml" \
+              --browser chrome
+          fi
+    - store_test_results:
+        path: results
+    - store_artifacts:
+        path: cypress/videos
+    - store_artifacts:
+        path: cypress/screenshots
+
+version: 2
+jobs:
+
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+
+      - run: make deps
+
+      - run: make build_staging
+      - run: mv dist dist_staging
+
+      - run: make build_production
+      - run: mv dist dist_production
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - dist_staging
+            - dist_production
+            - bin
+            - Makefile
+            - node_modules
+            - deploy
+            - cypress
+            - cypress.json
+
+  deploy_staging:
+    <<: *defaults
+    steps:
+      - setup_remote_docker:
+          version: 17.06.0-ce
+      - attach_workspace:
+          at: ~/repo
+
+      - deploy:
+          name: Deploy Staging
+          command: |
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedcom" ]; then
+              sudo apt-get install python-dev
+              sudo apt-get install python-setuptools
+              sudo easy_install pip
+              /usr/local/bin/pip install awscli --upgrade --user
+
+              docker build -f ~/repo/deploy/Dockerfile --build-arg dist=./dist_staging --build-arg version=${CIRCLE_SHA1:0:7} -t console:${CIRCLE_SHA1:0:7} ~/repo
+
+              export AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID
+              export AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY
+              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+              docker tag console:${CIRCLE_SHA1:0:7} 923411875752.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7}
+              docker push 923411875752.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7}
+              docker tag console:${CIRCLE_SHA1:0:7} 923411875752.dkr.ecr.us-east-1.amazonaws.com/console:latest
+              docker push 923411875752.dkr.ecr.us-east-1.amazonaws.com/console:latest
+
+              docker run -it \
+                -e AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID \
+                -e AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY \
+                923411875752.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
+                ecs \
+                deploy \
+                --timeout 1200 \
+                -i console 923411875752.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7} \
+                --region us-east-1 \
+                tf-api-staging console
+              fi
+
+  test_staging_console:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/console_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging
+
+  test_staging_customers:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customers_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging
+
+  test_staging_default_spec:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/support/default_spec_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging
+
+  test_staging_login:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/auth/login_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging
+
+  test_staging_logout:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/auth/logout_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging
+
+  test_staging_customer_upload_photo:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_upload_photo_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging  
+
+  test_staging_customer_edit_name:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_edit_name_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging  
+
+  test_staging_spec_archive_new_acct:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/support/spec_archive_new_acct_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging    
+
+  test_staging_customer_delete_new_acct:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_delete_new_acct_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging    
+
+  test_staging_release_semvererrors_verify:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/channels/release_semvererrors_verify_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging   
+
+  test_staging_team_member_check:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.staging.replicated.com
+      - CY_SPEC_PATH: cypress/integration/account/team_member_check_spec.js
+    working_directory: ~/repo
+    <<: *cypress_staging   
+
+  deploy_production:
+    <<: *defaults
+    steps:
+      - setup_remote_docker:
+          version: 17.06.0-ce
+      - attach_workspace:
+          at: ~/repo
+
+      - deploy:
+          name: Deploy Production
+          command: |
+            if [ "${CIRCLE_PROJECT_USERNAME}" == "replicatedcom" ]; then
+              sudo apt-get install python-dev
+              sudo apt-get install python-setuptools
+              sudo easy_install pip
+              /usr/local/bin/pip install awscli --upgrade --user
+
+              docker build -f ~/repo/deploy/Dockerfile --build-arg dist=./dist_production --build-arg version=${CIRCLE_SHA1:0:7} -t console:${CIRCLE_SHA1:0:7} ~/repo
+
+              export AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID
+              export AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY
+              $(/home/circleci/.local/bin/aws ecr get-login --no-include-email --region us-east-1)
+              docker tag console:${CIRCLE_SHA1:0:7} 799720048698.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7}
+              docker push 799720048698.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7}
+              docker tag console:${CIRCLE_SHA1:0:7} 799720048698.dkr.ecr.us-east-1.amazonaws.com/console:latest
+              docker push 799720048698.dkr.ecr.us-east-1.amazonaws.com/console:latest
+
+              docker run -it \
+                -e AWS_ACCESS_KEY_ID=$PRODUCTION_AWS_ACCESS_KEY_ID \
+                -e AWS_SECRET_ACCESS_KEY=$PRODUCTION_AWS_SECRET_ACCESS_KEY \
+                799720048698.dkr.ecr.us-east-1.amazonaws.com/deployer:latest \
+                ecs \
+                deploy \
+                --timeout 1200 \
+                -i console 799720048698.dkr.ecr.us-east-1.amazonaws.com/console:${CIRCLE_SHA1:0:7} \
+                --region us-east-1 \
+                tf-api-production console
+
+            fi
+
+  test_production_console:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/console_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+
+  test_production_customers:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customers_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+
+  test_production_default_spec:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/support/default_spec_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+
+  test_production_login:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/auth/login_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+
+  test_production_logout:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/auth/logout_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+
+  test_production_customer_delete_new_acct:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_delete_new_acct_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production  
+
+  test_production_customer_edit_name:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_edit_name_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production  
+
+  test_production_customer_upload_photo:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/customers/customer_upload_photo_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production  
+
+  test_production_edit_releasespec:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/channels/edit_releasespec_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production
+    
+  test_production_release_semvererrors_verify:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/channels/release_semvererrors_verify_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production  
+    
+  test_production_spec_archive_new_acct:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/support/spec_archive_new_acct_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production  
+    
+  test_production_team_member_check:
+    docker:
+    - image: cypress/browsers
+    environment:
+      - CYPRESS_HOST: https://console.replicated.com
+      - CY_SPEC_PATH: cypress/integration/account/team_member_check_spec.js
+    working_directory: ~/repo
+    <<: *cypress_production      
+
+workflows:
+  version: 2
+  btd:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+               - master
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+               - master
+      - test_staging_console:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master
+      - test_staging_customers:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master
+      - test_staging_default_spec:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master
+      - test_staging_login:
+          requires:
+            - deploy_staging
+          filters:
+           branches:
+              only:
+               - master
+      - test_staging_logout:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master
+      - test_staging_customer_upload_photo:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master  
+      - test_staging_customer_edit_name:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master  
+      - test_staging_spec_archive_new_acct:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master   
+      - test_staging_customer_delete_new_acct:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master  
+      - test_staging_release_semvererrors_verify:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master   
+      - test_staging_team_member_check:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only:
+               - master                                                        
+      - deploy_production:
+          requires:
+            - test_staging_console
+            - test_staging_customers
+            - test_staging_default_spec
+            - test_staging_login
+            - test_staging_logout
+            - test_staging_customer_upload_photo
+            - test_staging_customer_edit_name
+            - test_staging_spec_archive_new_acct
+            - test_staging_customer_delete_new_acct
+            - test_staging_release_semvererrors_verify
+            - test_staging_team_member_check
+
+          filters:
+            branches:
+              only: master
+      - test_production_console:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_customers:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_default_spec:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_login:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_logout:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_customer_upload_photo:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master  
+      - test_production_customer_edit_name:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_spec_archive_new_acct:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master
+      - test_production_customer_delete_new_acct:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master   
+      - test_production_release_semvererrors_verify:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master                                            
+
+      - test_production_team_member_check:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only:
+               - master                                   
+
+

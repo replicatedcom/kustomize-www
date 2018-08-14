@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Config on Replicated Help Center</title>
+    <link>/docs/config/</link>
+    <description>Recent content in Config on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Wed, 02 May 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/config/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Config Overview</title>
+      <link>/docs/config/overview/</link>
+      <pubDate>Wed, 02 May 2018 01:19:20 +0000</pubDate>
+      
+      <guid>/docs/config/overview/</guid>
+      <description>Ship Config  The config key is where you can define the dynamic values that end customers need to configure before they can use your application. It might include things like:
+ External Database connection details and credentials Other internal integrations settings like SMTP auth or API keys Tunable settings for your application like &amp;ldquo;number of worker processes&amp;rdquo; or &amp;ldquo;log level&amp;rdquo;  In Replicated Ship, a simple config section with one item might look like</description>
+    </item>
+    
+  </channel>
+</rss>

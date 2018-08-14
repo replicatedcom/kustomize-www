@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicated Scheduler Guide on Replicated Help Center</title>
+    <link>/categories/replicated-scheduler-guide/</link>
+    <description>Recent content in Replicated Scheduler Guide on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Tue, 30 Jan 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/replicated-scheduler-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create And Ship A Release</title>
+      <link>/guides/native-scheduler/create-release/</link>
+      <pubDate>Tue, 30 Jan 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/guides/native-scheduler/create-release/</guid>
+      <description>Create And Ship A Release When starting out with Replicated, the Vendor Portal will be the place you spend most of your time. Going through this guide will help you become familiar with the concepts and ideas that are important to be successful shipping on Replicated using the Vendor Portal. If you get stuck or need help with any of these steps, head to our community or send us an email to contact@replicated.</description>
+    </item>
+    
+    <item>
+      <title>Installing And Testing The Release</title>
+      <link>/guides/native-scheduler/install/</link>
+      <pubDate>Tue, 30 Jan 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/guides/native-scheduler/install/</guid>
+      <description>Installing and Testing A Release This guide will walk you through installing the &amp;ldquo;Learning Replicated&amp;rdquo; application create and promoted in the previous guide. If you haven&amp;rsquo;t yet created this release, head back to the Create And Ship A Release guide and complete that first.
+Now that we&amp;rsquo;ve created a release and promoted it to the Unstable channel, the next step is to create a customer license, and use this license to install the application on a test server.</description>
+    </item>
+    
+    <item>
+      <title>Iterating And Updating</title>
+      <link>/guides/native-scheduler/iterate/</link>
+      <pubDate>Tue, 30 Jan 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/guides/native-scheduler/iterate/</guid>
+      <description>Iterate and Ship Updates This guide will walk you through making a change and shipping an update to an application after it&amp;rsquo;s been deployed. It&amp;rsquo;s assumed you have the environment from parts 1 and 2 of this guide (creating a release and installing). If you haven&amp;rsquo;t completed these guides, head back and finish them first.
+Now that we have a server running, a common task is to ship updates. Our application is simple (just a redis container), but let&amp;rsquo;s add an nginx congtainer to our test application.</description>
+    </item>
+    
+  </channel>
+</rss>

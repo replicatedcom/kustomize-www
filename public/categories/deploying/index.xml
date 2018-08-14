@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deploying on Replicated Help Center</title>
+    <link>/categories/deploying/</link>
+    <description>Recent content in Deploying on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Tue, 01 May 2018 19:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/deploying/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automated Deployment</title>
+      <link>/guides/automated-deployment/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-deployment/</guid>
+      <description>Applications delivered in Replicated Ship can be deployed using automation instead of manually running installation scripts. It&amp;rsquo;s possible to deploy the first release of an application completely automated, even to airgapped environments. The process to automate deployment of an application varies, depending on the automation tools used. This document defines the steps involved in automating the deployment of an on-prem application, with links to specific implementations, when possible.
+The process to automate deployment of an application involves 3 steps:</description>
+    </item>
+    
+    <item>
+      <title>Automated Deployment with a Kubernetes App</title>
+      <link>/guides/automated-deployment-kubernetes-app/</link>
+      <pubDate>Tue, 01 May 2018 19:00:00 +0000</pubDate>
+      
+      <guid>/guides/automated-deployment-kubernetes-app/</guid>
+      <description>Kubernetes applications delivered in Replicated Ship can be deployed using automation instead of manually running kubectl to deploy from a laptop. It&amp;rsquo;s possible to deploy the first release of an application completely automated, even to airgapped environmnets. This document walks through an example application and how it will be configured and initially deployed.
+Prerequisites In addition to any external resources the software vendor requries (databases, etc), you&amp;rsquo;ll need to have:</description>
+    </item>
+    
+  </channel>
+</rss>

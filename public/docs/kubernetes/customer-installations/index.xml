@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Managing Kubernetes in Customer Environments on Replicated Help Center</title>
+    <link>/docs/kubernetes/customer-installations/</link>
+    <description>Recent content in Managing Kubernetes in Customer Environments on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sun, 03 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/kubernetes/customer-installations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Managing Kubernetes in Customer Environments</title>
+      <link>/docs/kubernetes/customer-installations/overview/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/overview/</guid>
+      <description>After building your application as a series of Kubernetes manifests, use this documentation to distribute it to your customers. Here, you will find all of the information necessary to setup and manage your application running on Kubernetes clusters.
+While Replicated and your application can run on a pre-built Kubernetes cluster, the Installing documentation provides information about Replicated&amp;rsquo;s Kubernetes appliance, an opinionated, easy setup Kubernetes node ready to run Replicated applications.</description>
+    </item>
+    
+    <item>
+      <title>Installing Replicated</title>
+      <link>/docs/kubernetes/customer-installations/installing/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/installing/</guid>
+      <description>We distribute an installation script that can be used to install Docker, Kubernetes and Replicated. The cluster should not be created prior to running the install script. The Replicated install script will install a working Kubernetes cluster.
+ Basic install (recommended):  The basic install will install Docker, Kubernetes and Replicated. It will save the install script to a file which you can inspect and then run. We recommend reading and understanding the install script prior to running.</description>
+    </item>
+    
+    <item>
+      <title>Supported Operating Systems</title>
+      <link>/docs/kubernetes/customer-installations/supported-operating-systems/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/supported-operating-systems/</guid>
+      <description>Replicated supports Linux-based servers that can run current versions of Docker and Kubernetes.
+Your machine must support docker-engine 1.12.3 . The install script will install docker-engine 1.12.3 and Kubernetes 1.9.3 .
+Replicated provides an easy install script to work with the the following list of operating system.
+ Ubuntu 16.04 Red Hat Enterprise Linux 7.4 CentOS 7  </description>
+    </item>
+    
+    <item>
+      <title>Airgapped Installations</title>
+      <link>/docs/kubernetes/customer-installations/airgapped-installations/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/airgapped-installations/</guid>
+      <description>An &amp;ldquo;airgapped&amp;rdquo; environment is a network that has no path to inbound or outbound internet traffic at all. Some enterprise customers require that you ship a package they can install in their airgapped environment.
+Replicated supports this type of installation, using the following steps:
+ Prepare the environment  The customer will be responsible for delivering a server that is capable of running Replicated, Kubernetes and Docker. Refer to the supporting operating systems list for a list of officially supported systems.</description>
+    </item>
+    
+    <item>
+      <title>Install into an Existing Cluster</title>
+      <link>/docs/kubernetes/customer-installations/existing-cluster/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/existing-cluster/</guid>
+      <description>Replicated can be installed to an existing Kubernetes 1.9 cluster. Use the https://get.replicated.com/kubernetes-yml-generate script to generate specs for the Deployments, Services, and PersistentVolumeClaims required by Replicated.
+Persistent Volumes When deploying to an environment with dynamic volume provisioning, use the storage_class param to set how PersistentVolumeClaims are fulfilled. You should also disable the Host Path provisioner when specifying a storage class.
+curl -sSL &amp;quot;https://get.replicated.com/kubernetes-yml-generate?storage_class=standard&amp;amp;storage_provisioner=0&amp;quot; | bash &amp;gt; replicated.yml kubectl apply -f replicated.</description>
+    </item>
+    
+    <item>
+      <title>Installing Kubernetes Only</title>
+      <link>/docs/kubernetes/customer-installations/installing-k8s-only/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/installing-k8s-only/</guid>
+      <description>The Replicated installation script can be used to install Docker and Kubernetes in an airgapped environment, and not install Replicated to the cluster. This is useful when you want to use another method to distribute you application, such as Helm.
+ Basic install (recommended):  The basic install will install Docker, Kubernetes by pulling the scripts and resources from the Internet. It will save the install script to a file which you can inspect and then run.</description>
+    </item>
+    
+    <item>
+      <title>Adding Nodes</title>
+      <link>/docs/kubernetes/customer-installations/add-nodes/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/kubernetes/customer-installations/add-nodes/</guid>
+      <description>When an application is configured by the vendor with a clustering strategy, Replicated makes it possible for the end customer to install additional nodes on remote instances to run a distributed application.
+On the Cluster page on the On-Prem Console an &amp;ldquo;Add Node&amp;rdquo; button will be visible. This will prompt the end customer with an option for adding a node.
+The join script will add Docker and all dependencies for a worker node in a Kubernetes cluster, then join the cluster through the master node.</description>
+    </item>
+    
+  </channel>
+</rss>

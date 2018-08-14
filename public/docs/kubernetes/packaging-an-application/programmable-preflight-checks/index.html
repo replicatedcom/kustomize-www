@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Programmable Preflight Checks</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<link rel="stylesheet" href='/css/style-7a29e25363.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	
+	<meta name="generator" content="Hugo 0.26" />
+	
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<a href="/search" id="mobile-search" class="searchIcon--white"></a>
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="nav-list paddingContainer u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<img width="109" src="/images/logo@2x.png"/>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="/guides/">Guides</a></li>
+							
+								<li><a href="/docs/native/getting-started/overview/">Documentation</a></li>
+							
+								<li><a href="/api/">API Reference</a></li>
+							
+								<li><a href="https://help.replicated.com/community/">Community</a></li>
+							
+							<li>
+								<div class="search-form">
+									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
+									<span class="searchIcon--white" id="desktop-search"></span>
+								</div>
+							</li>
+							<li class="log-in-link">
+								<span><a href="https://vendor.replicated.com" target="_blank">Log in</a></span>
+								
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<article class="single">
+				
+					<div class="u-gradient--kubernetes main-section header flex-column flex1 justifyContent--center">
+				
+				<div class="container">
+					<div class="paddingContainer">
+						<div class="flex flex-auto u-width--full justifyContent--spaceBetween alignItems--center u-marginTop--more">
+							<div class="u-width--full u-marginRight--more">
+								<h1 class="u-color--white u-fontWeight--bold u-fontSize--header u-textAlign--left">Programmable Preflight Checks</h1>
+								<p class="u-fontSize--normal u-fontWeight--medium u-color--white u-marginTop--normal u-lineHeight--normal">A guide to implementing Programmable Preflight Checks to analyze customer systems to determine if the environment meets the minimum requirements for installation or update.</p>
+							</div>
+							<div class="flex-auto u-hidden--mobileTablet">
+								<span class="icon u-replicatedKubernetes u-marginRight--normal"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="paddingContainer">
+					<div class="u-flexTabletReflow flex1">
+						<div class="flex-auto sidebar-wrapper">
+							
+
+
+
+<div class="sidebar">
+        <div class="dropdown u-marginBottom--most">
+            <p class="u-fontWeight--bold u-fontSize--largest u-color--tuna u-paddingBottom--normal">Documentation</p>
+            <p class="u-fontSize--large u-fontWeight--medium u-cursor--pointer flex justifyContent--spaceBetween alignItems--center" id="dropdown-link">
+                
+                    <span>Kubernetes</span>
+                
+                <span class="icon u-chevronIcon u-margingRight--small"></span>
+            </p>
+            <div class="menu" id="scheduler-dropdown-menu" style="display: none">
+                <div class="u-paddingTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/native/getting-started/overview" class="u-color--curiousBlue">Replicated</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/native/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Native Scheduler</p>
+                        </a>
+                        <a href="/docs/kubernetes/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Kubernetes</p>
+                        </a>
+                        <a href="/docs/swarm/getting-started/overview" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Docker Swarm</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/config-screen/config-yaml/" class="u-color--curiousBlue">Features</a>
+                    <div class="u-marginTop--small">
+                        <a href="/docs/config-screen/config-yaml/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Config Screen</p>
+                        </a>
+                        <a href="/docs/snapshots/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Snapshots</p>
+                        </a>
+                        <a href="/docs/ldap-and-identity/overview/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">LDAP & Identity Integration</p>
+                        </a>
+                        <a href="/docs/registry/security/" class="u-fontWeight--medium u-color--tuna u-fontSize--small">
+                            <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Replicated Private Registry</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="u-borderTop--gray u-paddingTop--normal u-marginTop--small u-fontSize--normal u-fontWeight--bold u-color--curiousBlue u-paddingLeft--small">
+                    <a href="/docs/ship" class="u-fontWeight--medium u-color--tuna u-fontSize--normal">
+                        <p class="scheduler-menu-item-sub" class="u-lineHeight--normal">Ship</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-only">
+            
+            
+            
+            <div class="u-marginBottom--most">
+                <h3 class="u-fontWeight--bold u-fontSize--large u-borderBottom--gray u-paddingBottom--normal u-marginBottom--normal">Kubernetes</h3>
+                
+                    
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/kubernetes/getting-started/overview/" class=" u-color--tuna ">Shipping With Kubernetes on Replicated</a>
+                        </h3>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/kubernetes/packaging-an-application/yaml-format/" class=" u-color--tuna ">Packaging An Application</a>
+                        </h3>
+                        
+                            <div class="u-paddingLeft--normal u-marginTop--small u-marginBottom--small">
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/yaml-format/" class=" u-color--curiousBlue ">
+                                            YAML Overview
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/ingress/" class=" u-color--curiousBlue ">
+                                            Ingress Controllers
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/volumes/" class=" u-color--curiousBlue ">
+                                            Volumes
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/secrets/" class=" u-color--curiousBlue ">
+                                            Secrets
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/config-maps/" class=" u-color--curiousBlue ">
+                                            Config Maps
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/template-functions/" class=" u-color--curiousBlue ">
+                                            Template Functions
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/support-bundle/" class=" u-color--curiousBlue ">
+                                            Support Bundle
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/custom-preflight-checks/" class=" u-color--curiousBlue ">
+                                            Custom Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/" class=" u-color--curiousBlueDark u-fontWeight--bold ">
+                                            Programmable Preflight Checks
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/custom-metrics/" class=" u-color--curiousBlue ">
+                                            Custom Metrics
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/admin-commands/" class=" u-color--curiousBlue ">
+                                            Admin Commands
+                                        </a>
+                                    </p>
+                                    
+                                
+                                    
+                                    <p class="u-paddingTop--small u-fontSize--normal u-lineHeight--normal">
+                                        <a href="/docs/kubernetes/packaging-an-application/application-properties/" class=" u-color--curiousBlue ">
+                                            Application Properties
+                                        </a>
+                                    </p>
+                                    
+                                
+                            </div>
+                        
+                    
+                        
+                        <h3 class="u-fontWeight--medium u-fontSize--normal u-marginTop--normal u-lineHeight--normal">
+                            <a href="/docs/kubernetes/customer-installations/overview/" class=" u-color--tuna ">Managing Kubernetes in Customer Environments</a>
+                        </h3>
+                        
+                    
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+
+						</div>
+						<div class="flex1 page-content-wrapper">
+							<div class="page-content">
+								
+
+<p>The host requirements section of the yaml gives Replicated the ability to analyze system
+requirements and warn or prevent the user from proceeding with an installation or upgrade. In
+addition to host requirements, Replicated has the ability to define fully customizable preflight
+requirements as of version <span class="version">v2.5.0</span>
+. These custom requirements provide
+flexibility to the point that an arbitrary command can be executed by a vendor provided image. See
+the <a href="#commands">commands section</a> below for a full list of commands that may be run including
+examples.</p>
+
+<p>There are two types of custom preflight checks:</p>
+
+<ul>
+<li>Run a shell script using ubuntu trusty - see <a href="#raw">raw</a></li>
+<li>Use a common preflight check - see <a href="#api-version">api_version</a>, <a href="#cluster-size">cluster_size</a>, <a href="#no-restore-in-progress">no_restore_in_progress</a>, <a href="#server-version">server_version</a>, <a href="#total-cores">total_cores</a>, <a href="#total-memory">total_memory</a>, <a href="#volume-claim-bound">volume_claim_bound</a>, <a href="#volume-claims">volume_claims</a>.</li>
+</ul>
+
+<h1 id="commands">Commands</h1>
+
+<p>Commands will be run to determine the status of a requirement. They return result messages, a
+status code and an error. Next we will look at examples. For details on the fields please see the
+<a href="#resource-specification">resource specification</a> section at the bottom of the page.</p>
+
+
+<h2 class="linked-headline" id="raw">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#raw" class="anchor" id="#raw"></a>
+    Raw
+</h2>
+
+
+<p>The raw command is run inside Replicated&rsquo;s <a href="https://hub.docker.com/r/replicated/cmd/">command container</a>.
+The clustering and tags properties will determine where the command is run. If clustering is
+disabled the command will run on all nodes in the cluster. Additional properties to the raw command
+are all that can be specified in the container section of the yaml.</p>
+
+<p><strong>Id:</strong> <code>raw</code></p>
+
+<p><strong>Status Codes:</strong> 1, 22, 62 <a href="#status-codes">*</a></p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cmd</td>
+<td>string</td>
+<td>yes</td>
+<td>The cmd to be run when executing the container</td>
+</tr>
+
+<tr>
+<td>cluster</td>
+<td>string</td>
+<td>no</td>
+<td>Is clustering enabled (evaluated to a boolean value)</td>
+</tr>
+
+<tr>
+<td>tags</td>
+<td>array[string]</td>
+<td>no</td>
+<td>Determines nodes where the check is performed when cluster=true</td>
+</tr>
+
+<tr>
+<td>conflicts</td>
+<td>array[string]</td>
+<td>no</td>
+<td>Skips nodes with the tag when cluster=true</td>
+</tr>
+
+<tr>
+<td>additional&hellip;</td>
+<td></td>
+<td>no</td>
+<td>all possible container properties</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<pre><code class="language-yaml">custom_requirements:
+- id: license-file-exists
+  message: License file exists
+  details: The vendor license file must exist on the host at /etc/vendor-license
+  results:
+  - status: success
+    message: File /etc/vendor-license exists.
+    condition:
+      status_code: 0
+  - status: error
+    message: File /etc/vendor-license does not exists.
+    condition:
+      status_code: 1
+    # else error
+  command:
+    id: raw
+    data:
+      cmd: '[&quot;test&quot;, &quot;-e&quot;, &quot;/host/etc/vendor-license&quot;]'
+      volumes:
+      - host_path: /etc
+        container_path: /host/etc
+        options: [&quot;ro&quot;]
+</code></pre>
+
+<ul>
+<li>Use a common preflight check - see <a href="#api-version">api_version</a>, <a href="#cluster-size">cluster_size</a>, <a href="#no-restore-in-progress">no_restore_in_progress</a>, <a href="#server-version">server_version</a>, <a href="#total-cores">total_cores</a>, <a href="#total-memory">total_memory</a>, <a href="#volume-claim-bound">volume_claim_bound</a>, <a href="#volume-claims">volume_claims</a>.</li>
+</ul>
+
+
+<h2 class="linked-headline" id="api-version">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#api-version" class="anchor" id="#api-version"></a>
+    API Version
+</h2>
+
+
+
+<h2 class="linked-headline" id="cluster-size">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#cluster-size" class="anchor" id="#cluster-size"></a>
+    Cluster Size
+</h2>
+
+
+
+<h2 class="linked-headline" id="no-restore-in-progress">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#no-restore-in-progress" class="anchor" id="#no-restore-in-progress"></a>
+    No Restore in Progress
+</h2>
+
+
+
+<h2 class="linked-headline" id="server-version">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#server-version" class="anchor" id="#server-version"></a>
+    Server Version
+</h2>
+
+
+
+<h2 class="linked-headline" id="total-memory">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#total-memory" class="anchor" id="#total-memory"></a>
+    Total Memory
+</h2>
+
+
+
+<h2 class="linked-headline" id="volume-claim-bound">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#volume-claim-bound" class="anchor" id="#volume-claim-bound"></a>
+    Volume Claim Bound
+</h2>
+
+
+
+<h2 class="linked-headline" id="volume-claims">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#volume-claims" class="anchor" id="#volume-claims"></a>
+    Volume Claims
+</h2>
+
+
+<h1 id="resource-specification">Resource Specification</h1>
+
+<p>Custom requirements are represented with the followings and properties.</p>
+
+
+<h2 class="linked-headline" id="requirement">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#requirement" class="anchor" id="#requirement"></a>
+    Requirement
+</h2>
+
+
+<p>The requirement resource is the primary resource for custom preflight checks. A requirement
+represents a single check that is to be preformed during the installation and upgrade steps of the
+application lifecycle.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>yes</td>
+<td>A unique identifier for the requirement</td>
+</tr>
+
+<tr>
+<td>message</td>
+<td>string or Message</td>
+<td>yes</td>
+<td>A short description of the requirement</td>
+</tr>
+
+<tr>
+<td>details</td>
+<td>string or Message</td>
+<td>no</td>
+<td>A more detailed description of the requirement</td>
+</tr>
+
+<tr>
+<td>when</td>
+<td>string</td>
+<td>no</td>
+<td>Will determine if this requirement should be run (evaluated to a boolean value)</td>
+</tr>
+
+<tr>
+<td>command</td>
+<td>Command</td>
+<td>yes</td>
+<td>The command that will be run</td>
+</tr>
+
+<tr>
+<td>results</td>
+<td>array[Result]</td>
+<td>yes</td>
+<td>An array of result objects that when evaluated will determine success or failure</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="linked-headline" id="command">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#command" class="anchor" id="#command"></a>
+    Command
+</h2>
+
+
+<p>The command resource represents the command that is to be run. The command will return messages, a
+status code and possibly an error. See the <a href="#commands">commands section</a> for a list of supported
+operations.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>yes</td>
+<td>The command id</td>
+</tr>
+
+<tr>
+<td>timeout</td>
+<td>int</td>
+<td>no</td>
+<td>Timeout in seconds, default 15 seconds, -1 denotes no timeout</td>
+</tr>
+
+<tr>
+<td>data</td>
+<td>object</td>
+<td>no</td>
+<td>The command data</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="linked-headline" id="result">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#result" class="anchor" id="#result"></a>
+    Result
+</h2>
+
+
+<p>The result resource represents the different possible outcomes of the command. A result contains
+a status, message and condition. Result are evaluated in order and the first matching result will
+determine the requirement status. If no condition properties are specified that result will always
+evaluate to true. If no results match the requirement will receive status <code>error</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>yes</td>
+<td>One of success, warn or error</td>
+</tr>
+
+<tr>
+<td>message</td>
+<td>string or Message</td>
+<td>yes</td>
+<td>A description of the result</td>
+</tr>
+
+<tr>
+<td>condition</td>
+<td>Condition</td>
+<td>no</td>
+<td>The condition that must be met</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="linked-headline" id="condition">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#condition" class="anchor" id="#condition"></a>
+    Condition
+</h2>
+
+
+<p>All properties of a condition must be met to determine that condition to be true. The <code>bool_expr</code>
+property is intended to be evaluated using Replicated templates. This template will receive
+the following variables from the result of the command: <code>.Results</code> (array of messages), <code>.Result</code>
+(the first message), <code>.StatusCode</code>, <code>.Error</code>.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>error</td>
+<td>boolean</td>
+<td>no</td>
+<td>Did the command result in an error?</td>
+</tr>
+
+<tr>
+<td>status_code</td>
+<td>int</td>
+<td>no</td>
+<td>The command status code</td>
+</tr>
+
+<tr>
+<td>bool_expr</td>
+<td>string</td>
+<td>no</td>
+<td>An expression that can be evaluated and parsed as a boolean</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="linked-headline" id="message">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#message" class="anchor" id="#message"></a>
+    Message
+</h2>
+
+
+<p>A message resource can be localized via the id. It contains a default message that will be
+displayed when no localization is present. Messages have arguments that can be substituted into the
+text via templates.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>no</td>
+<td>The message identifier. Can be used to localize the message.</td>
+</tr>
+
+<tr>
+<td>default_message</td>
+<td>string</td>
+<td>yes</td>
+<td>The default message</td>
+</tr>
+
+<tr>
+<td>args</td>
+<td>map[string]string</td>
+<td>no</td>
+<td>Arguments to the message</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 class="linked-headline" id="status-codes">
+    <a href="/docs/kubernetes/packaging-an-application/programmable-preflight-checks/#status-codes" class="anchor" id="#status-codes"></a>
+    Status Codes
+</h2>
+
+
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>Catchall for general errors</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Invalid argument</td>
+</tr>
+
+<tr>
+<td>62</td>
+<td>Timeout</td>
+</tr>
+
+<tr>
+<td>98</td>
+<td>Address already in use</td>
+</tr>
+
+<tr>
+<td>111</td>
+<td>Connection refused</td>
+</tr>
+</tbody>
+</table>
+
+								<div class="prev-next-arrows justifyContent--spaceBetween flex u-marginTop--most">
+									<div class="next flex u-textAlign--left">
+										
+											
+												<a href="/docs/kubernetes/packaging-an-application/custom-preflight-checks/">
+													<span class="icon u-chevronIcon"></span>
+													Custom Preflight Checks
+												</a>
+											
+										
+										</div>
+										<div class="previous flex u-textAlign--right">
+										
+											
+												<a href="/docs/kubernetes/packaging-an-application/custom-metrics/">
+													Custom Metrics
+													<span class="icon u-chevronIcon"></span>
+												</a>
+											
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-list-item">
+  <div class="footer-item">
+    <div class="u-paddingBottom--normal">
+      <a target="_blank" class="u-cursor--pointer" href="https://www.replicated.com">
+        <img width="130" src="/images/footer_logo@2x.png"/>
+      </a>
+    </div>
+    <div class="u-fontSize--small u-color--dustyGray u-marginBottom--small u-hidden--mobileTablet">&copy; 2018 <a> &nbsp;Replicated Inc.</a></div>
+    <div class="u-fontSize--small u-color--dustyGray u-hidden--mobileTablet">All Rights Reserved</div>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Help Center</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/guides">Guides</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/docs">Documentation</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="/api">API Reference</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://vendor.replicated.com/support">Contact Support</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Company</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com">About Replicated</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://blog.replicated.com">Replicated Blog</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.replicated.com/careers">Careers</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover">RSS Feed</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">Contact</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://twitter.com/replicatedhq">Twitter</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="mailto:contact@replicated.com">Email</a></li>
+    </ul>
+  </div>
+</div><div class="footer-list-item">
+  <div class="footer-item">
+    <p class="u-fontWeight--medium u-color--tuna">More</p>
+    <ul>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://github.com/replicatedhq">GitHub</a></li>
+      <li><a class="u-color--dustyGray u-textDecoration--underlineOnHover" href="https://www.enterpriseready.io">EnterpriseReady.io</a></li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+			</div>
+		</div>
+	</footer>
+
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61084834-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+      </script>
+    
+ 
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+  
+  
+
+    
+    
+      
+        <script src="/js/staging/autocomplete-search-kubernetes.js"></script>
+      
+      
+    
+
+  
+
+	<script src="/js/prism.js"></script>
+	<script>
+		function toggleMenuClass() {
+			this.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		const toggleMenu = document.getElementById("toggleNav");
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+		};
+	</script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="/js/featherlight.min.js"></script>
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
+        $('#search-field').show("slide", { direction: "right" }, 300);
+        $('#search-field').focus();
+      }
+		});
+
+    $('#search-field').on("blur", function () {
+      $(this).hide("slide", { direction: "right" }, 300);
+    });
+
+    $('#dropdown-link').on('click', function() {
+      $('#scheduler-dropdown-menu').toggle();
+    });
+
+    $(document).on('click', function(e) {
+      var target = e.target;
+      if(target.id !== "dropdown-link") {
+        $('#scheduler-dropdown-menu').hide();
+      }
+    });
+
+    $('.tooltip').tooltip({
+      position: {  my: "center bottom-10", at: "center top"  },
+      show: { effect: "fade", duration: 200 },
+      hide: { effect: "fade", duration: 200 }
+    });
+	</script>
+</body>
+</html>

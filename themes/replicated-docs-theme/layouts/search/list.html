@@ -1,0 +1,29 @@
+{{ partial "headerWithSearch.html" . }}
+	<main class="instant-search">
+		{{ partial "instantsearch_section.html" . }}
+		<div id="hits-per-page"></div> 
+		<div class="container">
+			<h2 class="border">Search Results</h2>
+			<div class="counts">
+				<h3><span id="result-count">O</span> results <span id="search-made"></span></h3>
+				<div class="individual-counts"></div>
+			</div>
+			<div class="search-results">
+				<h2>Documentation <span id="docs-count"></span></h2>
+				<div id="docs-hits">
+					<!-- Hits widget will appear here -->
+				</div>
+			</div>
+			<div class="search-results">
+				<h2>Community <span id="discourse-count"></span></h2>
+				<div id="discourse-hits">
+					<!-- Hits widget will appear here -->
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
+{{ $env := .Site.Params.search_env }}
+<script src="{{ .Site.BaseURL }}js/{{$env}}/instantsearch-search.js"></script>
+{{ partial "footer.html" . }}

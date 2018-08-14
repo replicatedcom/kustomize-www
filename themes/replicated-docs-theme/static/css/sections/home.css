@@ -1,0 +1,179 @@
+.header-section {
+    padding: 90px 0;
+    background: url("../../images/header-bg@2x.png") no-repeat;
+    background-position: center -280px;
+    background-size: 1847px auto;
+}
+
+.header-section .cube-logo {
+    background: url("../../images/cube-logo@2x.png") no-repeat;
+    background-size: 147px auto; 
+    width: 197px;
+    height: 157px;
+}
+
+.swim-lane-section {
+    padding: 60px 0 0;
+
+    background: rgba(244,249,246,100) 0%;
+    background: -moz-linear-gradient(0, rgba(244,249,246,100) 0% 0%, rgba(255,255,255,100) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(244,249,246,100)), color-stop(100%, rgba(255,255,255,100)));
+    background: -webkit-linear-gradient(0, rgba(244,249,246,100)0%, rgba(255,255,255,100) 100%);
+    background: -o-linear-gradient(0, rgba(244,249,246,100) 0%, rgba(255,255,255,100) 100%);
+    background: -ms-linear-gradient(0, rgba(244,249,246,100) 0% 0%, rgba(255,255,255,100) 100%);
+    background: linear-gradient(0, rgba(244,249,246,100) 0%, rgba(255,255,255,100) 100%);
+}
+
+.swim-lane-section .lane {
+    width: 250px;
+    height: 330px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    border-right: #E8E6E6 solid 2px;
+}
+
+.swim-lane-section .lane .img {
+    z-index: 1;
+}
+
+.swim-lane-section .configure-img {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: 0 8px;
+    width: 152px;
+    height: 126px;
+}
+
+.swim-lane-section .build-img {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: 0 -125px;
+    width: 140px;
+    height: 125px;
+}
+
+.swim-lane-section .deploy-img {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: 0 -265px;
+    width: 105px;
+    height: 132px;
+}
+
+.swim-lane-section .update-img {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: 0 -416px;
+    width: 123px;
+    height: 119px;
+}
+
+.swim-lane-section .merge-circle {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: -166px -3px;
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    left: 241px;
+    top: 14px;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.swim-lane-section .pull-circle {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: -166px -73px;
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    left: 492px;
+    top: 14px;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.swim-lane-section .update-circle {
+    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
+    background-position: -166px -143px;
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    left: 742px;
+    top: 14px;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.swim-lane-section .lane:last-of-type {
+    border-right: 0;
+}
+
+.swim-lane-section .line {
+    top: 17px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 4px;
+    width: 720px;
+    background: #63C07D;
+    z-index: 0;
+}
+
+.challenges-section {
+    padding: 60px 0;
+    background: #F5F8FC;
+}
+
+@media screen and (max-width: 1024px) {
+    .swim-lane-section .line,
+    .swim-lane-section .update-circle,
+    .swim-lane-section .pull-circle,
+    .swim-lane-section .merge-circle {
+        display: none;
+    }
+
+    .swim-lane-section .lane:nth-of-type(4) {
+        border: 0;
+    }
+
+    .swim-lane-section .container {
+        max-width: 745px;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .header-section .container {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-section .container div:last-of-type {
+        width: 100%;
+    }
+
+    .header-section .container div:last-of-type p {
+        font-size: 14px;
+    }
+
+    .header-section .cube-logo {
+        margin-left: 45px;
+        margin-bottom: 20px;
+    }
+
+    .header-section {
+        background-position: center -378px;
+        background-size: 2347px auto;
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .swim-lane-section .lane {
+        border: 0;
+    }
+    .swim-lane-section .container {
+        padding-right: 30px;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    .swim-lane-section br {
+        display: none;
+    }
+}

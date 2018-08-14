@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on Replicated Help Center</title>
+    <link>/docs/audit-log/architecture/</link>
+    <description>Recent content in Architecture on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Sat, 03 Mar 2018 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/docs/audit-log/architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Audit Log Architecture</title>
+      <link>/docs/audit-log/architecture/overview/</link>
+      <pubDate>Sat, 03 Mar 2018 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/architecture/overview/</guid>
+      <description>Retraced is more than a traditional database to store and retrieve objects. The &amp;ldquo;Architecture&amp;rdquo; documentation provides an overview of some of the features that Retraced provides to provide immutability and verifiability of your audit log data.
+Cryptographically Guarantee Immutability Retraced implements industry standard and provable digest algorithms to ensure the data you send into an audit log is the data that was received. The same algorithms can be used in the future to verify that none of the data has changed since it was written.</description>
+    </item>
+    
+    <item>
+      <title>Immutability Guarantee</title>
+      <link>/docs/audit-log/architecture/immutability-guarantee/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/architecture/immutability-guarantee/</guid>
+      <description>When you send audit events into Retraced, we offer functionality that guarantees the data you sent is the data that was received. We use the same functionality to allow you to, at any time, cryptographically verify that the events have not changed since they were written and no events have been removed.
+Digest of Events When an event is received by the Retraced API, the methods that receives the event will always synchronously compute a digest hash of the data received, using our publicly documented hashing formula.</description>
+    </item>
+    
+    <item>
+      <title>Hashing Formula</title>
+      <link>/docs/audit-log/architecture/hashing-formula/</link>
+      <pubDate>Sun, 03 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/audit-log/architecture/hashing-formula/</guid>
+      <description>When both the sender and the receiver of a message independently calculate a digest of the message, it&amp;rsquo;s a proven way to ensure that both sides have the same content. But both sides needs to have a reference that describes how to calculate the digest. This document describes the specification that the Replicated API uses to calculate a message digest.
+To calculate the digest, Retraced will build a colon (:) delimited string of all the fields, and then calculate a SHA256 digest.</description>
+    </item>
+    
+  </channel>
+</rss>

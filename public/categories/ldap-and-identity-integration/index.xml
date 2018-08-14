@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ldap and Identity Integration on Replicated Help Center</title>
+    <link>/categories/ldap-and-identity-integration/</link>
+    <description>Recent content in Ldap and Identity Integration on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Thu, 07 Jul 2016 04:02:20 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/ldap-and-identity-integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authenticating with LDAP</title>
+      <link>/docs/ldap-and-identity/authentication/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/authentication/</guid>
+      <description>One feature of the Replicated LDAP integration is the ability for your application containers to authenticate using a simple REST API that runs inside your application environment. When your application container creates an authentication request against the on-prem Replicated API, Replicated will send the request to the identity provider for login and return a success/error response synchronously.
+For details on using the Identity API in your application, refer to the Indentity API reference documentation.</description>
+    </item>
+    
+    <item>
+      <title>Config Items</title>
+      <link>/docs/ldap-and-identity/config/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/config/</guid>
+      <description>Configuration  At the root level, configure the identity object
+identity: enabled: &#39;{{repl if ConfigOptionNotEquals &amp;quot;auth_source&amp;quot; &amp;quot;auth_type_internal&amp;quot;}}true{{repl else}}false{{repl end}}&#39; provisioner: &#39;http://{{repl NodePrivateIPAddress &amp;quot;MyContainerName&amp;quot; &amp;quot;Container Image Name&amp;quot;}}:6006&#39; sources: - source: ldap enabled: &#39;{{repl if ConfigOptionEquals &amp;quot;auth_source&amp;quot; &amp;quot;auth_type_ldap&amp;quot;}}true{{repl else}}false{{repl end}}&#39; - source: ldap_advanced enabled: &#39;{{repl if ConfigOptionEquals &amp;quot;auth_source&amp;quot; &amp;quot;auth_type_ldap_advanced&amp;quot;}}true{{repl else}}false{{repl end}}&#39;  config: - name: auth title: Authentication description: Where will user accounts be provisioned items: - name: auth_source default: auth_type_internal type: select_one items: - name: auth_type_internal title: Built In - name: auth_type_ldap title: LDAP - name: auth_type_ldap_advanced title: LDAP Advanced - name: ldap_settings title: LDAP Server Settings when: auth_source=auth_type_ldap test_proc: # Optional.</description>
+    </item>
+    
+    <item>
+      <title>LDAP &amp; Identity Integration Overview</title>
+      <link>/docs/ldap-and-identity/overview/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/overview/</guid>
+      <description>Replicated can be integrated with LDAP servers to sync users and/or authenticate users between the directory and your application.
+ Configuration  To enable the identity services in your application, a top level key in your release yaml must be present:
+identity: enabled: true provisioner: &#39;https://localhost/ldap/auth&#39; sources: - source: ldap enabled: true     Field Description     enabled Boolean indicating if LDAP authentication is enabled on this installation.</description>
+    </item>
+    
+    <item>
+      <title>LDAP and Identity Integration</title>
+      <link>/docs/ldap-and-identity/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple LDAP Domains</title>
+      <link>/docs/ldap-and-identity/multi-domains/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/multi-domains/</guid>
+      <description>  Advanced LDAP Configuration Specification  The following JSON schema defines the advanced LDAP config spec. This is especially useful if you intend to support identity management via multiple LDAP domains or organizational units.
+{ &amp;quot;$schema&amp;quot;: &amp;quot;http://json-schema.org/draft-04/schema#&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;array&amp;quot;, &amp;quot;items&amp;quot;: { &amp;quot;$ref&amp;quot;: &amp;quot;#/definitions/ldap_host&amp;quot; }, &amp;quot;definitions&amp;quot;: { &amp;quot;ldap_host&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;object&amp;quot;, &amp;quot;properties&amp;quot;: { &amp;quot;ServerType&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot;, &amp;quot;enum&amp;quot;: [&amp;quot;openldap&amp;quot;, &amp;quot;ad&amp;quot;, &amp;quot;other&amp;quot;] }, &amp;quot;Hostname&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot;, &amp;quot;format&amp;quot;: &amp;quot;hostname&amp;quot; }, &amp;quot;Port&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;integer&amp;quot; }, &amp;quot;Encryption&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot;, &amp;quot;enum&amp;quot;: [&amp;quot;plain&amp;quot;, &amp;quot;starttls&amp;quot;, &amp;quot;ldaps&amp;quot;] }, &amp;quot;BaseDN&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;UserSearchDNs&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;array&amp;quot;, &amp;quot;items&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;minItems&amp;quot;: 1 }, &amp;quot;FieldUsername&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;SearchUsername&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;SearchPassword&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;RestrictedGroupCNs&amp;quot;: { &amp;quot;oneOf&amp;quot;: [ { &amp;quot;type&amp;quot;: &amp;quot;array&amp;quot;, &amp;quot;items&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; } }, { &amp;quot;type&amp;quot;: &amp;quot;null&amp;quot; } ] }, &amp;quot;LoginUsername&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;LoginPassword&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;AdvancedSearch&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;boolean&amp;quot; }, &amp;quot;UserQuery&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; }, &amp;quot;GroupQuery&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;string&amp;quot; } }, &amp;quot;required&amp;quot;: [ &amp;quot;ServerType&amp;quot;, &amp;quot;Hostname&amp;quot;, &amp;quot;Port&amp;quot;, &amp;quot;Encryption&amp;quot;, &amp;quot;BaseDN&amp;quot;, &amp;quot;UserSearchDNs&amp;quot;, &amp;quot;FieldUsername&amp;quot;, &amp;quot;SearchUsername&amp;quot;, &amp;quot;SearchPassword&amp;quot; ], &amp;quot;additionalProperties&amp;quot;: false } } }  </description>
+    </item>
+    
+    <item>
+      <title>Supported LDAP Servers</title>
+      <link>/docs/ldap-and-identity/supported-servers/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/supported-servers/</guid>
+      <description>Replicated currently supports LDAP Authentication and sync in the following directory servers:
+ Microsoft Active Directory (2008 and 2012) Open LDAP LDAP 389 DS Free IPA  </description>
+    </item>
+    
+    <item>
+      <title>Syncing LDAP Users</title>
+      <link>/docs/ldap-and-identity/ldap-sync/</link>
+      <pubDate>Thu, 07 Jul 2016 04:02:20 +0000</pubDate>
+      
+      <guid>/docs/ldap-and-identity/ldap-sync/</guid>
+      <description>In addition to authentication, Replicated can sync a directory (or a subset of a directory) to your application. This is useful when your application needs to know the list of all users and expects them to be in a users table in the database.
+To sync users from a corporate identity provider, you can use the Replicated Provisioning API, which is available in the context of your application when running behind the firewall.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicatedctl on Replicated Help Center</title>
+    <link>/categories/replicatedctl/</link>
+    <description>Recent content in Replicatedctl on Replicated Help Center</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
+    <lastBuildDate>Tue, 20 Feb 2018 00:45:55 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/replicatedctl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>replicatedctl app</title>
+      <link>/api/replicatedctl/replicatedctl_app/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app/</guid>
+      <description> replicatedctl app Manage apps
+Synopsis Manage apps
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app inspect - Display detailed information on the app replicatedctl app start - Start the app replicatedctl app status - Manage the app status replicatedctl app stop - Stop the app  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_inspect/</guid>
+      <description> replicatedctl app inspect Display detailed information on the app
+Synopsis Display detailed information on the app
+replicatedctl app inspect  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app start</title>
+      <link>/api/replicatedctl/replicatedctl_app_start/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_start/</guid>
+      <description> replicatedctl app start Start the app
+Synopsis Start the app
+replicatedctl app start  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app status</title>
+      <link>/api/replicatedctl/replicatedctl_app_status/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_status/</guid>
+      <description> replicatedctl app status Manage the app status
+Synopsis Manage the app status
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps replicatedctl app status inspect - Display detailed information on the app&amp;rsquo;s status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app status inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app_status_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_status_inspect/</guid>
+      <description> replicatedctl app status inspect Display detailed information on the app&amp;rsquo;s status
+Synopsis Display detailed information on the app&amp;rsquo;s status
+replicatedctl app status inspect  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app status - Manage the app status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app stop</title>
+      <link>/api/replicatedctl/replicatedctl_app_stop/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app_stop/</guid>
+      <description> replicatedctl app stop Stop the app
+Synopsis Stop the app
+replicatedctl app stop  Options  -a, --attach Attach to task -f, --force Force stop -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app - Manage apps  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config</title>
+      <link>/api/replicatedctl/replicatedctl_app-config/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config/</guid>
+      <description> replicatedctl app-config Manage app config
+Synopsis Manage app config
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app-config export - Export app config settings replicatedctl app-config import - Import app config settings from stdin replicatedctl app-config set - Sets an individual app config value replicatedctl app-config view - View app config form  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config export</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_export/</guid>
+      <description> replicatedctl app-config export Export app config settings
+Synopsis Export app config settings
+replicatedctl app-config export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config import</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_import/</guid>
+      <description> replicatedctl app-config import Import app config settings from stdin
+Synopsis Import app config settings from stdin
+replicatedctl app-config import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config set</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_set/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_set/</guid>
+      <description> replicatedctl app-config set Sets an individual app config value
+Synopsis Sets an individual app config value
+replicatedctl app-config set NAME  Options  --data stringSlice Sets the item data --value stringSlice Sets the item value  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-config view</title>
+      <link>/api/replicatedctl/replicatedctl_app-config_view/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-config_view/</guid>
+      <description> replicatedctl app-config view View app config form
+Synopsis View app config form
+replicatedctl app-config view  Options  --group string Config group to filter by -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-config - Manage app config  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release</title>
+      <link>/api/replicatedctl/replicatedctl_app-release/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release/</guid>
+      <description> replicatedctl app-release Manage app releases
+Synopsis Manage app releases
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl app-release apply - Applies pending app releases replicatedctl app-release inspect - Display detailed information on one or more app releases replicatedctl app-release ls - List app releases replicatedctl app-release notes - Display release notes for an app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release apply</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_apply/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_apply/</guid>
+      <description>replicatedctl app-release apply Applies pending app releases
+Synopsis Applies pending app releases
+replicatedctl app-release apply  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --sequence int Apply releases up to and including specified sequence (0 for all) --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release inspect</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_inspect/</guid>
+      <description> replicatedctl app-release inspect Display detailed information on one or more app releases
+Synopsis Display detailed information on one or more app releases
+replicatedctl app-release inspect SEQUENCE [SEQUENCE...]  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-release - Manage app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release ls</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_ls/</guid>
+      <description>replicatedctl app-release ls List app releases
+Synopsis List app releases
+replicatedctl app-release ls  Options  --all Display all app releases --fetch Fetch releases form Market API -o, --output string Output format. One of: json|yaml --pending Display only pending app releases -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl app-release notes</title>
+      <link>/api/replicatedctl/replicatedctl_app-release_notes/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_app-release_notes/</guid>
+      <description> replicatedctl app-release notes Display release notes for an app releases
+Synopsis Display release notes for an app releases
+replicatedctl app-release notes SEQUENCE  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl app-release - Manage app releases  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth/</guid>
+      <description> replicatedctl console-auth Manage UI console authentication settings
+Synopsis Manage UI console authentication settings
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl console-auth export - Export console auth config for current auth type replicatedctl console-auth import - Import console authentication config from stdin replicatedctl console-auth reset - Resets console authentication to type anonymous  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth export</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_export/</guid>
+      <description>replicatedctl console-auth export Export console auth config for current auth type
+Synopsis Export console auth config for current auth type
+replicatedctl console-auth export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template --type string Get configuration for auth type (one of anonymous, password, ldap)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth import</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_import/</guid>
+      <description> replicatedctl console-auth import Import console authentication config from stdin
+Synopsis Import console authentication config from stdin
+replicatedctl console-auth import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl console-auth - Manage UI console authentication settings  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl console-auth reset</title>
+      <link>/api/replicatedctl/replicatedctl_console-auth_reset/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_console-auth_reset/</guid>
+      <description> replicatedctl console-auth reset Resets console authentication to type anonymous
+Synopsis Resets console authentication to type anonymous
+replicatedctl console-auth reset  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl console-auth - Manage UI console authentication settings  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license</title>
+      <link>/api/replicatedctl/replicatedctl_license/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license/</guid>
+      <description> replicatedctl license Manage the license
+Synopsis Manage the license
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl license activate - Activate the license replicatedctl license inspect - Display detailed information on the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license activate</title>
+      <link>/api/replicatedctl/replicatedctl_license_activate/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license_activate/</guid>
+      <description> replicatedctl license activate Activate the license
+Synopsis Activate the license
+replicatedctl license activate CODE  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl license - Manage the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license inspect</title>
+      <link>/api/replicatedctl/replicatedctl_license_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license_inspect/</guid>
+      <description> replicatedctl license inspect Display detailed information on the license
+Synopsis Display detailed information on the license
+replicatedctl license inspect  Options  -o, --output string Output format. One of: json|yaml --sync Sync license --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl license - Manage the license  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl license-load</title>
+      <link>/api/replicatedctl/replicatedctl_license-load/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_license-load/</guid>
+      <description> replicatedctl license-load Load the license from stdin
+Synopsis Load the license from stdin
+replicatedctl license-load  Options  -a, --attach Attach to task -q, --quiet Only display task ID --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params</title>
+      <link>/api/replicatedctl/replicatedctl_params/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params/</guid>
+      <description> replicatedctl params Manage params
+Synopsis Manage params
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl params export - Export params replicatedctl params import - Import params from stdin replicatedctl params set - Sets an individual param value replicatedctl params unset - Unsets a runtime overridden param value  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params export</title>
+      <link>/api/replicatedctl/replicatedctl_params_export/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_export/</guid>
+      <description> replicatedctl params export Export params
+Synopsis Export params
+replicatedctl params export  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params import</title>
+      <link>/api/replicatedctl/replicatedctl_params_import/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_import/</guid>
+      <description> replicatedctl params import Import params from stdin
+Synopsis Import params from stdin
+replicatedctl params import  Options  --format string Input format. One of: json|yaml (default &amp;quot;json&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params set</title>
+      <link>/api/replicatedctl/replicatedctl_params_set/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_set/</guid>
+      <description> replicatedctl params set Sets an individual param value
+Synopsis Sets an individual param value
+replicatedctl params set KEY  Options  --value string Sets the param value  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl params unset</title>
+      <link>/api/replicatedctl/replicatedctl_params_unset/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_params_unset/</guid>
+      <description> replicatedctl params unset Unsets a runtime overridden param value
+Synopsis Unsets a runtime overridden param value
+replicatedctl params unset KEY  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl params - Manage params  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight</title>
+      <link>/api/replicatedctl/replicatedctl_preflight/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight/</guid>
+      <description> replicatedctl preflight View or manage preflight checks
+Synopsis View or manage preflight checks
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl preflight dismiss - Dismiss preflight check warnings replicatedctl preflight run - Run the preflight checks replicatedctl preflight status - Get preflight status  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight dismiss</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_dismiss/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_dismiss/</guid>
+      <description> replicatedctl preflight dismiss Dismiss preflight check warnings
+Synopsis Dismiss preflight check warnings
+replicatedctl preflight dismiss  Options  --checksum string Preflight checksum -f, --force Force dismiss checks --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight run</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_run/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_run/</guid>
+      <description> replicatedctl preflight run Run the preflight checks
+Synopsis Run the preflight checks
+replicatedctl preflight run  Options  -o, --output string Output format. One of: json|yaml -q, --quiet Only display checksum --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl preflight status</title>
+      <link>/api/replicatedctl/replicatedctl_preflight_status/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_preflight_status/</guid>
+      <description> replicatedctl preflight status Get preflight status
+Synopsis Get preflight status
+replicatedctl preflight status  Options  -q, --quiet Display true or false --sequence string App sequence (default &amp;quot;current&amp;quot;)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl preflight - View or manage preflight checks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot/</guid>
+      <description>replicatedctl snapshot Manage snapshots
+Synopsis Manage snapshots
+Options  --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends. --s3-bucket string S3 bucket name. This option is only used with s3 backend. --s3-key-id string ID of the secret key that has write access to the specified S3 bucket. This option is only used with s3 backend. --s3-region string S3 bucket region.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot ls</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_ls/</guid>
+      <description>replicatedctl snapshot ls List snapshots
+Synopsis List snapshots
+replicatedctl snapshot ls  Options  -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot restore</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_restore/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_restore/</guid>
+      <description>replicatedctl snapshot restore Restore installation from the specified spanshot
+Synopsis Restore installation from the specified spanshot
+replicatedctl snapshot restore ID  Options  --dismiss-preflight-checks Dismiss preflight checks --id string Snapshot ID --node-timeout int Number of seconds to wait for nodes to connect (default 60)  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl snapshot start</title>
+      <link>/api/replicatedctl/replicatedctl_snapshot_start/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_snapshot_start/</guid>
+      <description>replicatedctl snapshot start Start a snapshot
+Synopsis Start a snapshot
+replicatedctl snapshot start  Options  --exclude-app-data Only backup Replicated data and exclude app data --wait Block until snapshot is complete  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;) --path string Snapshot location path. The value should be an absolute path. This option is only used with local and sftp backends. --s3-bucket string S3 bucket name.</description>
+    </item>
+    
+    <item>
+      <title>replicatedctl support-bundle</title>
+      <link>/api/replicatedctl/replicatedctl_support-bundle/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_support-bundle/</guid>
+      <description> replicatedctl support-bundle Generate a support bundle
+Synopsis Generate a support bundle
+replicatedctl support-bundle  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task</title>
+      <link>/api/replicatedctl/replicatedctl_task/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task/</guid>
+      <description> replicatedctl task Manage tasks
+Synopsis Manage tasks
+Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI replicatedctl task attach - Stream task progress replicatedctl task inspect - Display detailed information on one or more tasks replicatedctl task ls - List tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task attach</title>
+      <link>/api/replicatedctl/replicatedctl_task_attach/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_attach/</guid>
+      <description> replicatedctl task attach Stream task progress
+Synopsis Stream task progress
+replicatedctl task attach ID  Options  -q, --quiet Suppress stdout --raw Raw JSON stream --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task inspect</title>
+      <link>/api/replicatedctl/replicatedctl_task_inspect/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_inspect/</guid>
+      <description> replicatedctl task inspect Display detailed information on one or more tasks
+Synopsis Display detailed information on one or more tasks
+replicatedctl task inspect ID [ID...]  Options  -o, --output string Output format. One of: json|yaml --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl task ls</title>
+      <link>/api/replicatedctl/replicatedctl_task_ls/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_task_ls/</guid>
+      <description> replicatedctl task ls List tasks
+Synopsis List tasks
+replicatedctl task ls  Options  --all Display all tasks -o, --output string Output format. One of: json|yaml -q, --quiet Only display IDs --template string Format the output using the given Go template  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl task - Manage tasks  </description>
+    </item>
+    
+    <item>
+      <title>replicatedctl version</title>
+      <link>/api/replicatedctl/replicatedctl_version/</link>
+      <pubDate>Tue, 20 Feb 2018 00:45:55 +0000</pubDate>
+      
+      <guid>/api/replicatedctl/replicatedctl_version/</guid>
+      <description> replicatedctl version Get the Replicated CLI version information
+Synopsis Get the Replicated CLI version information
+replicatedctl version  Options  --quiet Only print the version  Options inherited from parent commands  --host string Replicated API host (default &amp;quot;unix:///var/run/replicated/replicated-cli.sock&amp;quot;)  SEE ALSO  replicatedctl - Replicated CLI  </description>
+    </item>
+    
+  </channel>
+</rss>
