@@ -39,7 +39,7 @@ algolia:
   index: "ship"
   appID: "5PHVQPX4AR"
 
-enu:
+menu:
   main:
     - Name: "Docs"
       Weight: 1
