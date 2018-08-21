@@ -85,7 +85,7 @@
 }
 
 /* ≥ 768px */
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 53em) {
   .u-show--mobileTablet { display: none !important; }
   .u-hidden--mobileTablet { display: flex !important; }
   .u-widthMobile--full { width: auto; }

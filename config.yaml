@@ -1,11 +1,11 @@
 ---
 baseURL: "/"
 languageCode: "en-us"
-title: "Replicated Help Center"
+title: "Kustomize WWW"
 theme: "replicated-docs-theme"
 metadataformat: "yaml"
 canonifyurls: true
-description: "Documentation and knowledgebase for Replicated."
+description: "Landing Page for Kustomize"
 googleAnalytics: "UA-61084834-1"
 
 Params:
@@ -43,14 +43,14 @@ menu:
   main:
     - Name: "Docs"
       Weight: 1
-      URL: "/"
+      URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md"
     - Name: "Overview"
       Weight: 2
-      URL: "/"
+      URL: "#overview"
     - Name: "Resources"
       Weight: 3
-      URL: "/"
+      URL: "#resources"
     - Name: "Community"
       Weight: 4
-      URL: "/"
+      URL: "#community"
 ---

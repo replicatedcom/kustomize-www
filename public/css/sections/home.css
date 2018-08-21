@@ -1,3 +1,10 @@
+
+html,
+body {
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
+}
 .intro {
     font-weight: bold;
     color: #323232;
@@ -38,12 +45,9 @@
 .overview-section .details {
     flex-wrap: wrap;
 }
-.overview-section .details:last-of-type {
-    margin-top: 70px;
-}
 .overview-section .detail {
     width: 260px;
-    margin: 0 30px;
+    margin: 35px 30px;
 }
 .overview-section .detail p {
     font-weight: 500;
@@ -89,7 +93,7 @@
     height: 57px;
 }
 .overview-section .documentation-link {
-    margin-top: 75px;
+    margin-top: 35px;
 }
 .overview-section .documentation-link a {
     color: #3E5FA8;
@@ -111,15 +115,12 @@
     padding: 100px 0;
     background: #F8F8F8;
 }
-.resources-section .cards:last-of-type {
-    margin-top: 30px;
-}
 .resources-section .card {
   width: 290px;
   box-sizing: border-box;
   background: #fff;
   padding: 24px;
-  margin: 0 15px;
+  margin: 0 15px 30px;
   border-radius: 3.5px;
   border: solid 1px #DFDFDF;
   cursor: pointer;
@@ -237,6 +238,10 @@
     .swim-lane-section .container {
         max-width: 745px;
     }
+    .resources-section .cards {
+        max-width: 640px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 598px) {
@@ -262,6 +267,9 @@
     .header-section {
         background-position: center -378px;
         background-size: 2347px auto;
+    }
+    .resources-section .cards {
+        justify-content: center;
     }
 }
 
