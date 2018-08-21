@@ -39,12 +39,18 @@ algolia:
   index: "ship"
   appID: "5PHVQPX4AR"
 
-menu:
+enu:
   main:
-    - Name: "Link 1"
+    - Name: "Docs"
+      Weight: 1
+      URL: "/"
+    - Name: "Overview"
       Weight: 2
-      URL: "/link-1"
-    - Name: "Link 2"
-      Weight: 2
-      URL: "/link-2"
+      URL: "/"
+    - Name: "Resources"
+      Weight: 3
+      URL: "/"
+    - Name: "Community"
+      Weight: 4
+      URL: "/"
 ---
