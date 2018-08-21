@@ -30,8 +30,8 @@
 	<link rel="stylesheet" href='/css/style-9cc871a890.css'>
 	<link rel="stylesheet" href='/css/featherlight.min.css'>
 	<link rel="stylesheet" href="/css/highlight/prism.css">
-	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Replicated Help Center">
-	<meta name="generator" content="Hugo 0.31.1" />
+	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize WWW">
+	<meta name="generator" content="Hugo 0.46" />
 	
 	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
@@ -40,6 +40,7 @@
 	<header>
 		<nav>
 			<div class="container u-position--relative">
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
 				<ul class="flex justifyContent--spaceBetween alignItems--center nav-list u-position--relative">
 					<li>
 						<a class="logo-link" href="/">
@@ -49,13 +50,13 @@
 					<li>
 						<ul id="headerLinks" class="header-links">
 							
-								<li><a href="/">Docs</a></li>
+								<li><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md">Docs</a></li>
 							
-								<li><a href="/">Overview</a></li>
+								<li><a href="/#overview">Overview</a></li>
 							
-								<li><a href="/">Resources</a></li>
+								<li><a href="/#resources">Resources</a></li>
 							
-								<li><a href="/">Community</a></li>
+								<li><a href="/#community">Community</a></li>
 							
 						</ul>
 					</li>
@@ -82,7 +83,7 @@
 		</div>
 	</header>
 	<main>
-		<div class="flex flex-column overview-section u-gradient--whiteToGray">
+		<div id="overview" class="flex flex-column overview-section u-gradient--whiteToGray">
     <div class="flex flex-column flex1 container">
         <div class="flex1 flex flex-column alignItems--center intro">
             <div class="hash"></div>
@@ -114,8 +115,6 @@
                     configurations
                 </p>
             </div>
-        </div>
-        <div class="details flex justifyContent--center">
             <div class="detail">
                 <div class="icon kubernetes"></div>
                 <p>
@@ -142,12 +141,12 @@
     </div>
     <div class="container">
         <div class="documentation-link">
-            <a href="">See Documentation<span></span></a>
+            <a href="" target="_blank">See Documentation<span></span></a>
         </div>
     </div>
 </div>
 
-		<div class="flex flex-column resources-section u-gradient--whiteToGray">
+		<div id="resources" class="flex flex-column resources-section u-gradient--whiteToGray">
         <div class="flex flex-column flex1 container">
             <div class="flex1 flex flex-column alignItems--center intro">
                 <div class="hash"></div>
@@ -157,44 +156,52 @@
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <div class="cards flex">
+            <div class="cards flex flexWrap--wrap">
+              <a href="https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/" target="_blank">
                 <div class="card">
                     <h4>Launch</br>
                         Announcement
                     </h4>
                     <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
                 </div>
+              </a>
+              <a href="" target="_blank">
                 <div class="card">
                     <h4>Background</br>
                         White paper
                     </h4>
                     <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
                 </div>
+              </a>
+              <a href="" target="_blank">
                 <div class="card">
                     <h4>See</br>
                         Examples
                     </h4>
                     <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
                 </div>
-            </div>
-            <div class="cards flex">
+              </a>
+              <a href="" target="_blank">
                 <div class="card">
                     <h4>Overview</br>
                         Slides
                     </h4>
                     <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
                 </div>
+              </a>
+              <a href="" target="_blank">
                 <div class="card">
                     <h4>See</br>
                         Glossary
                     </h4>
                     <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
                 </div>
+              </a>
             </div>
         </div>
     </div>
-    
-		<div class="flex flex-column community-section u-gradient--whiteToGray">
+
+		<div id="community" class="flex flex-column community-section u-gradient--whiteToGray">
         <div class="flex flex-column flex1 container">
             <div class="flex1 flex flex-column alignItems--center intro">
                 <div class="hash"></div>
@@ -204,27 +211,33 @@
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <div class="links flex">
-                <div class="link">
+            <div class="links flex flexWrap--wrap">
+                <a href="htttp://google.com" target="_blank">
+                  <div class="link">
                     <div class="link-icon slack"></div>
                     <p>K8s slack</br>
                        #kustomize
                     </p>
                 </div>
+              </a>
+              <a href="" target="_blank">
                 <div class="link">
                     <div class="link-icon github"></div>
                     <p>GitHub</p>
                 </div>
+              </a>
+              <a href="" target="_blank">
                 <div class="link">
                     <div class="link-icon envelope"></div>
                     <p>Official</br>
                        Mailing List
                     </p>
                 </div>
+              </a>
             </div>
         </div>
     </div>
-    
+
 	</main>
 	<footer>
 		<div class="container">

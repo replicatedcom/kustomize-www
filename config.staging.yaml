@@ -1,11 +1,11 @@
 ---
 baseURL: "/"
 languageCode: "en-us"
-title: "Replicated Help Center"
+title: "Kustomize WWW"
 theme: "replicated-docs-theme"
 metadataformat: "yaml"
 canonifyurls: true
-description: "Documentation and knowledgebase for Replicated."
+description: "Landing Page for Kustomize"
 googleAnalytics: "UA-61084834-1"
 
 Params:
