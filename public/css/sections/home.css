@@ -1,126 +1,227 @@
-.header-section {
-    padding: 90px 0;
-    background: url("../../images/header-bg@2x.png") no-repeat;
-    background-position: center -280px;
-    background-size: 1847px auto;
+.intro {
+    font-weight: bold;
+    color: #323232;
+    font-size: 28px;
+    margin-bottom: 75px;
+}
+.intro .hash {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: -65px 0; 
+    width: 18px;
+    height: 18px;
+}
+.intro h2 {
+    align-items: center;
+    padding-top: 5px;
+}
+.intro p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #9B9B9B;
+    margin-top: 24px;
+    text-align: center;
+}
+.intro .small-border {
+    height: 2px;
+    border-radius: 5px;
+    width: 58px;
+    background: #3E5FA8;
+    margin-top: 10px;
 }
 
-.header-section .cube-logo {
-    background: url("../../images/cube-logo@2x.png") no-repeat;
-    background-size: 147px auto; 
-    width: 197px;
-    height: 157px;
+.overview-section {
+    padding: 100px 0;
+    text-align: center;
+    align-items: center;
 }
-
-.swim-lane-section {
-    padding: 60px 0 0;
-
-    background: rgba(244,249,246,100) 0%;
-    background: -moz-linear-gradient(0, rgba(244,249,246,100) 0% 0%, rgba(255,255,255,100) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(244,249,246,100)), color-stop(100%, rgba(255,255,255,100)));
-    background: -webkit-linear-gradient(0, rgba(244,249,246,100)0%, rgba(255,255,255,100) 100%);
-    background: -o-linear-gradient(0, rgba(244,249,246,100) 0%, rgba(255,255,255,100) 100%);
-    background: -ms-linear-gradient(0, rgba(244,249,246,100) 0% 0%, rgba(255,255,255,100) 100%);
-    background: linear-gradient(0, rgba(244,249,246,100) 0%, rgba(255,255,255,100) 100%);
+.overview-section .details {
+    flex-wrap: wrap;
 }
-
-.swim-lane-section .lane {
-    width: 250px;
-    height: 330px;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    border-right: #E8E6E6 solid 2px;
+.overview-section .details:last-of-type {
+    margin-top: 70px;
 }
-
-.swim-lane-section .lane .img {
-    z-index: 1;
+.overview-section .detail {
+    width: 260px;
+    margin: 0 30px;
 }
-
-.swim-lane-section .configure-img {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: 0 8px;
-    width: 152px;
-    height: 126px;
+.overview-section .detail p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #9B9B9B;
+    margin-top: 24px;
 }
-
-.swim-lane-section .build-img {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: 0 -125px;
-    width: 140px;
-    height: 125px;
-}
-
-.swim-lane-section .deploy-img {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: 0 -265px;
-    width: 105px;
-    height: 132px;
-}
-
-.swim-lane-section .update-img {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: 0 -416px;
-    width: 123px;
-    height: 119px;
-}
-
-.swim-lane-section .merge-circle {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: -166px -3px;
-    width: 57px;
+.overview-section .icon.megaphone {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 0; 
+    width: 58px;
     height: 57px;
-    position: absolute;
-    left: 241px;
-    top: 14px;
-    bottom: 0;
-    margin: auto 0;
 }
-
-.swim-lane-section .pull-circle {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: -166px -73px;
-    width: 57px;
+.overview-section .icon.components {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 -58px; 
+    width: 60px;
     height: 57px;
-    position: absolute;
-    left: 492px;
-    top: 14px;
-    bottom: 0;
-    margin: auto 0;
 }
-
-.swim-lane-section .update-circle {
-    background: url("../../images/swimlane_spritesheet.svg") no-repeat;
-    background-position: -166px -143px;
-    width: 57px;
+.overview-section .icon.manage {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 -252px; 
+    width: 53px;
     height: 57px;
-    position: absolute;
-    left: 742px;
-    top: 14px;
-    bottom: 0;
-    margin: auto 0;
+}
+.overview-section .icon.kubernetes {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 -130px; 
+    width: 52px;
+    height: 57px;
+}
+.overview-section .icon.yaml-doc {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 -196px; 
+    width: 45px;
+    height: 57px;
+}
+.overview-section .icon.pull-request {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0 -315px; 
+    width: 62px;
+    height: 57px;
+}
+.overview-section .documentation-link {
+    margin-top: 75px;
+}
+.overview-section .documentation-link a {
+    color: #3E5FA8;
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: solid 1px #3E5FA8;
+}
+.overview-section .documentation-link a span {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: -66px -27px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px
 }
 
-.swim-lane-section .lane:last-of-type {
-    border-right: 0;
+.resources-section {
+    padding: 100px 0;
+    background: #F8F8F8;
+}
+.resources-section .cards:last-of-type {
+    margin-top: 30px;
+}
+.resources-section .card {
+  width: 290px;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 24px;
+  margin: 0 15px;
+  border-radius: 3.5px;
+  border: solid 1px #DFDFDF;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+.resources-section .card h4 {
+    font-weight: bold;
+    color: #3E5FA8;
+    line-height: 26px;
+    font-size: 20px;
+}
+.resources-section .card p {
+    font-weight: 500;
+    color: #3E5FA8;
+    line-height: 26px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resources-section .card:hover {
+    background: #5D8BEE;
+    box-shadow: -2px 2px 5px rgba(0,0,0,.3);
+    transition: all .2s ease;
+    border: solid 1px #5D8BEE;
+}
+.resources-section .card:hover h4 {
+    color: #fff;
+}
+.resources-section .card:hover p {
+    color: #fff;
+}
+.resources-section .card:hover .arrow {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: -66px -47px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+.resources-section .card .arrow {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: -66px -27px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
 }
 
-.swim-lane-section .line {
-    top: 17px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    height: 4px;
-    width: 720px;
-    background: #63C07D;
-    z-index: 0;
+.community-section {
+    padding: 100px 0;
 }
-
-.challenges-section {
-    padding: 60px 0;
-    background: #F5F8FC;
+.community-section .links {
+    justify-content: center;
 }
-
+.community-section .link {
+    text-align: center;
+    width: 75px;
+    margin: 0 45px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+.community-section .link p {
+    font-weight: 500;
+    color: #323232;
+    font-size: 14px;
+    line-height: 17px;
+}
+.community-section .link .link-icon.slack {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: 8px -374px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 1px #ECECEC;
+    border-radius: 50px;
+    margin-bottom: 20px; 
+}
+.community-section .link .link-icon.github {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: 11px -424px;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 1px #ECECEC;
+    border-radius: 50px;
+    margin-bottom: 20px; 
+}
+.community-section .link .link-icon.envelope {
+    background: url(../../images/main_spritesheet.svg) right center no-repeat;
+    background-position: 8.5px -517px;
+    background-size: 160px auto;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 1px #ECECEC;
+    border-radius: 50px;
+    margin-bottom: 20px; 
+}
+.community-section .link:hover .link-icon {
+    transition: all .1s ease;
+    box-shadow: 0 0 5px rgba(62, 95, 168, .4);
+}
 @media screen and (max-width: 1024px) {
     .swim-lane-section .line,
     .swim-lane-section .update-circle,

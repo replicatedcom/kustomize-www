@@ -38,33 +38,40 @@
 </head>
 <body>
 	<header>
-		{{ if eq .Params.type "home" }}
-		   <nav class="home-nav">
-		{{ else }}
-			<nav class="other-nav">
-		{{ end }}
+		<nav>
 			<div class="container u-position--relative">
-				<ul class="flex justifyContent-flexStart alignItems--center nav-list paddingContainer u-position--relative">
+				<ul class="flex justifyContent--spaceBetween alignItems--center nav-list u-position--relative">
 					<li>
-						Kustomize
+						<a class="logo-link" href="{{ .Site.BaseURL }}">
+							<div class="logo"></div>
+						</a>
 					</li>
 					<li>
 						<ul id="headerLinks" class="header-links">
 							{{ range .Site.Menus.main }}
 								<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 							{{ end }}
-							<li>
-								<div class="search-form">
-									<input type="text" placeholder="What are you looking for?" id="search-field" style="display: none;" />
-									<span class="searchIcon--white" id="desktop-search"></span>
-								</div>
-							</li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<div class="container u-position--relative">
-				{{ partial "guides_sub_nav.html" }}
-			</div>
 		</nav>
+		<div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
+			<div class="flex flex-column flex-auto">
+				<h1>Declarative Configuration</br>
+					for Kubernetes
+				</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing</br>
+					elit, sed do eiusmod tempor incididunt ut labore</br>
+					et dolore magna aliqua.
+				</p>
+				<div class="flex buttons">
+					<a href="" class="Button primary darkBlue">Get Started</a>
+					<a href="" class="Button secondary white">Learn More</a>
+				</div>
+			</div>
+			<div class="template-illustration flex1">
+				<img src="{{ .Site.BaseURL }}images/header_templates.png"/>
+			</div>
+		</div>
 	</header>

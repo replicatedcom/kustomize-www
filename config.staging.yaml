@@ -41,10 +41,16 @@ algolia:
 
 menu:
   main:
-    - Name: "Documentation"
+    - Name: "Docs"
+      Weight: 1
+      URL: "/"
+    - Name: "Overview"
       Weight: 2
-      URL: "/docs/ship-yaml/getting-started/overview"
-    - Name: "Guides"
-      Weight: 2
-      URL: "/guides"
+      URL: "/"
+    - Name: "Resources"
+      Weight: 3
+      URL: "/"
+    - Name: "Community"
+      Weight: 4
+      URL: "/"
 ---
