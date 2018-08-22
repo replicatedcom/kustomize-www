@@ -272,6 +272,8 @@ nav ul li a {
   }
   .header-content > div {
     flex: 0 0 auto;
+    max-width: 490px;
+    margin-right: 50px;
   }
   .header-content > div br {
     display: inline-block !important;
@@ -284,5 +286,4 @@ nav ul li a {
   .header-content .template-illustration img {
     width: 600px;
   }
-  
 }
