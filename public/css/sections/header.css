@@ -273,6 +273,7 @@ nav ul li a {
   .header-content > div {
     flex: 0 0 auto;
     max-width: 490px;
+    margin-right: 50px;
   }
   .header-content > div br {
     display: inline-block !important;
