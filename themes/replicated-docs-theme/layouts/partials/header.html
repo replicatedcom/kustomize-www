@@ -47,7 +47,7 @@
 					<li>
 						<ul id="headerLinks" class="header-links">
 							{{ range .Site.Menus.main }}
-								<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+								<li><a href="{{ .URL | relURL }}" class="header-link">{{ .Name }}</a></li>
 							{{ end }}
 						</ul>
 					</li>
