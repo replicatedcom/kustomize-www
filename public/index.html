@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Replicated Ship</title>
+	<title>Kustomize.io</title>
 	
 	<meta name="author" content="Replicated">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
@@ -30,11 +30,8 @@
 	<link rel="stylesheet" href='/css/style-9cc871a890.css'>
 	<link rel="stylesheet" href='/css/featherlight.min.css'>
 	<link rel="stylesheet" href="/css/highlight/prism.css">
-	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize.io">
+	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize WWW">
 	<meta name="generator" content="Hugo 0.31.1" />
-	
-	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 </head>
 <body>
 	<header>
@@ -64,17 +61,15 @@
 			</div>
 		</nav>
 		<div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
-			<div class="flex flex-column flex-auto">
-				<h1>Declarative Configuration
+			<div class="flex flex-column">
+				<h1>Declarative Configuration</br>
 					for Kubernetes
 				</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-					elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua.
+				<p>Kustomize introduces a template-free way to customize application configuration that simplifies the use of off-the-shelf applications.
 				</p>
 				<div class="flex buttons">
-					<a href="" class="Button primary darkBlue">Get Started</a>
-					<a href="" class="Button secondary white">Learn More</a>
+					<a href="https://github.com/kubernetes-sigs/kustomize/blob/master/INSTALL.md" class="Button primary darkBlue">Install</a>
+					<a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md" class="Button secondary white">View Docs</a>
 				</div>
 			</div>
 			<div class="template-illustration flex1">
@@ -90,8 +85,8 @@
             <div class="hash"></div>
             <h2>Overview</h2>
             <div class="small-border"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br/>
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p>Kustomize traverses a Kubernetes manifest to
+              add, remove or update configuration options without forking.
             </p>
         </div>
         <div class="details flex justifyContent--center">
@@ -142,7 +137,7 @@
     </div>
     <div class="container">
         <div class="documentation-link">
-            <a href="" target="_blank">See Documentation<span></span></a>
+            <a href="https://github.com/kubernetes-sigs/kustomize/tree/master/docs" target="_blank">See Documentation<span></span></a>
         </div>
     </div>
 </div>
@@ -153,49 +148,52 @@
                 <div class="hash"></div>
                 <h2>Resources</h2>
                 <div class="small-border"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</br>
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p>The best blog posts, presentations and useful links related to Kustomize.
                 </p>
             </div>
             <div class="cards flex flexWrap--wrap">
               <a href="https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/" target="_blank">
                 <div class="card">
-                    <h4>Launch</br>
-                        Announcement
+                    <h4>Launch Announcement
                     </h4>
-                    <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
+                    <p>Introducing kustomize: Template-free Configuration Customization</br>
+                      for Kubernetes<span class="arrow"></span></p>
                 </div>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/kubernetes/community/blob/master/contributors/design-proposals/architecture/declarative-application-management.md" target="_blank">
                 <div class="card">
-                    <h4>Background</br>
-                        White paper
+                    <h4>Background Whitepaper
                     </h4>
-                    <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
+                    <p>Declaritive application management. - Brian Grant<span class="arrow"></span></p>
                 </div>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/kubernetes-sigs/kustomize/tree/master/examples" target="_blank">
                 <div class="card">
-                    <h4>See</br>
-                        Examples
+                    <h4>Examples
                     </h4>
-                    <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
+                    <p>helloWorld, mySql, wordpress and others. <span class="arrow"></span></p>
                 </div>
               </a>
-              <a href="" target="_blank">
+              <a href="https://speakerdeck.com/spesnova/introduction-to-kustomize?slide=7" target="_blank">
                 <div class="card">
-                    <h4>Overview</br>
-                        Slides
+                    <h4>Overview Slides
                     </h4>
-                    <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
+                    <p>A great overview of key Kustomize concepts.<span class="arrow"></span></p>
                 </div>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/glossary.md" target="_blank">
                 <div class="card">
-                    <h4>See</br>
-                        Glossary
+                    <h4>Glossary
                     </h4>
-                    <p>Lorem ipsum dolor sit amet<span class="arrow"></span></p>
+                    <p>A list of common terms in the Kustomize world.<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://testingclouds.wordpress.com/2018/07/20/844/" target="_blank">
+                <div class="card">
+                    <h4>Use Case
+                    </h4>
+                    <p>Customizing upstream Helm </br>
+                      charts with Kustomize<span class="arrow"></span></p>
                 </div>
               </a>
             </div>
@@ -208,22 +206,11 @@
                 <div class="hash"></div>
                 <h2>Community</h2>
                 <div class="small-border"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</br>
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p>Connect with the Kustomize community to get answers to questions and to stay up with the latest developments.
                 </p>
             </div>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; Updated upstream
-            <div class="links flex flexWrap--wrap">
-                <a href="htttp://google.com" target="_blank">
-=======
             <div class="links flex">
                 <a href="http://slack.k8s.io/" target="_blank">
->>>>>>> Stashed changes
-=======
-            <div class="links flex">
-                <a href="http://slack.k8s.io/" target="_blank">
->>>>>>> Stashed changes
                   <div class="link">
                     <div class="link-icon slack"></div>
                     <p>K8s slack</br>
@@ -276,7 +263,7 @@
         })(window, document,
           'script', '//www.google-analytics.com/analytics.js', 'ga');
          
-        ga('create', 'UA-61084834-1', 'auto');
+        ga('create', 'UA-61420213-8', 'auto');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
          
@@ -291,16 +278,14 @@
         });
       </script>
     
- 
-	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+		
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
   
   
 
     
-      <script src='/js/staging/autocomplete-search-27c2160667.js'></script>
+      <script src='/js/prod/autocomplete-search-821c3977cf.js'></script>
     
 
   
@@ -355,7 +340,7 @@
     $('#navItem--documentation').on("mouseenter", function () {
       $('.guides-sub-nav').hide();
     });
-    
+
     $('.home-nav').on("mouseleave", function () {
       $('.guides-sub-nav').hide();
     });
@@ -371,8 +356,8 @@
       .click(function(event) {
         
         if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-          && 
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
           location.hostname == this.hostname
         ) {
           
@@ -391,3 +376,4 @@
   </script>
 </body>
 </html>
+
