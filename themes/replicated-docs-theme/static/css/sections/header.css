@@ -9,7 +9,7 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
-  background-position: 0 -526px; 
+  background-position: 0 -526px;
   width: 146px;
   height: 33px;
 }
@@ -271,7 +271,8 @@ nav ul li a {
     padding: 0 0 35px 0;
   }
   .header-content > div {
-    flex: 0 0 auto;
+    min-width: 500px;
+    margin-right: 50px;
   }
   .header-content > div br {
     display: inline-block !important;
@@ -279,10 +280,10 @@ nav ul li a {
   .header-content .template-illustration {
     display: initial;
     position: relative;
-    top: 70px;  
+    top: 70px;
   }
   .header-content .template-illustration img {
     width: 600px;
   }
-  
+
 }

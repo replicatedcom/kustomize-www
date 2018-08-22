@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Replicated Ship on Kustomize WWW</title>
+    <title>Replicated Ship on Kustomize.io</title>
     <link>/</link>
-    <description>Recent content in Replicated Ship on Kustomize WWW</description>
+    <description>Recent content in Replicated Ship on Kustomize.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Replicated, Inc</copyright>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     

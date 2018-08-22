@@ -268,7 +268,7 @@ nav ul li a {
     display: none;
   }
   .header-content {
-    padding: 0;
+    padding: 0 0 35px 0;
   }
   .header-content > div {
     flex: 0 0 auto;
