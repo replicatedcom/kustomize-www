@@ -1,11 +1,11 @@
 ---
 baseURL: "/"
 languageCode: "en-us"
-title: "Kustomize WWW"
+title: "Kustomize.io"
 theme: "replicated-docs-theme"
 metadataformat: "yaml"
 canonifyurls: true
-description: "Landing Page for Kustomize"
+description: "Overview, resources and links for Kubernetes Kustomize."
 googleAnalytics: "UA-61084834-1"
 
 Params:

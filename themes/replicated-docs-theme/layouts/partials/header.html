@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ .Title }}</title>
+	<title>Kustomize.io</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ .Site.BaseURL }}favicons/apple-touch-icon-57x57.png" />
@@ -26,7 +26,7 @@
 	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
 	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
 	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />	
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/{{ index .Site.Data "manifest-css" "style.css" }}'>
 	<link rel="stylesheet" href='{{ .Site.BaseURL }}css/featherlight.min.css'>
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight/prism.css">
@@ -58,17 +58,15 @@
 			</div>
 		</nav>
 		<div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
-			<div class="flex flex-column flex-auto">
-				<h1>Declarative Configuration
+			<div class="flex flex-column">
+				<h1>Declarative Configuration</br>
 					for Kubernetes
 				</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-					elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua.
+				<p>Kustomize introduces a template-free way to customize application configuration that simplifies the use of off-the-shelf applications.
 				</p>
 				<div class="flex buttons">
-					<a href="" class="Button primary darkBlue">Get Started</a>
-					<a href="" class="Button secondary white">Learn More</a>
+					<a href="https://github.com/kubernetes-sigs/kustomize/blob/master/INSTALL.md" class="Button primary darkBlue">Install</a>
+					<a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md" class="Button secondary white">View Docs</a>
 				</div>
 			</div>
 			<div class="template-illustration flex1">
