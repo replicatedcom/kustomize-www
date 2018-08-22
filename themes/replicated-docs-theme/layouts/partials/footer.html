@@ -33,9 +33,7 @@
         });
       </script>
     {{ end }}
- 
-	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+		
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
   {{ $env := .Site.Params.search_env }}
@@ -99,7 +97,7 @@
     $('#navItem--documentation').on("mouseenter", function () {
       $('.guides-sub-nav').hide();
     });
-    
+
     $('.home-nav').on("mouseleave", function () {
       $('.guides-sub-nav').hide();
     });
@@ -115,8 +113,8 @@
       .click(function(event) {
         // On-page links
         if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-          && 
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
           location.hostname == this.hostname
         ) {
           // Figure out element to scroll to
