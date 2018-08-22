@@ -268,10 +268,11 @@ nav ul li a {
     display: none;
   }
   .header-content {
-    padding: 0;
+    padding: 0 0 35px 0;
   }
   .header-content > div {
     flex: 0 0 auto;
+    max-width: 490px;
   }
   .header-content > div br {
     display: inline-block !important;
@@ -284,5 +285,4 @@ nav ul li a {
   .header-content .template-illustration img {
     width: 600px;
   }
-  
 }

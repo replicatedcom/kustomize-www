@@ -285,4 +285,12 @@ body {
     .swim-lane-section br {
         display: none;
     }
+    br {
+      display: none;
+    }
+    .overview-section,
+    .resources-section,
+    .community-section {
+        padding: 75px 15px;
+    }
 }
