@@ -9,8 +9,8 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
-  background-position: 0 -526px;
-  width: 146px;
+  background-position: 0 -526px; 
+  width: 150px;
   height: 33px;
 }
 nav > div > ul.flex {

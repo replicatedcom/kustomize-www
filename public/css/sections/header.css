@@ -9,8 +9,13 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
+<<<<<<< Updated upstream
   background-position: 0 -526px;
   width: 146px;
+=======
+  background-position: 0 -526px; 
+  width: 150px;
+>>>>>>> Stashed changes
   height: 33px;
 }
 nav > div > ul.flex {
