@@ -156,7 +156,7 @@
                 <div class="card">
                     <h4>Launch Announcement
                     </h4>
-                    <p>Introducing kustomize: Template-free Configuration Customization</br>
+                    <p>Template-free Configuration Customization
                       for Kubernetes<span class="arrow"></span></p>
                 </div>
               </a>
@@ -297,11 +297,10 @@
 			document.getElementById("headerLinks").classList.toggle("show");
 		}
 		const toggleMenu = document.getElementById("toggleNav");
-		const headerLinks = document.getElementsByClassName(".header-link");
+		const headerLinks = document.getElementsByClassName("header-link");
 		if (toggleMenu) {
 			toggleMenu.addEventListener("click", toggleMenuClass);
       for(var link of headerLinks) {
-        console.log(link);
         link.addEventListener("click", toggleMenuClass);
       }
 		};

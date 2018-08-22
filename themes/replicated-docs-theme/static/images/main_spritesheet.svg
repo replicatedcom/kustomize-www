@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="607px" viewBox="0 0 150 607" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="148px" height="607px" viewBox="0 0 148 607" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>main_spritesheet</title>
     <desc>Created with Sketch.</desc>
@@ -226,22 +226,18 @@
                         </text>
                     </g>
                 </g>
-                <g id="ustomize.io" transform="translate(32.000000, 7.000000)" fill="#FFFFFF" font-size="20" font-weight="bold" letter-spacing="0.5">
-                    <text id="ustomize." font-family="HelveticaNeue-Bold, Helvetica Neue">
+                <g id="ustomize.io" transform="translate(32.000000, 7.000000)" fill="#FFFFFF" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="20" font-weight="bold" letter-spacing="0.5">
+                    <text>
                         <tspan x="0.2" y="20">ustomize.</tspan>
-                    </text>
-                    <text id="io" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">
-                        <tspan x="98.76" y="20">io</tspan>
+                        <tspan x="97.26" y="20" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">io</tspan>
                     </text>
                 </g>
             </g>
             <g id="Group-74" transform="translate(2.000000, 574.000000)">
-                <g id="ustomize.io" transform="translate(33.000000, 7.000000)" fill="#3E5FA8" font-size="20" font-weight="bold" letter-spacing="0.5">
-                    <text id="ustomize." font-family="HelveticaNeue-Bold, Helvetica Neue">
+                <g id="ustomize.io" transform="translate(33.000000, 7.000000)" fill="#3E5FA8" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="20" font-weight="bold" letter-spacing="0.5">
+                    <text>
                         <tspan x="0.7" y="20.5">ustomize.</tspan>
-                    </text>
-                    <text id="io" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">
-                        <tspan x="99.26" y="20.5">io</tspan>
+                        <tspan x="97.76" y="20.5" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">io</tspan>
                     </text>
                 </g>
                 <g id="Group-82">
