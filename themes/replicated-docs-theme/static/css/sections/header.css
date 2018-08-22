@@ -271,7 +271,8 @@ nav ul li a {
     padding: 0 0 35px 0;
   }
   .header-content > div {
-    min-width: 500px;
+    flex: 0 0 auto;
+    max-width: 490px;
     margin-right: 50px;
   }
   .header-content > div br {
@@ -285,5 +286,4 @@ nav ul li a {
   .header-content .template-illustration img {
     width: 600px;
   }
-
 }
