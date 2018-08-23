@@ -69,13 +69,13 @@ body {
 .overview-section .icon.components {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -58px; 
-    width: 60px;
-    height: 57px;
+    width: 62px;
+    height: 58px;
 }
 .overview-section .icon.manage {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -252px; 
-    width: 53px;
+    width: 55px;
     height: 57px;
 }
 .overview-section .icon.kubernetes {
@@ -87,8 +87,8 @@ body {
 .overview-section .icon.yaml-doc {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -196px; 
-    width: 45px;
-    height: 57px;
+    width: 47px;
+    height: 58px;
 }
 .overview-section .icon.pull-request {
     background-image: url(../../images/main_spritesheet.svg);
@@ -166,7 +166,7 @@ body {
     width: 10px;
     height: 10px;
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     right: 0;
 }
 .resources-section .card .arrow {
@@ -176,7 +176,7 @@ body {
     width: 10px;
     height: 10px;
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     right: 0;
 }
 
