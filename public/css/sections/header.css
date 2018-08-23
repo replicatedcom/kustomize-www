@@ -9,7 +9,7 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
-  background-position: 0 -526px; 
+  background-position: 1px -526px; 
   width: 150px;
   height: 33px;
 }
