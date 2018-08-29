@@ -49,13 +49,17 @@
 
 	<script src="{{ .Site.BaseURL }}js/prism.js"></script>
 	<script>
+    const toggleMenu = document.getElementById("toggleNav");
+		const headerLinks = document.getElementsByClassName("header-link");
 		function toggleMenuClass() {
-			this.classList.toggle("open");
+			toggleMenu.classList.toggle("open");
 			document.getElementById("headerLinks").classList.toggle("show");
 		}
-		const toggleMenu = document.getElementById("toggleNav");
 		if (toggleMenu) {
 			toggleMenu.addEventListener("click", toggleMenuClass);
+      for(var link of headerLinks) {
+        link.addEventListener("click", toggleMenuClass);
+      }
 		};
 	</script>
 

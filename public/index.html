@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href='/css/featherlight.min.css'>
 	<link rel="stylesheet" href="/css/highlight/prism.css">
 	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize WWW">
-	<meta name="generator" content="Hugo 0.31.1" />
+	<meta name="generator" content="Hugo 0.46" />
 </head>
 <body>
 	<header>
@@ -47,13 +47,13 @@
 					<li>
 						<ul id="headerLinks" class="header-links">
 							
-								<li><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md">Docs</a></li>
+								<li><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md" class="header-link">Docs</a></li>
 							
-								<li><a href="/#overview">Overview</a></li>
+								<li><a href="/#overview" class="header-link">Overview</a></li>
 							
-								<li><a href="/#resources">Resources</a></li>
+								<li><a href="/#resources" class="header-link">Resources</a></li>
 							
-								<li><a href="/#community">Community</a></li>
+								<li><a href="/#community" class="header-link">Community</a></li>
 							
 						</ul>
 					</li>
@@ -156,7 +156,7 @@
                 <div class="card">
                     <h4>Launch Announcement
                     </h4>
-                    <p>Introducing kustomize: Template-free Configuration Customization</br>
+                    <p>Template-free Configuration Customization
                       for Kubernetes<span class="arrow"></span></p>
                 </div>
               </a>
@@ -292,13 +292,17 @@
 
 	<script src="/js/prism.js"></script>
 	<script>
+    const toggleMenu = document.getElementById("toggleNav");
+		const headerLinks = document.getElementsByClassName("header-link");
 		function toggleMenuClass() {
-			this.classList.toggle("open");
+			toggleMenu.classList.toggle("open");
 			document.getElementById("headerLinks").classList.toggle("show");
 		}
-		const toggleMenu = document.getElementById("toggleNav");
 		if (toggleMenu) {
 			toggleMenu.addEventListener("click", toggleMenuClass);
+      for(var link of headerLinks) {
+        link.addEventListener("click", toggleMenuClass);
+      }
 		};
 	</script>
 

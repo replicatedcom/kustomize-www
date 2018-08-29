@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="146px" height="607px" viewBox="0 0 146 607" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="148px" height="607px" viewBox="0 0 148 607" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>main_spritesheet</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="50%" x2="78.7501831%" y2="85.1573392%" id="linearGradient-1">
+        <path d="M22,4.5 L50,4.5" id="path-1"></path>
+        <filter x="-8.9%" y="-125.0%" width="117.9%" height="350.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.959768282   0 0 0 0 0.959768282   0 0 0 0 0.959768282  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M22,14.5 L50,14.5" id="path-3"></path>
+        <filter x="-8.9%" y="-125.0%" width="117.9%" height="350.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.959768282   0 0 0 0 0.959768282   0 0 0 0 0.959768282  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M22,24.5 L50,24.5" id="path-5"></path>
+        <filter x="-8.9%" y="-125.0%" width="117.9%" height="350.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.959768282   0 0 0 0 0.959768282   0 0 0 0 0.959768282  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="50%" x2="78.7501831%" y2="85.1573392%" id="linearGradient-7">
             <stop stop-color="#02D8B1" offset="0%"></stop>
             <stop stop-color="#01B090" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="50%" y1="50%" x2="79.5159394%" y2="86.093749%" id="linearGradient-2">
+        <linearGradient x1="50%" y1="50%" x2="79.5159394%" y2="86.093749%" id="linearGradient-8">
             <stop stop-color="#FC7753" offset="0%"></stop>
             <stop stop-color="#C64725" offset="100%"></stop>
         </linearGradient>
@@ -74,63 +101,6 @@
                             </text>
                         </g>
                     </g>
-                    <g id="Group-5" transform="translate(1.000000, 266.000000)">
-                        <g id="Controls">
-                            <g id="Line-13" transform="translate(22.000000, 4.000000)">
-                                <g id="path-1-link" fill="#000000" fill-rule="nonzero">
-                                    <path d="M0,0.5 L28,0.5" id="path-1"></path>
-                                </g>
-                                <g id="path-1-link" stroke="#776311" stroke-opacity="0.05" stroke-width="5">
-                                    <path d="M0,0.5 L28,0.5" id="path-1"></path>
-                                </g>
-                            </g>
-                            <g id="Line-13" transform="translate(22.000000, 14.000000)">
-                                <g id="path-3-link" fill="#000000" fill-rule="nonzero">
-                                    <path d="M0,0.5 L28,0.5" id="path-3"></path>
-                                </g>
-                                <g id="path-3-link" stroke="#776311" stroke-opacity="0.05" stroke-width="5">
-                                    <path d="M0,0.5 L28,0.5" id="path-3"></path>
-                                </g>
-                            </g>
-                            <g id="Line-13" transform="translate(22.000000, 24.000000)">
-                                <g id="path-5-link" fill="#000000" fill-rule="nonzero">
-                                    <path d="M0,0.5 L28,0.5" id="path-5"></path>
-                                </g>
-                                <g id="path-5-link" stroke="#776311" stroke-opacity="0.05" stroke-width="5">
-                                    <path d="M0,0.5 L28,0.5" id="path-5"></path>
-                                </g>
-                            </g>
-                            <path d="M22.5,14.5 L49.5,14.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round"></path>
-                            <path d="M22.5,4.5 L49.5,4.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round"></path>
-                            <path d="M22.5,24.5 L49.5,24.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round"></path>
-                            <circle id="Oval-5" fill="#C64725" fill-rule="nonzero" cx="7" cy="8" r="6"></circle>
-                            <circle id="Oval-5" fill="#FC7753" fill-rule="nonzero" cx="6" cy="7" r="6"></circle>
-                            <circle id="Oval-5" fill="#01B090" fill-rule="nonzero" cx="7" cy="29" r="6"></circle>
-                            <circle id="Oval-5" fill="#02D8B1" fill-rule="nonzero" cx="6" cy="28" r="6"></circle>
-                            <circle id="Oval-7" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="6" cy="28" r="3"></circle>
-                            <g id="Group-28" transform="translate(20.000000, 31.000000)" fill-rule="nonzero">
-                                <g id="Group-31" transform="translate(27.000000, 0.000000)">
-                                    <ellipse id="Oval-6" fill="#47639B" cx="3.41935484" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
-                                    <ellipse id="Oval-6" fill="#6185CC" cx="2.77419355" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
-                                </g>
-                                <g id="Group-30" transform="translate(14.000000, 0.000000)">
-                                    <ellipse id="Oval-6" fill="#758FC3" cx="2.64516129" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
-                                    <ellipse id="Oval-6" fill="#AEC4EF" cx="2" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
-                                </g>
-                                <g id="Group-29" transform="translate(0.500000, 0.000000)">
-                                    <ellipse id="Oval-6" fill="#5181E2" cx="3.22580645" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
-                                    <ellipse id="Oval-6" fill="#7AA6FF" cx="2.58064516" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
-                                </g>
-                            </g>
-                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="25" y="1" width="3" height="7" rx="1.5"></rect>
-                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="24.5" y="0.5" width="3" height="7" rx="1.5"></rect>
-                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="34.5" y="11" width="3" height="7" rx="1.5"></rect>
-                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="34" y="10.5" width="3" height="7" rx="1.5"></rect>
-                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="45" y="21" width="3" height="7" rx="1.5"></rect>
-                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="44.5" y="20.5" width="3" height="7" rx="1.5"></rect>
-                            <circle id="Oval-7" fill="url(#linearGradient-2)" fill-rule="nonzero" cx="6" cy="7" r="3"></circle>
-                        </g>
-                    </g>
                     <g id="Group-6" transform="translate(1.000000, 317.000000)">
                         <g id="Group-36">
                             <g id="Group-33" fill-rule="nonzero">
@@ -154,6 +124,52 @@
                                     </g>
                                 </g>
                             </g>
+                        </g>
+                    </g>
+                    <g id="Group-5" transform="translate(2.000000, 266.000000)">
+                        <g id="Controls">
+                            <g id="Line-13" stroke-linecap="round" fill-rule="nonzero">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use stroke-opacity="0.05" stroke="#776311" stroke-width="5" xlink:href="#path-1"></use>
+                            </g>
+                            <g id="Line-13" stroke-linecap="round" fill-rule="nonzero">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                <use stroke-opacity="0.05" stroke="#776311" stroke-width="5" xlink:href="#path-3"></use>
+                            </g>
+                            <g id="Line-13" stroke-linecap="round" fill-rule="nonzero">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                <use stroke-opacity="0.05" stroke="#776311" stroke-width="5" xlink:href="#path-5"></use>
+                            </g>
+                            <path d="M22.5,14.5 L49.5,14.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round" fill-rule="nonzero"></path>
+                            <path d="M22.5,4.5 L49.5,4.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round" fill-rule="nonzero"></path>
+                            <path d="M22.5,24.5 L49.5,24.5" id="Line-14" stroke="#A6A6A6" stroke-linecap="round" fill-rule="nonzero"></path>
+                            <circle id="Oval-5" fill="#C64725" fill-rule="nonzero" cx="7" cy="8" r="6"></circle>
+                            <circle id="Oval-5" fill="#FC7753" fill-rule="nonzero" cx="6" cy="7" r="6"></circle>
+                            <circle id="Oval-5" fill="#01B090" fill-rule="nonzero" cx="7" cy="29" r="6"></circle>
+                            <circle id="Oval-5" fill="#02D8B1" fill-rule="nonzero" cx="6" cy="28" r="6"></circle>
+                            <circle id="Oval-7" fill="url(#linearGradient-7)" fill-rule="nonzero" cx="6" cy="28" r="3"></circle>
+                            <g id="Group-28" transform="translate(20.000000, 31.000000)">
+                                <g id="Group-31" transform="translate(27.000000, 0.000000)" fill-rule="nonzero">
+                                    <ellipse id="Oval-6" fill="#47639B" cx="3.41935484" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
+                                    <ellipse id="Oval-6" fill="#6185CC" cx="2.77419355" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
+                                </g>
+                                <g id="Group-30" transform="translate(14.000000, 0.000000)" fill-rule="nonzero">
+                                    <ellipse id="Oval-6" fill="#758FC3" cx="2.64516129" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
+                                    <ellipse id="Oval-6" fill="#AEC4EF" cx="2" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
+                                </g>
+                                <g id="Group-29" transform="translate(0.500000, 0.000000)" fill-rule="nonzero">
+                                    <ellipse id="Oval-6" fill="#5181E2" cx="3.22580645" cy="3.125" rx="1.93548387" ry="1.875"></ellipse>
+                                    <ellipse id="Oval-6" fill="#7AA6FF" cx="2.58064516" cy="2.5" rx="1.93548387" ry="1.875"></ellipse>
+                                </g>
+                                <g id="Group-27" transform="translate(31.645161, 0.000000)"></g>
+                            </g>
+                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="25" y="1" width="3" height="7" rx="1.5"></rect>
+                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="24.5" y="0.5" width="3" height="7" rx="1.5"></rect>
+                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="34.5" y="11" width="3" height="7" rx="1.5"></rect>
+                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="34" y="10.5" width="3" height="7" rx="1.5"></rect>
+                            <rect id="Rectangle-13" fill="#C7A110" fill-rule="nonzero" x="45" y="21" width="3" height="7" rx="1.5"></rect>
+                            <rect id="Rectangle-13" fill="#FEDC55" fill-rule="nonzero" x="44.5" y="20.5" width="3" height="7" rx="1.5"></rect>
+                            <circle id="Oval-7" fill="url(#linearGradient-8)" fill-rule="nonzero" cx="6" cy="7" r="3"></circle>
                         </g>
                     </g>
                     <g id="Group" transform="translate(1.000000, 0.000000)">
@@ -221,31 +237,23 @@
                         <rect id="Rectangle-2" fill-opacity="0.4" fill="#FFFFFF" fill-rule="nonzero" x="3.11713225" y="3" width="24.279567" height="27.5098248" rx="1.8"></rect>
                         <rect id="Rectangle-2" fill-opacity="0.4" fill="#FFFFFF" fill-rule="nonzero" x="0.117132246" y="0" width="24.279567" height="27.5098248" rx="1.8"></rect>
                         <rect id="Rectangle-2" fill="#3E5FA8" fill-rule="nonzero" x="6" y="6" width="23.3300757" height="26.4744376" rx="1.8"></rect>
-                        <text id="K" fill="#FFFFFF" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="20" font-weight="400">
+                        <text id="K" fill="#FFFFFF" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="20" font-weight="bold">
                             <tspan x="10.78" y="27">K</tspan>
                         </text>
                     </g>
                 </g>
-                <g id="ustomize.io" transform="translate(32.000000, 7.000000)" fill="#FFFFFF" font-size="20" letter-spacing="0.5">
-                    <text id="ustomize." font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="400">
-                        <tspan x="0.2" y="20">ustomize</tspan>
-                        <tspan x="87.92" y="20">.</tspan>
-                    </text>
-                    <text id="io" font-family="HelveticaNeue-MediumItalic, Helvetica Neue" font-style="italic" font-weight="500">
-                        <tspan x="94.76" y="20">i</tspan>
-                        <tspan x="100.08" y="20">o</tspan>
+                <g id="ustomize.io" transform="translate(32.000000, 7.000000)" fill="#FFFFFF" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="20" font-weight="bold" letter-spacing="0.5">
+                    <text>
+                        <tspan x="0.2" y="20">ustomize.</tspan>
+                        <tspan x="97.26" y="20" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">io</tspan>
                     </text>
                 </g>
             </g>
             <g id="Group-74" transform="translate(2.000000, 574.000000)">
-                <g id="ustomize.io" transform="translate(33.000000, 7.000000)" fill="#3E5FA8" font-size="20" letter-spacing="0.5">
-                    <text id="ustomize." font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="400">
-                        <tspan x="0.7" y="20.5">ustomize</tspan>
-                        <tspan x="88.42" y="20.5">.</tspan>
-                    </text>
-                    <text id="io" font-family="HelveticaNeue-MediumItalic, Helvetica Neue" font-style="italic" font-weight="500">
-                        <tspan x="95.26" y="20.5">i</tspan>
-                        <tspan x="100.58" y="20.5">o</tspan>
+                <g id="ustomize.io" transform="translate(33.000000, 7.000000)" fill="#3E5FA8" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="20" font-weight="bold" letter-spacing="0.5">
+                    <text>
+                        <tspan x="0.7" y="20.5">ustomize.</tspan>
+                        <tspan x="97.76" y="20.5" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-style="italic">io</tspan>
                     </text>
                 </g>
                 <g id="Group-82">

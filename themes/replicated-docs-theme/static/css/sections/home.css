@@ -1,9 +1,11 @@
 
 html,
 body {
-    overflow-x: hidden;
     position: relative;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 .intro {
     font-weight: bold;
@@ -67,13 +69,13 @@ body {
 .overview-section .icon.components {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -58px; 
-    width: 60px;
-    height: 57px;
+    width: 62px;
+    height: 58px;
 }
 .overview-section .icon.manage {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -252px; 
-    width: 53px;
+    width: 55px;
     height: 57px;
 }
 .overview-section .icon.kubernetes {
@@ -85,8 +87,8 @@ body {
 .overview-section .icon.yaml-doc {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0 -196px; 
-    width: 45px;
-    height: 57px;
+    width: 47px;
+    height: 58px;
 }
 .overview-section .icon.pull-request {
     background-image: url(../../images/main_spritesheet.svg);
@@ -143,6 +145,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .resources-section .card:hover {
     background: #5D8BEE;
@@ -162,6 +165,9 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
 }
 .resources-section .card .arrow {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
@@ -169,6 +175,9 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
 }
 
 .community-section {
@@ -176,6 +185,7 @@ body {
 }
 .community-section .links {
     justify-content: center;
+    flex-wrap: wrap;
 }
 .community-section .link {
     text-align: center;
@@ -212,7 +222,7 @@ body {
 }
 .community-section .link .link-icon.envelope {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
-    background-position: 8.5px -517px;
+    background-position: 8.5px -510px;
     background-size: 160px auto;
     width: 60px;
     height: 60px;

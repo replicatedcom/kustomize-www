@@ -1,9 +1,11 @@
 
 html,
 body {
-    overflow-x: hidden;
     position: relative;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
 }
 .intro {
     font-weight: bold;
@@ -143,6 +145,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .resources-section .card:hover {
     background: #5D8BEE;
@@ -162,6 +165,9 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .resources-section .card .arrow {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
@@ -169,6 +175,9 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .community-section {
@@ -176,6 +185,7 @@ body {
 }
 .community-section .links {
     justify-content: center;
+    flex-wrap: wrap;
 }
 .community-section .link {
     text-align: center;
@@ -212,7 +222,7 @@ body {
 }
 .community-section .link .link-icon.envelope {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
-    background-position: 8.5px -517px;
+    background-position: 8.5px -510px;
     background-size: 160px auto;
     width: 60px;
     height: 60px;
