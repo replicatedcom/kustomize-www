@@ -13,6 +13,10 @@ Params:
   copyright: "Replicated, Inc"
   search_env: "prod"
 
+  matomo:
+    host: "data-2.replicated.com"
+    site: "5"
+
   favicon: ""
   pagetitle: "Kustomize"
   permalink: "#"

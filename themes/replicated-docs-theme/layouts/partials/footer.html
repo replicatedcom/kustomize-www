@@ -33,7 +33,25 @@
         });
       </script>
     {{ end }}
-		
+
+    {{ with .Site.Params.matomo }}
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//{{ .host }}/";
+        _paq.push(['setTrackerUrl', u+'data/']);
+        _paq.push(['setSiteId', '{{ .site }}']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  {{ end }}
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
   {{ $env := .Site.Params.search_env }}
@@ -135,5 +153,6 @@
         }
       });
   </script>
+
 </body>
 </html>
