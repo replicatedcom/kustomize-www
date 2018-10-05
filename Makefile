@@ -6,15 +6,8 @@ install:
 build:
 	hugo -v
 
-build_staging:
-	yarn gulp
-	hugo -v --config config.staging.yaml
-
 serve:
 	hugo serve
-
-serve_staging:
-	hugo serve --config config.staging.yaml
 
 index-site:
 	yarn index-site
