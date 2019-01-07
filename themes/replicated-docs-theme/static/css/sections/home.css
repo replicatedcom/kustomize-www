@@ -17,7 +17,7 @@ body {
 }
 .intro .hash {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: -65px 0; 
+    background-position: -65px 0;
     width: 18px;
     height: 18px;
 }
@@ -62,39 +62,53 @@ body {
 }
 .overview-section .icon.megaphone {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 0; 
+    background-position: 0 0;
     width: 58px;
     height: 57px;
 }
 .overview-section .icon.components {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 -58px; 
+    background-position: 0 -58px;
     width: 62px;
     height: 58px;
 }
 .overview-section .icon.manage {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 -252px; 
+    background-position: 0 -252px;
     width: 55px;
     height: 57px;
 }
 .overview-section .icon.kubernetes {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 -130px; 
+    background-position: 0 -130px;
     width: 52px;
     height: 57px;
 }
 .overview-section .icon.yaml-doc {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 -196px; 
+    background-position: 0 -196px;
     width: 47px;
     height: 58px;
 }
 .overview-section .icon.pull-request {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0 -315px; 
+    background-position: 0 -315px;
     width: 62px;
     height: 57px;
+}
+.overview-section .icon.ship {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0px -690px;
+    width: 60px;
+    height: 63px;
+    cursor: pointer;
+}
+.overview-section .icon.argocd {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 0px -620px;
+    width: 37px;
+    height: 63px;
+    cursor: pointer;
 }
 .overview-section .documentation-link {
     margin-top: 35px;
@@ -208,7 +222,7 @@ body {
     margin: 0 auto;
     border: solid 1px #ECECEC;
     border-radius: 50px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 .community-section .link .link-icon.github {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
@@ -218,18 +232,18 @@ body {
     margin: 0 auto;
     border: solid 1px #ECECEC;
     border-radius: 50px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 .community-section .link .link-icon.envelope {
     background: url(../../images/main_spritesheet.svg) right center no-repeat;
-    background-position: 8.5px -510px;
+    background-position: 8.5px -518px;
     background-size: 160px auto;
     width: 60px;
     height: 60px;
     margin: 0 auto;
     border: solid 1px #ECECEC;
     border-radius: 50px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 .community-section .link:hover .link-icon {
     transition: all .1s ease;
