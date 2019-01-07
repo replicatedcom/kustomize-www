@@ -110,6 +110,10 @@ body {
     height: 63px;
     cursor: pointer;
 }
+.overview-section .detail:hover p {
+    text-decoration: underline;
+}
+
 .overview-section .documentation-link {
     margin-top: 35px;
 }
