@@ -9,7 +9,7 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
-  background-position: 1px -526px; 
+  background-position: 1px -526px;
   width: 150px;
   height: 33px;
 }
@@ -141,7 +141,7 @@ nav ul li a {
 .header-content h1 {
   color: #fff;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 37px;
   line-height: 52px;
 }
 .header-content p {

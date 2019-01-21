@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Kustomize.io</title>
-	
+
 	<meta name="author" content="Replicated">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
@@ -46,15 +46,15 @@
 					</li>
 					<li>
 						<ul id="headerLinks" class="header-links">
-							
+
 								<li><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md" class="header-link">Docs</a></li>
-							
+
 								<li><a href="/#overview" class="header-link">Overview</a></li>
-							
+
 								<li><a href="/#resources" class="header-link">Resources</a></li>
-							
+
 								<li><a href="/#community" class="header-link">Community</a></li>
-							
+
 						</ul>
 					</li>
 				</ul>
@@ -62,8 +62,8 @@
 		</nav>
 		<div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
 			<div class="flex flex-column">
-				<h1>Declarative Configuration</br>
-					for Kubernetes
+				<h1>Kubernetes native</br>
+					configuration management
 				</h1>
 				<p>Kustomize introduces a template-free way to customize application configuration that simplifies the use of off-the-shelf applications.
 				</p>
@@ -253,7 +253,7 @@
 		</div>
 	</footer>
 
-	
+
       <script>
         (function(i,s,o,g,r,a,m){
           i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
@@ -262,11 +262,11 @@
           m.parentNode.insertBefore(a,m)
         })(window, document,
           'script', '//www.google-analytics.com/analytics.js', 'ga');
-         
+
         ga('create', 'UA-61420213-8', 'auto');
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
-         
+
         var buttons = document.querySelectorAll('a');
         Array.prototype.map.call(buttons, function(item) {
           if (item.host != document.location.host) {
@@ -277,18 +277,18 @@
           }
         });
       </script>
-    
-		
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
-  
-  
 
-    
+
+
+
       <script src='/js/prod/autocomplete-search-821c3977cf.js'></script>
-    
 
-  
+
+
 
 	<script src="/js/prism.js"></script>
 	<script>
@@ -354,22 +354,22 @@
   </script>
   <script>
     $('a[href*="#"]')
-      
+
       .not('[href="#"]')
       .not('[href="#0"]')
       .click(function(event) {
-        
+
         if (
           location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
           &&
           location.hostname == this.hostname
         ) {
-          
+
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          
+
           if (target.length) {
-            
+
             event.preventDefault();
             $('html, body').animate({
               scrollTop: target.offset().top
@@ -380,4 +380,3 @@
   </script>
 </body>
 </html>
-
