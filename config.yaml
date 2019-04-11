@@ -31,7 +31,7 @@ menu:
     - Name: "apply -k Docs"
       Weight: 1
       URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
-    - Name: "binary Docs"
+    - Name: "Binary Docs"
       Weight: 2
       URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs"
     - Name: "Overview"
