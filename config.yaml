@@ -28,10 +28,10 @@ taxonomies:
 
 menu:
   main:
-    - Name: "apply -k Docs"
+    - Name: "kubectl Usage Docs"
       Weight: 1
       URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
-    - Name: "Binary Docs"
+    - Name: "Core Docs"
       Weight: 2
       URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs"
     - Name: "Overview"
