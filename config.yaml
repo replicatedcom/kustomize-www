@@ -28,16 +28,19 @@ taxonomies:
 
 menu:
   main:
-    - Name: "Docs"
+    - Name: "Docs: apply -k"
       Weight: 1
-      URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs/workflows.md"
-    - Name: "Overview"
+      URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
+    - Name: "Docs: binary"
       Weight: 2
+      URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs"
+    - Name: "Overview"
+      Weight: 3
       URL: "#overview"
     - Name: "Resources"
-      Weight: 3
+      Weight: 4
       URL: "#resources"
     - Name: "Community"
-      Weight: 4
+      Weight: 5
       URL: "#community"
 ---
