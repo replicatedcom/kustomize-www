@@ -28,7 +28,7 @@ taxonomies:
 
 menu:
   main:
-    - Name: "kubectl Usage Docs"
+    - Name: "kubectl Usage"
       Weight: 1
       URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
     - Name: "Core Docs"
