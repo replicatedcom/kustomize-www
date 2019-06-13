@@ -110,6 +110,14 @@ body {
     height: 63px;
     cursor: pointer;
 }
+
+.overview-section .icon.flux {
+    background-image: url(../../images/main_spritesheet.svg);
+    background-position: 1px -760px;
+    width: 94px;
+    height: 80px;
+    cursor: pointer;
+}
 .overview-section .detail:hover p {
     text-decoration: underline;
 }
