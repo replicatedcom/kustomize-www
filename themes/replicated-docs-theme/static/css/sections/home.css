@@ -113,9 +113,9 @@ body {
 
 .overview-section .icon.flux {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 1px -760px;
+    background-position: 1px -778px;
     width: 94px;
-    height: 80px;
+    height: 60px;
     cursor: pointer;
 }
 .overview-section .detail:hover p {
