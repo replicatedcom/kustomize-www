@@ -43,4 +43,7 @@ menu:
     - Name: "Community"
       Weight: 5
       URL: "#community"
+    - Name: "Tutorial"
+      Weight: 6
+      URL: "https://kustomize.io/tutorial"
 ---
