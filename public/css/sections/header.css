@@ -9,7 +9,7 @@ nav {
 }
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
-  background-position: 1px -526px; 
+  background-position: 1px -526px;
   width: 150px;
   height: 33px;
 }
@@ -205,8 +205,8 @@ nav ul li a {
   }
 }
 
-/* ≥ 768px */
-@media screen and (min-width: 52em) {
+/* ≥ 880px */
+@media screen and (min-width: 880px) {
   #headerLinks {
     padding-top: 0;
   }
