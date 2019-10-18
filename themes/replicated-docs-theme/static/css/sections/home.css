@@ -41,6 +41,17 @@ body {
     margin-top: 10px;
 }
 
+.tutorial-section {
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+    align-items: center;
+}
+
+.tutorial-section .tutorial-img {
+    width: 100%;
+}
+
 .overview-section {
     padding: 100px 0;
     text-align: center;
@@ -306,6 +317,11 @@ body {
         background-position: center -378px;
         background-size: 2347px auto;
     }
+
+    .tutorial-section .tutorial-img {
+        width: 90%;
+        margin: 0 auto;
+}
     .resources-section .cards {
         justify-content: center;
     }
