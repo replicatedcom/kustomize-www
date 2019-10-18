@@ -41,6 +41,10 @@ body {
     margin-top: 10px;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .tutorial-section {
     padding: 100px 0;
     background-color: #f8f8f8;
