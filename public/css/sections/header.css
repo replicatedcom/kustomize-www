@@ -10,7 +10,7 @@ nav {
 nav .logo {
   background-image: url(../../images/main_spritesheet.svg);
   background-position: 1px -526px;
-  width: 150px;
+  width: 138px;
   height: 33px;
 }
 nav > div > ul.flex {
@@ -141,7 +141,7 @@ nav ul li a {
 .header-content h1 {
   color: #fff;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 37px;
   line-height: 52px;
 }
 .header-content p {
@@ -205,8 +205,8 @@ nav ul li a {
   }
 }
 
-/* ≥ 880px */
-@media screen and (min-width: 880px) {
+/* ≥ 768px */
+@media screen and (min-width: 52em) {
   #headerLinks {
     padding-top: 0;
   }
