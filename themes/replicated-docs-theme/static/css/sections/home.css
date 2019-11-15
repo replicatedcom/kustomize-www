@@ -111,11 +111,11 @@ body {
     width: 62px;
     height: 57px;
 }
-.overview-section .icon.ship {
+.overview-section .icon.kots {
     background-image: url(../../images/main_spritesheet.svg);
-    background-position: 0px -690px;
-    width: 60px;
-    height: 63px;
+    background-position: 0px -704px;
+    width: 128px;
+    height: 50px;
     cursor: pointer;
 }
 .overview-section .icon.argocd {
