@@ -33,7 +33,7 @@ menu:
       URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
     - Name: "Core Docs"
       Weight: 2
-      URL: "https://github.com/kubernetes-sigs/kustomize/blob/master/docs"
+      URL: "https://kubernetes-sigs.github.io/kustomize/"
     - Name: "Overview"
       Weight: 3
       URL: "#overview"

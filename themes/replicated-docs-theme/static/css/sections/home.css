@@ -133,6 +133,7 @@ body {
     height: 60px;
     cursor: pointer;
 }
+
 .overview-section .detail:hover p {
     text-decoration: underline;
 }
