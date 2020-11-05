@@ -121,7 +121,7 @@ body {
 .overview-section .icon.argocd {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 0px -620px;
-    width: 37px;
+    width: 122px;
     height: 63px;
     cursor: pointer;
 }
@@ -129,7 +129,7 @@ body {
 .overview-section .icon.flux {
     background-image: url(../../images/main_spritesheet.svg);
     background-position: 1px -778px;
-    width: 94px;
+    width: 122px;
     height: 60px;
     cursor: pointer;
 }
