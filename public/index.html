@@ -1,485 +1,491 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Kustomize - Kubernetes native configuration management</title>
-
-  <meta name="author" content="Replicated">
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;" />
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-  <meta name="google-site-verification" content="5wDAbRRvyn5BrnLIgvApbtwWI8S1AdpHISelWzodRtg" />
-  <link rel="stylesheet" href='/css/style-9cc871a890.css'>
-  <link rel="stylesheet" href='/css/featherlight.min.css'>
-  <link rel="stylesheet" href="/css/highlight/prism.css">
-  <meta name="google-site-verification" content="oa0WUjkbLgS-LwlcLjCKhIDkPB-_rDHHdorazx8lO1M" />
-  <link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize WWW">
-  <meta name="generator" content="Hugo 0.55.2" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kustomize - Kubernetes native configuration management</title>
+	
+	<meta name="author" content="Replicated">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicons/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	<meta name="google-site-verification" content="5wDAbRRvyn5BrnLIgvApbtwWI8S1AdpHISelWzodRtg" />
+	<link rel="stylesheet" href='/css/style-9cc871a890.css'>
+	<link rel="stylesheet" href='/css/featherlight.min.css'>
+	<link rel="stylesheet" href="/css/highlight/prism.css">
+	<meta name="google-site-verification" content="oa0WUjkbLgS-LwlcLjCKhIDkPB-_rDHHdorazx8lO1M" />
+	<link href="/index.xml" rel="feed" type="application/rss+xml" title="Kustomize WWW">
+	<meta name="generator" content="Hugo 0.69.0" />
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="container u-position--relative">
-        <span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
-        <ul class="flex justifyContent--spaceBetween alignItems--center nav-list u-position--relative">
-          <li>
-            <a class="logo-link" href="/">
-              <div class="logo"></div>
-            </a>
-          </li>
-          <li>
-            <ul id="headerLinks" class="header-links">
+	<header>
+		<nav>
+			<div class="container u-position--relative">
+				<span id="toggleNav" class="u-show--mobileTablet icon u-cursor--pointer"></span>
+				<ul class="flex justifyContent--spaceBetween alignItems--center nav-list u-position--relative">
+					<li>
+						<a class="logo-link" href="/">
+							<div class="logo"></div>
+						</a>
+					</li>
+					<li>
+						<ul id="headerLinks" class="header-links">
+							
+								<li><a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html" class="header-link">kubectl Usage</a></li>
+							
+								<li><a href="https://kubernetes-sigs.github.io/kustomize/" class="header-link">Core Docs</a></li>
+							
+								<li><a href="/#overview" class="header-link">Overview</a></li>
+							
+								<li><a href="/#resources" class="header-link">Resources</a></li>
+							
+								<li><a href="/#community" class="header-link">Community</a></li>
+							
+								<li><a href="https://kustomize.io/tutorial" class="header-link">Tutorial</a></li>
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
+			<div class="flex flex-column">
+				<h1>Kubernetes native </br>
+					configuration management
+				</h1>
+				<p>Kustomize introduces a template-free way to customize application configuration that simplifies the use of off-the-shelf applications. Now, built into <code>kubectl</code> as <code>apply -k</code>.
+				</p>
+				<div class="flex buttons">
+					<a href="https://kubernetes-sigs.github.io/kustomize/installation/" class="Button primary darkBlue">Install kustomize </a>
+					<a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html" class="Button secondary white">Use with kubectl</a>
+				</div>
+			</div>
+			<div class="template-illustration flex1">
+				<img src="/images/header_templates.png"/>
+			</div>
+		</div>
+	</header>
 
-              <li><a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
-                  class="header-link">kubectl Usage</a></li>
-
-              <li><a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs" class="header-link">Core
-                  Docs</a></li>
-
-              <li><a href="/#overview" class="header-link">Overview</a></li>
-
-              <li><a href="/#resources" class="header-link">Resources</a></li>
-
-              <li><a href="/#community" class="header-link">Community</a></li>
-
-              <li><a href="https://kustomize.io/tutorial" class="header-link">Tutorial</a></li>
-
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="header-content container flex justifyContent--spaceBetween alignItems--center u-position--relative">
-      <div class="flex flex-column">
-        <h1>Kubernetes native </br>
-          configuration management
-        </h1>
-        <p>Kustomize introduces a template-free way to customize application configuration that simplifies the use of
-          off-the-shelf applications. Now, built into <code>kubectl</code> as <code>apply -k</code>.
-        </p>
-        <div class="flex buttons">
-          <a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
-            class="Button primary darkBlue">Use with kubectl</a>
-          <a href="https://kubernetes.io/blog/2019/03/25/kubernetes-1-14-release-announcement/"
-            class="Button secondary white">Read about K8s 1.14</a>
-        </div>
-      </div>
-      <div class="template-illustration flex1">
-        <img src="/images/header_templates.png" />
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="flex flex1 flex-column tutorial-section bg-light u-width--full">
-      <div class="flex flex-column flex1 container">
+	<main>
+		<div class="flex flex1 flex-column tutorial-section bg-light u-width--full">
+    <div class="flex flex-column flex1 container">
         <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Tutorial</h2>
-          <div class="small-border"></div>
-          <p>
-            Learn basic Kustomize patch syntax and kustomization yaml creation. Download your new directory and
-            <code>kubectl apply -k</code> it to your cluster. <span class="underline"><a
-                href="https://kustomize.io/tutorial">Try it</a></span>
-          </p>
+            <div class="hash"></div>
+            <h2>Tutorial</h2>
+            <div class="small-border"></div>
+            <p>
+                Learn basic Kustomize patch syntax and kustomization  yaml creation. Download your new directory and <code>kubectl apply -k</code> it to your cluster. <span class="underline"><a href="https://kustomize.io/tutorial">Try it</a></span>
+            </p>
         </div>
         <a href="https://kustomize.io/tutorial">
-          <img class="tutorial-img" src="/images/tutorial-img.png">
+            <img class="tutorial-img" src="/images/tutorial-img.png">
         </a>
-      </div>
     </div>
-    <div id="overview" class="flex flex-column overview-section u-gradient--whiteToGray">
-      <div class="flex flex-column flex1 container">
+</div>
+		<div id="overview" class="flex flex-column overview-section u-gradient--whiteToGray">
+    <div class="flex flex-column flex1 container">
         <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Overview</h2>
-          <div class="small-border"></div>
-          <p>Kustomize traverses a Kubernetes manifest to
-            add, remove or update configuration options without forking. It is
-            available both as a standalone binary and as a native feature of <code>kubectl</code>.
-          </p>
+            <div class="hash"></div>
+            <h2>Overview</h2>
+            <div class="small-border"></div>
+            <p>Kustomize traverses a Kubernetes manifest to
+              add, remove or update configuration options without forking. It is
+              available both as a standalone binary and as a native feature of <code>kubectl</code>.
+            </p>
         </div>
         <div class="details flex justifyContent--center">
-          <div class="detail">
-            <div class="icon megaphone"></div>
-            <p>
-              Purely declarative approach to
-              configuration customization
-            </p>
-          </div>
-          <div class="detail">
-            <div class="icon components"></div>
-            <p>
-              Natively built into <code>kubectl</code>
-            </p>
-          </div>
-          <div class="detail">
-            <div class="icon manage"></div>
-            <p>
-              Manage an arbitrary number of
-              distinctly customized Kubernetes
-              configurations
-            </p>
-          </div>
-          <div class="detail">
-            <div class="icon kubernetes"></div>
-            <p>
-              Available as a standalone
-              binary for extension and
-              integration into other services
-            </p>
-          </div>
-          <div class="detail">
-            <div class="icon yaml-doc"></div>
-            <p>
-              Every artifact that kustomize uses
-              is plain YAML and can be validated
-              and processed as such
-            </p>
-          </div>
-          <div class="detail">
-            <div class="icon pull-request"></div>
-            <p>
-              Kustomize encourages a
-              fork/modify/rebase workflow
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="documentation-link">
-          See Documentation: <a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
-            target="_blank">apply -k</a> | <a href="https://github.com/kubernetes-sigs/kustomize/tree/master/docs"
-            target="_blank">standalone</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="resources" class="flex flex-column resources-section u-gradient--whiteToGray">
-      <div class="flex flex-column flex1 container">
-        <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Resources</h2>
-          <div class="small-border"></div>
-          <p>The best blog posts, presentations and useful links related to Kustomize.
-          </p>
-        </div>
-        <div class="cards flex flexWrap--wrap">
-          <a href="https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/"
-            target="_blank">
-            <div class="card">
-              <h4>Launch Announcement
-              </h4>
-              <p>Template-free Configuration Customization
-                for Kubernetes<span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://github.com/kubernetes/community/blob/master/contributors/design-proposals/architecture/declarative-application-management.md"
-            target="_blank">
-            <div class="card">
-              <h4>Background Whitepaper
-              </h4>
-              <p>Declaritive application management. - Brian Grant<span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://github.com/kubernetes-sigs/kustomize/tree/master/examples" target="_blank">
-            <div class="card">
-              <h4>Examples
-              </h4>
-              <p>helloWorld, mySql, wordpress and others. <span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://speakerdeck.com/spesnova/introduction-to-kustomize?slide=7" target="_blank">
-            <div class="card">
-              <h4>Overview Slides
-              </h4>
-              <p>A great overview of key Kustomize concepts.<span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://github.com/kubernetes-sigs/kustomize/blob/master/docs/glossary.md" target="_blank">
-            <div class="card">
-              <h4>Glossary
-              </h4>
-              <p>A list of common terms in the Kustomize world.<span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://testingclouds.wordpress.com/2018/07/20/844/" target="_blank">
-            <div class="card">
-              <h4>Use Case
-              </h4>
-              <p>Customizing upstream Helm </br>
-                charts with Kustomize<span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://www.youtube.com/watch?v=ahMIBxufNR0" target="_blank">
-            <div class="card">
-              <h4>KubeCon Video
-              </h4>
-              <p>Deploy Your App with Template</br>
-                Free YAML Ryan Cox, Lyft <span class="arrow"></span></p>
-            </div>
-          </a>
-          <a href="https://kubernetes.io/blog/2019/03/25/kubernetes-1-14-release-announcement/" target="_blank">
-            <div class="card">
-              <h4>Kubernetes 1.14
-              </h4>
-              <p>Kustomize is now available</br>
-                in kubectl through the -k flag <span class="arrow"></span></p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div id="meetup" class="flex flex-column community-section u-gradient--whiteToGray">
-      <div class="flex flex-column flex1 container">
-        <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Meetup & Conference Talks</h2>
-          <div class="small-border"></div>
-          <p>These presentations are from various Kustomize meetups and conferences.
-          </p>
-        </div>
-        <div class="links flex">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WWJDbHo-OeY" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </div>
-
-        <div class="links flex" style="margin-top:50px;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/pRG47EQ5OAg" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="links flex" style="margin-top:50px;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ahMIBxufNR0" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="links flex" style="margin-top:50px;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/NFnpUlt0IuM" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <hr />
-
-    <div id="projects" class="flex flex-column overview-section u-gradient--whiteToGray">
-      <div class="flex flex-column flex1 container">
-        <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Projects Integrating Kustomize</h2>
-          <div class="small-border"></div>
-          <p>Since the introduction of Kustomize, several additional projects have emerged with deep Kustomize
-            integrations:
-          </p>
-        </div>
-        <div class="details flex justifyContent--center">
-          <a href="https://kots.io/" target="_blank">
             <div class="detail">
-              <div class="icon kots"></div>
-              <p>
-                Kots
-              </p>
+                <div class="icon megaphone"></div>
+                <p>
+                    Purely declarative approach to
+                    configuration customization
+                </p>
             </div>
-          </a>
-          <a href="https://github.com/argoproj/argo-cd" target="_blank">
             <div class="detail">
-              <div class="icon argocd"></div>
-              <p>
-                ArgoCD
-              </p>
+                <div class="icon components"></div>
+                <p>
+                    Natively built into <code>kubectl</code>
+                </p>
             </div>
-          </a>
-          <a href="https://github.com/weaveworks/flux" target="_blank">
             <div class="detail">
-              <div class="icon flux"></div>
-              <p>
-                Flux
-              </p>
+                <div class="icon manage"></div>
+                <p>
+                    Manage an arbitrary number of
+                    distinctly customized Kubernetes
+                    configurations
+                </p>
             </div>
-          </a>
+            <div class="detail">
+                <div class="icon kubernetes"></div>
+                <p>
+                    Available as a standalone
+                    binary for extension and
+                    integration into other services
+                </p>
+            </div>
+            <div class="detail">
+                <div class="icon yaml-doc"></div>
+                <p>
+                   Every artifact that kustomize uses
+                   is plain YAML and can be validated
+                   and processed as such
+                </p>
+            </div>
+            <div class="detail">
+                <div class="icon pull-request"></div>
+                <p>
+                   Kustomize encourages a
+                   fork/modify/rebase workflow
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-
-    <hr />
-
-    <div id="community" class="flex flex-column community-section u-gradient--whiteToGray">
-      <div class="flex flex-column flex1 container">
-        <div class="flex1 flex flex-column alignItems--center intro">
-          <div class="hash"></div>
-          <h2>Community</h2>
-          <div class="small-border"></div>
-          <p>Connect with the Kustomize community to get answers to questions and to stay up with the latest
-            developments.
-          </p>
-        </div>
-        <div class="links flex">
-          <a href="http://slack.k8s.io/" target="_blank">
-            <div class="link">
-              <div class="link-icon slack"></div>
-              <p>K8s slack</br>
-                #kustomize
-              </p>
-            </div>
-          </a>
-          <a href="https://github.com/kubernetes-sigs/kustomize/" target="_blank">
-            <div class="link">
-              <div class="link-icon github"></div>
-              <p>GitHub</p>
-            </div>
-          </a>
-          <a href="https://groups.google.com/forum/#!forum/kustomize" target="_blank">
-            <div class="link">
-              <div class="link-icon envelope"></div>
-              <p>Official</br>
-                Mailing List
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </main>
-  <footer>
     <div class="container">
-      <div class="footer-items-wrapper">
-        <div class="footer-list flex1 paddingContainer">
-          <div class="footer-wrapper">
-            <div class="flex justifyContent--center alignItems--center">
-              <span class="heart"></span>
-              <p>Website contributed by <a href="https://replicated.com" target="_blank">Replicated</a></p>
+        <div class="documentation-link">
+            See Documentation: <a href="https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html" target="_blank">apply -k</a> | <a href="https://kubernetes-sigs.github.io/kustomize/" target="_blank">standalone</a>
+        </div>
+    </div>
+</div>
+
+		<div id="resources" class="flex flex-column resources-section u-gradient--whiteToGray">
+        <div class="flex flex-column flex1 container">
+            <div class="flex1 flex flex-column alignItems--center intro">
+                <div class="hash"></div>
+                <h2>Resources</h2>
+                <div class="small-border"></div>
+                <p>The best blog posts, presentations and useful links related to Kustomize.
+                </p>
             </div>
-          </div>
+            <div class="cards flex flexWrap--wrap">
+              <a href="https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/" target="_blank">
+                <div class="card">
+                    <h4>Launch Announcement
+                    </h4>
+                    <p>Template-free Configuration Customization
+                      for Kubernetes<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://github.com/kubernetes/community/blob/master/contributors/design-proposals/architecture/declarative-application-management.md" target="_blank">
+                <div class="card">
+                    <h4>Background Whitepaper
+                    </h4>
+                    <p>Declaritive application management. - Brian Grant<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://github.com/kubernetes-sigs/kustomize/tree/master/examples" target="_blank">
+                <div class="card">
+                    <h4>Examples
+                    </h4>
+                    <p>helloWorld, mySql, wordpress and others. <span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://speakerdeck.com/spesnova/introduction-to-kustomize?slide=7" target="_blank">
+                <div class="card">
+                    <h4>Overview Slides
+                    </h4>
+                    <p>A great overview of key Kustomize concepts.<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://kubernetes-sigs.github.io/kustomize/api-reference/glossary/" target="_blank">
+                <div class="card">
+                    <h4>Glossary
+                    </h4>
+                    <p>A list of common terms in the Kustomize world.<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://testingclouds.wordpress.com/2018/07/20/844/" target="_blank">
+                <div class="card">
+                    <h4>Use Case
+                    </h4>
+                    <p>Customizing upstream Helm </br>
+                      charts with Kustomize<span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/watch?v=ahMIBxufNR0" target="_blank">
+                <div class="card">
+                    <h4>KubeCon Video
+                    </h4>
+                    <p>Deploy Your App with Template</br>
+                       Free YAML Ryan Cox, Lyft <span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://kubernetes.io/blog/2019/03/25/kubernetes-1-14-release-announcement/" target="_blank">
+                <div class="card">
+                    <h4>Kubernetes 1.14
+                    </h4>
+                    <p>Kustomize is now available</br>
+                       in kubectl through the -k flag <span class="arrow"></span></p>
+                </div>
+              </a>
+              <a href="https://kubernetes.io/blog/2019/03/25/kubernetes-1-14-release-announcement/" target="_blank">
+                <div class="card">
+                    <h4>Kustomize Introduction
+                    </h4>
+                    <p>Creating a Kubernetes app </br>
+                      out of multiple pieces <span class="arrow"></span></p>
+                </div>
+              </a>
+            </div>
+        </div>
+    </div>
+
+		<div id="meetup" class="flex flex-column community-section u-gradient--whiteToGray">
+        <div class="flex flex-column flex1 container">
+            <div class="flex1 flex flex-column alignItems--center intro">
+                <div class="hash"></div>
+                <h2>Meetup & Conference Talks</h2>
+                <div class="small-border"></div>
+                <p>These presentations are from various Kustomize meetups and conferences.
+                </p>
+            </div>
+            <div class="links flex">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1fCAwFGX38U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="links flex" style="margin-top:50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WWJDbHo-OeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="links flex" style="margin-top:50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pRG47EQ5OAg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="links flex" style="margin-top:50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ahMIBxufNR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="links flex" style="margin-top:50px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NFnpUlt0IuM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <hr/>
+
+		<div id="projects" class="flex flex-column overview-section u-gradient--whiteToGray">
+  <div class="flex flex-column flex1 container">
+    <div class="flex1 flex flex-column alignItems--center intro">
+      <div class="hash"></div>
+      <h2>Projects Integrating Kustomize</h2>
+      <div class="small-border"></div>
+      <p>Since the introduction of Kustomize, several additional projects have emerged with deep Kustomize integrations:
+      </p>
+    </div>
+    <div class="details flex justifyContent--center">
+      <a href="https://kots.io/" target="_blank">
+        <div class="detail">
+          <div class="icon kots"></div>
+          <p>
+            Kots
+          </p>
+        </div>
+      </a>
+      <a href="https://github.com/argoproj/argo-cd" target="_blank">
+        <div class="detail">
+          <div class="icon argocd"></div>
+          <p>
+            ArgoCD
+          </p>
+        </div>
+      </a>
+      <a href="https://github.com/weaveworks/flux" target="_blank">
+        <div class="detail">
+          <div class="icon flux"></div>
+          <p>
+            Flux
+          </p>
+        </div>
+      </a>
+      <a href="https://github.com/kbst/terraform-kubestack" target="_blank">
+        <div class="detail">
+          <div><img src="./images/kubestack.svg" alt="Kubestack" width="100"></div>
+          <p>
+            Kubestack
+          </p>
+        </div>
+      </a>
+      <a href="https://github.com/replicatedhq/unfork" target="_blank">
+        <div class="detail">
+          <div style="padding: 20px 0;"><img src="./images/unfork.svg" alt="Unfork" width="150"></div>
+          <p>
+            Unfork
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+		<div id="community" class="flex flex-column community-section u-gradient--whiteToGray">
+        <div class="flex flex-column flex1 container">
+            <div class="flex1 flex flex-column alignItems--center intro">
+                <div class="hash"></div>
+                <h2>Community</h2>
+                <div class="small-border"></div>
+                <p>Connect with the Kustomize community to get answers to questions and to stay up with the latest developments.
+                </p>
+            </div>
+            <div class="links flex">
+                <a href="http://slack.k8s.io/" target="_blank">
+                  <div class="link">
+                    <div class="link-icon slack"></div>
+                    <p>K8s slack</br>
+                       #kustomize
+                    </p>
+                </div>
+              </a>
+              <a href="https://github.com/kubernetes-sigs/kustomize/" target="_blank">
+                <div class="link">
+                    <div class="link-icon github"></div>
+                    <p>GitHub</p>
+                </div>
+              </a>
+              <a href="https://groups.google.com/forum/#!forum/kustomize" target="_blank">
+                <div class="link">
+                    <div class="link-icon envelope"></div>
+                    <p>Official</br>
+                       Mailing List
+                    </p>
+                </div>
+              </a>
+            </div>
+        </div>
+    </div>
+
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer-items-wrapper">
+        <div class="footer-list flex1 paddingContainer">
+					<div class="footer-wrapper">
+  <div class="flex justifyContent--center alignItems--center">
+    <span class="heart"></span>
+    <p>Website contributed by <a href="https://replicated.com" target="_blank">Replicated</a></p>
+  </div>
+</div>
 
         </div>
-      </div>
-    </div>
-  </footer>
+			</div>
+		</div>
+	</footer>
 
-
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q ||
-          []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document,
-      'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-61420213-8', 'auto');
-    ga('set', 'anonymizeIp', true);
-    ga('send', 'pageview');
-
-    var buttons = document.querySelectorAll('a');
-    Array.prototype.map.call(buttons, function (item) {
-      if (item.host != document.location.host) {
-        item.addEventListener('click', function () {
-          var action = item.getAttribute('data-action') || 'follow';
-          ga('send', 'event', 'outbound', action, item.href);
+	
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+        ga('create', 'UA-61420213-8', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+         
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
         });
-      }
-    });
-  </script>
+      </script>
+    
 
-
-
-
-  <script type="text/javascript">
-    var _paq = _paq || [];
-
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "//data-2.replicated.com/";
-      _paq.push(['setTrackerUrl', u + 'data/']);
-      _paq.push(['setSiteId', '5']);
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'js/'; s.parentNode.insertBefore(g, s);
-    })();
-  </script>
-
-
+    
+    
+    <script type="text/javascript">
+      var _paq = _paq || [];
+       
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//data-2.replicated.com/";
+        _paq.push(['setTrackerUrl', u+'data/']);
+        _paq.push(['setSiteId', '5']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    
+  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
+  
+  
 
+    
+      <script src='/js/prod/autocomplete-search-821c3977cf.js'></script>
+    
 
+  
 
-
-  <script src='/js/prod/autocomplete-search-821c3977cf.js'></script>
-
-
-
-
-  <script src="/js/prism.js"></script>
-  <script>
+	<script src="/js/prism.js"></script>
+	<script>
     const toggleMenu = document.getElementById("toggleNav");
-    const headerLinks = document.getElementsByClassName("header-link");
-    function toggleMenuClass() {
-      toggleMenu.classList.toggle("open");
-      document.getElementById("headerLinks").classList.toggle("show");
-    }
-    if (toggleMenu) {
-      toggleMenu.addEventListener("click", toggleMenuClass);
-      for (var link of headerLinks) {
+		const headerLinks = document.getElementsByClassName("header-link");
+		function toggleMenuClass() {
+			toggleMenu.classList.toggle("open");
+			document.getElementById("headerLinks").classList.toggle("show");
+		}
+		if (toggleMenu) {
+			toggleMenu.addEventListener("click", toggleMenuClass);
+      for(var link of headerLinks) {
         link.addEventListener("click", toggleMenuClass);
       }
-    };
-  </script>
+		};
+	</script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="/js/featherlight.min.js"></script>
-  <script>
-    $('#desktop-search').on("click", function () {
-      if (!$('#search-field').is(":visible")) {
+	<script>
+		$('#desktop-search').on("click", function () {
+      if(!$('#search-field').is(":visible")) {
         $('#search-field').show("slide", { direction: "right" }, 300);
         $('#search-field').focus();
       }
-    });
+		});
 
     $('#search-field').on("blur", function () {
       $(this).hide("slide", { direction: "right" }, 300);
     });
 
-    $('#dropdown-link').on('click', function () {
+    $('#dropdown-link').on('click', function() {
       $('#scheduler-dropdown-menu').toggle();
     });
 
-    $(document).on('click', function (e) {
+    $(document).on('click', function(e) {
       var target = e.target;
-      if (target.id !== "dropdown-link") {
+      if(target.id !== "dropdown-link") {
         $('#scheduler-dropdown-menu').hide();
       }
     });
 
     $('.tooltip').tooltip({
-      position: { my: "center bottom-10", at: "center top" },
+      position: {  my: "center bottom-10", at: "center top"  },
       show: { effect: "fade", duration: 200 },
       hide: { effect: "fade", duration: 200 }
     });
@@ -500,22 +506,22 @@
   </script>
   <script>
     $('a[href*="#"]')
-
+      
       .not('[href="#"]')
       .not('[href="#0"]')
-      .click(function (event) {
-
+      .click(function(event) {
+        
         if (
           location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
           &&
           location.hostname == this.hostname
         ) {
-
+          
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
+          
           if (target.length) {
-
+            
             event.preventDefault();
             $('html, body').animate({
               scrollTop: target.offset().top
@@ -526,5 +532,5 @@
   </script>
 
 </body>
-
 </html>
+
