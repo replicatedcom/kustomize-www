@@ -30,7 +30,7 @@ menu:
   main:
     - Name: "kubectl Usage"
       Weight: 1
-      URL: "https://kubectl.docs.kubernetes.io/pages/app_management/introduction.html"
+      URL: "https://kubectl.docs.kubernetes.io/guides/introduction/"
     - Name: "Core Docs"
       Weight: 2
       URL: "https://kubernetes-sigs.github.io/kustomize/"
