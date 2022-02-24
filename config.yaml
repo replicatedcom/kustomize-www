@@ -33,7 +33,7 @@ menu:
       URL: "https://kubectl.docs.kubernetes.io/guides/introduction/"
     - Name: "Core Docs"
       Weight: 2
-      URL: "https://kubernetes-sigs.github.io/kustomize/"
+      URL: "https://kubectl.docs.kubernetes.io/"
     - Name: "Overview"
       Weight: 3
       URL: "#overview"
@@ -43,7 +43,4 @@ menu:
     - Name: "Community"
       Weight: 5
       URL: "#community"
-    - Name: "Tutorial"
-      Weight: 6
-      URL: "https://kustomize.io/tutorial"
 ---
